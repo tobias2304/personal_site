@@ -167,6 +167,10 @@ p {
     max-width: 900px;
 }
 
+.hero-content .hero-actions {
+  margin-top: 100px;
+}
+
 .hero-title,
 .hero-subtitle,
 .hero-text,
@@ -300,6 +304,10 @@ p {
     color: #fff;
     text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
     padding-top: 50px;
+  }
+
+  .hero-content .hero-actions {
+    margin-top: 100px;
   }
 
   .hero-actions {
