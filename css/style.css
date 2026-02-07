@@ -71,6 +71,10 @@ p {
     color: var(--text-main);
 }
 
+  .logo-text {
+    display: none;
+  }
+
 .navbar .nav-link {
     position: relative;
     font-weight: 500;
@@ -223,7 +227,8 @@ p {
 
   header.hero {
     position: relative;
-    height: 100vh;
+    min-height: 70vh;
+    max-height: 85vh;
     overflow: hidden;
   }
 
@@ -238,6 +243,18 @@ p {
     transform: scale(1);
     z-index: 1;
     transition: transform 1.2s ease;
+  }
+
+   .hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.75)
+    );
+    z-index: 1;
   }
 
   /* Text darüber */
@@ -260,6 +277,87 @@ p {
     font-size: 1.1rem;
     opacity: 0.9;
   }
+
+  .hero-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .hero-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    max-width: 100%;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding-top: 150px;
+    margin-top: 0;
+  }
+  
+  .hero-title {
+    color: #fff;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-actions {
+    margin-top: 0px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+  }
+  .hero-actions .btn {
+    width: 100%;
+    padding: 10px 22px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 14px;
+  }
+
+  /* Haupt-CTA */
+  .btn-primary {
+    background: #2563eb; /* kräftiges Blau */
+    color: #ffffff;
+    border: none;
+    box-shadow:
+      0 6px 18px rgba(37, 99, 235, 0.6),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+          animation: pulseIn 1.9s ease-out;
+  }
+
+  @keyframes pulseIn {
+    0% {
+      transform: scale(0.96);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+ 
+  /* Sekundär CTA */
+  .btn-outline-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+          animation: pulseIn 1.9s ease-out;
+  }
+
+  @keyframes pulseIn {
+    0% {
+      transform: scale(0.96);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+  }
+
+
 }
 
 
@@ -426,3 +524,61 @@ footer {
     text-align: center;
     max-width: 520px;
 }
+
+
+/* =========================
+   LOGO – MONOGRAMM + WORTMARKE
+========================= */
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease;
+}
+
+.logo-mark {
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  padding: 10px 10px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #5c56cf, #040508);
+  color: white;
+  box-shadow: 0 8px 30px rgba(79, 70, 229, 0.45);
+  transition: transform 0.25s ease;
+}
+
+.logo-text {
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+/* Hover – lebt, aber schreit nicht */
+.logo:hover .logo-mark {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(79, 70, 229, 0.6);
+  transition: all 0.3s ease;
+  transform: scale(1.08);
+}
+
+.logo-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.logo:hover .logo-text::after {
+  width: 100%;
+}   
