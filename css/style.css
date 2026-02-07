@@ -228,7 +228,7 @@ p {
   header.hero {
     position: relative;
     min-height: 70vh;
-    max-height: 85vh;
+    max-height: 75vh;
     overflow: hidden;
   }
 
@@ -545,7 +545,7 @@ footer {
   font-weight: 700;
   letter-spacing: 0.12em;
   font-size: 0.9rem;
-  padding: 8px 10px;
+  padding: 10px 10px;
   border-radius: 999px;
 
   /* Fallback – IMMER sichtbar */
