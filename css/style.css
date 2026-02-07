@@ -310,12 +310,7 @@ p {
     margin-top: 100px;
   }
 
-  .hero-actions {
-    margin-top: 100px;
-    padding: 16px;
-    border-radius: 15px;
-    backdrop-filter: blur(0px);
-  }
+
   .hero-actions .btn {
     width: 100%;
     padding: 10px 22px;
