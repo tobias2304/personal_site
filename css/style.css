@@ -167,10 +167,6 @@ p {
     max-width: 900px;
 }
 
-.hero-content .hero-actions {
-  margin-top: 100px;
-}
-
 .hero-title,
 .hero-subtitle,
 .hero-text,
@@ -221,7 +217,7 @@ p {
    HERO – MOBILE
 ========================= */
 
-@media (pointer: coarse) {
+@media (max-width: 768px) {
 
   /* Desktop-Bild auf Mobile AUS */
   .hero-image {
@@ -243,9 +239,9 @@ p {
     
     background-size: cover;
     background-position: center top;
-    background-repeat: no-repeat;
    
-    filter: blur(1px) brightness(1.5) saturate(0.6);
+    background-repeat: no-repeat;
+    filter: blur(1px) brightness(1) saturate(0.6);
     transform: scale(1);
     z-index: 1;
     opacity: 2;
@@ -296,25 +292,21 @@ p {
     opacity: 0.85;
     max-width: 100%;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    padding-top: 12px;
+    padding-top: 115px;
     margin-top: 0;
   }
   
   .hero-title {
     color: #fff;
     text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
-    padding-top: 50px;
-  }
-
-  .hero-content .hero-actions {
-    margin-top: 80px;
   }
 
   .hero-actions {
-    transform: translateY(-60px);
+    margin-top: 0px;
     padding: 16px;
+    background: rgba(0, 0, 0, 0.45);
     border-radius: 15px;
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(6px);
   }
   .hero-actions .btn {
     width: 100%;
