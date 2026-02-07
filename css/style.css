@@ -217,7 +217,7 @@ p {
    HERO – MOBILE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 992px), (pointer: coarse) {
 
   /* Desktop-Bild auf Mobile AUS */
   .hero-image {
