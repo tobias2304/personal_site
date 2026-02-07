@@ -224,17 +224,6 @@ p {
     display: none;
   }
 
-@supports (clip-path: polygon(0 0)) {
-  .hero {
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 94%,
-      50% 100%,
-      0 94%
-    );
-  }
-}
 
   header.hero {
     position: relative;
@@ -258,6 +247,13 @@ p {
     z-index: 1;
     opacity: 2;
     transition: transform 1.2s ease;
+        clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 94%,
+      50% 100%,
+      0 94%
+    );
   }
 
    .hero-bg::after {
