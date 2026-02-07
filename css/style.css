@@ -1,0 +1,428 @@
+/* =========================================================
+   DESIGN SYSTEM – MINIMAL / EDITORIAL / PREMIUM
+========================================================= */
+
+:root {
+    --bg-main: #f8fafc;
+    --bg-soft: #ffffff;
+    --bg-panel: #ffffff;
+
+    --accent: #4f46e5;
+    --accent-muted: #6366f1;
+
+    --text-main: #0f172a;
+    --text-muted: #475569;
+
+    --border-subtle: rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
+    perspective: 1200px;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--text-main);
+}
+
+h1 { font-size: 2.6rem; }
+h2 { font-size: 1.7rem; }
+
+p {
+    color: var(--text-muted);
+    max-width: 46rem;
+}
+
+/* =========================================================
+   NAVBAR – FINAL
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(248, 250, 252, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+
+    padding: 1.2rem 0;
+    animation: navFadeDown 0.8s cubic-bezier(.2,.8,.2,1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-main);
+}
+
+.navbar .nav-link {
+    position: relative;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 0.4rem 0;
+    margin-left: 1.4rem;
+    transition: color .25s ease, transform .25s ease;
+}
+
+/* Aktiver Link = Text */
+.navbar .nav-link.active {
+    pointer-events: none;
+    cursor: default;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.navbar .nav-link.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    border-radius: 999px;
+}
+
+.navbar .nav-link.active::after {
+    display: none;
+}
+
+/* Hover */
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transform: scaleX(.4);
+    transition: opacity .25s ease, transform .35s cubic-bezier(.2,.8,.2,1);
+}
+
+.navbar .nav-link:hover {
+    color: var(--text-main);
+    transform: translateY(-2px);
+}
+
+.navbar .nav-link:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+@keyframes navFadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   HERO – WOW, aber kompakt
+========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 7rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(79,70,229,.18), transparent 55%),
+        radial-gradient(circle at 80% 30%, rgba(99,102,241,.12), transparent 60%);
+    filter: blur(50px);
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.hero-title,
+.hero-subtitle,
+.hero-text,
+.hero-actions {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.hero-title {
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    font-weight: 650;
+}
+
+.hero-subtitle {
+    margin-top: .3rem;
+    color: var(--text-muted);
+}
+
+.hero-text {
+    margin-top: 1.2rem;
+    font-size: 1.15rem;
+}
+
+.hero-actions {
+    margin-top: 2.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.hero.is-visible .hero-title      { animation: heroFadeUp .9s forwards; }
+.hero.is-visible .hero-subtitle   { animation: heroFadeUp .9s .15s forwards; }
+.hero.is-visible .hero-text       { animation: heroFadeUp .9s .3s forwards; }
+.hero.is-visible .hero-actions    { animation: heroFadeUp .9s .45s forwards; }
+
+@keyframes heroFadeUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-image img {
+  width: 380px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translate(-150px, -60px);
+}
+
+
+/* =========================
+   HERO – MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Desktop-Bild auf Mobile AUS */
+  .hero-image {
+    display: none;
+  }
+
+  header.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Hintergrundbild */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/img/Profilbild2.jpg");
+    background-size: cover;
+    background-position: center top;
+    filter: blur(2px) brightness(0.6);
+    transform: scale(1);
+    z-index: 1;
+    transition: transform 1.2s ease;
+  }
+
+  /* Text darüber */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0vh 9% 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .hero-content p {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+}
+
+
+/* =========================
+   FADE-IN (JavaScript)
+========================= */
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* =========================================================
+   STARTSEITEN-ABSTÄNDE (NUR HIER!)
+========================================================= */
+
+.page-section {
+    margin: 1.6rem 0;
+}
+
+.page-home .page-section:first-of-type {
+    margin-top: 1rem;
+}
+
+.page-home .page-section:last-of-type {
+    margin-bottom: 2.4rem;
+}
+
+/* =========================================================
+   INFO-SECTIONS (KÄSTEN)
+========================================================= */
+
+section.info-section {
+    position: relative;
+    background-color: var(--bg-panel);
+    border-radius: 1.4rem;
+    padding: 2rem 2.2rem;
+    box-shadow:
+        0 20px 50px rgba(15,23,42,.14),
+        0 0 0 1px var(--border-subtle);
+}
+
+section.info-section::before {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    border-radius: 999px;
+}
+
+section.info-section h2 {
+    margin-bottom: 1rem;
+}
+
+section.info-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+    background-color: var(--bg-soft);
+    border-radius: 1.25rem;
+    border: 1px solid var(--border-subtle);
+    transform-style: preserve-3d;
+    box-shadow: 0 14px 40px rgba(15,23,42,.12);
+    transition: transform .35s cubic-bezier(.2,.8,.2,1),
+                box-shadow .35s ease,
+                border-color .35s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255,255,255,.6) 50%,
+        transparent 65%
+    );
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.card:hover::before { opacity: 1; }
+
+.card:hover {
+    transform: translateY(-8px) translateZ(22px);
+    border-color: rgba(79,70,229,.35);
+    box-shadow: 0 28px 70px rgba(15,23,42,.18);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-primary {
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    border-radius: 999px;
+    font-weight: 600;
+    padding: .6rem 1.4rem;
+    transition: all .18s ease;
+}
+
+.btn-primary:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(79,70,229,.35);
+}
+
+.btn-outline-secondary {
+    border-radius: 999px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    font-size: .9rem;
+    color: var(--text-muted);
+    padding: 2rem 0;
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* CTA-Text sauber zentrieren */
+.cta-text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 520px;
+}
