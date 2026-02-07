@@ -221,7 +221,7 @@ p {
    HERO – MOBILE
 ========================= */
 
-@media (max-width: 992px), (pointer: coarse) {
+@media (pointer: coarse) {
 
   /* Desktop-Bild auf Mobile AUS */
   .hero-image {
@@ -307,10 +307,15 @@ p {
   }
 
   .hero-content .hero-actions {
-    margin-top: 100px;
+    margin-top: 80px;
   }
 
-
+  .hero-actions {
+    transform: translateY(-60px);
+    padding: 16px;
+    border-radius: 15px;
+    backdrop-filter: blur(0px);
+  }
   .hero-actions .btn {
     width: 100%;
     padding: 10px 22px;
