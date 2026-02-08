@@ -238,7 +238,7 @@ nav.navbar {
 
   header.hero {
     position: relative;
-    min-height: 75svh;
+    min-height: 85svh;
     overflow: hidden;
   }
 
@@ -252,7 +252,7 @@ nav.navbar {
     background-position: center top;
    
     background-repeat: no-repeat;
-    filter: brightness(0.85);
+    filter: brightness(1.5);
       clip-path: polygon(
     0 0,
     100% 0,
