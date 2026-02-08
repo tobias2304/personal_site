@@ -238,8 +238,7 @@ nav.navbar {
 
   header.hero {
     position: relative;
-    min-height: 70vh;
-    max-height: 75vh;
+    min-height: 100svh;
     overflow: hidden;
   }
 
@@ -253,18 +252,12 @@ nav.navbar {
     background-position: center top;
    
     background-repeat: no-repeat;
-    filter: blur(1px) brightness(1.5) saturate(0.6);
+    filter: brightness(0.85);
+    clip-path: none;
     transform: scale(1);
     z-index: 1;
-    opacity: 2;
+    opacity: 1;
     transition: transform 1.2s ease;
-        clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 94%,
-      50% 100%,
-      0 94%
-    );
   }
 
    .hero-bg::after {
@@ -283,7 +276,7 @@ nav.navbar {
   .hero-content {
     position: relative;
     z-index: 2;
-    padding: 0vh 9% 0;
+    padding-top: clamp(6rem, 18vh, 10rem);
     color: rgb(255, 255, 255);
     text-align: center;
   }
@@ -304,16 +297,18 @@ nav.navbar {
     color: rgba(255, 255, 255, 0.85);
   }
 
-  .hero-text {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    opacity: 0.85;
-    max-width: 100%;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    padding-top: 20px;
-    margin-top: 0;
-  }
+.hero-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.85;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  padding-top: 20px;
+  margin-top: 0;
+}
   
   .hero-title {
     color: #fff;
@@ -342,18 +337,7 @@ nav.navbar {
           animation: pulseIn 0.9s ease-out;
   }
 
-  @keyframes pulseIn {
-    0% {
-      transform: scale(0.96);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
 
- 
   /* Sekundär CTA */
   .btn-outline-secondary {
     background: rgba(255, 255, 255, 0.15);
