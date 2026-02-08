@@ -406,7 +406,7 @@ nav.navbar {
    TABLET
 ========================= */
 
-@media (min-width: 768px) and (max-width: 1025px) {
+@media (hover: none) and (pointer: coarse) {
  
   /*Startseite Hero Text weiter rechts*/
   .hero {
