@@ -224,7 +224,7 @@ nav.navbar {
 @media (max-width: 768px) {
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.2;
     word-break: break-word;
   }
