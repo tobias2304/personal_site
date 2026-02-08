@@ -408,6 +408,10 @@ nav.navbar {
 
 @media (min-width: 768px) and (max-width: 1025px) {
  
+
+    body {
+    outline: 15px solid red !important;
+  }
   /*Startseite Hero Text weiter rechts*/
   .hero {
     padding-left: 3rem;
