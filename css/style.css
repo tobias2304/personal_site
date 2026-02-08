@@ -402,6 +402,36 @@ nav.navbar {
 
 }
 
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ 
+  .hero {
+    padding-left: 3rem;
+  }
+  
+/*Umbruch Startseite Hero Text*/
+
+  .tablet-break {
+    display: block;
+  }
+
+  /*Logo weiter links*/
+  .navbar-brand {
+    transform: translateX(-1.5rem);
+  } 
+
+  /*Profilbild weiter nach rechts*/
+  .hero .hero-image {
+    transform: translateX(5.5rem);
+  }
+  
+
+}
+
+
 
 /* =========================
    FADE-IN (JavaScript)
