@@ -225,7 +225,7 @@ nav.navbar {
 
   /*Überschrift Datenschutzerklärung*/
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     line-height: 1.2;
     
   }
@@ -418,6 +418,22 @@ nav.navbar {
     transform: translateX(5.5rem);
   }
   
+  /*Zertifikation*/
+
+  .certification-badge {
+    width: 50px;
+    margin: 0 auto 1rem;
+    display: block;
+    animation: none !important;
+    transition: none !important;
+    margin: 0 auto 1rem;
+    height: auto;
+  }
+
+  .certification-badge:hover {
+    transform: none;
+    box-shadow: none;
+  }
 
 }
 
@@ -703,3 +719,43 @@ main {
 .logo:hover .logo-text::after {
   width: 100%;
 }   
+
+/*Badge Zertifizierung*/
+
+.certification-badge {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border-radius: 8px;
+}
+
+.certification-badge:hover {
+  border-radius: 14px;
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+.reveal-cert {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-cert.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes softGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(66,133,244,0);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(66,133,244,0.35);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(66,133,244,0);
+  }
+}
+
+.certification-badge.glow-once {
+  animation: softGlow 1.8s ease 0.5s 1;
+}
