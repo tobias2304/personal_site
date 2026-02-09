@@ -389,6 +389,22 @@ nav.navbar {
     transform: translateX(-50%);
   }
 
+  /*Zertifikation*/
+
+  .certification-badge {
+    width: 120px;
+    margin: 0 auto 0rem;
+    display: block;
+    animation: none !important;
+    transition: none !important;
+    height: auto;
+  }
+
+  .certification-badge:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
 }
 
 /* =========================
@@ -417,16 +433,16 @@ nav.navbar {
   .hero .hero-image {
     transform: translateX(5.5rem);
   }
-  
+ 
   /*Zertifikation*/
 
   .certification-badge {
-    width: 50px;
-    margin: 0 auto 1rem;
+    width: 120px;
+    margin: 0 auto 0rem;
     display: block;
     animation: none !important;
     transition: none !important;
-    margin: 0 auto 1rem;
+    
     height: auto;
   }
 
@@ -434,7 +450,7 @@ nav.navbar {
     transform: none;
     box-shadow: none;
   }
-
+  
 }
 
 
