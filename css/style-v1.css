@@ -790,6 +790,12 @@ main {
 .journey-section {
   position: relative;
   background: #0f172a;
+  overflow: hidden;   /* WICHTIG */
+}
+
+.footer-custom{
+  background-color: #101621;
+  color: #f8fafc;
 }
 
 /* Background FIXED + klickdurchlässig */
@@ -1018,45 +1024,7 @@ main {
 
 }
 
-.journey-page {
-  background: #0b1220;
-}
 
-.footer-custom {
-  background: #0b1220 !important;
-  color: #cbd5e1 !important;
-}
-
-.footer-custom h1,
-.footer-custom h2,
-.footer-custom h3,
-.footer-custom h4,
-.footer-custom h5,
-.footer-custom h6 {
-  color: #ffffff !important;
-}
-
-.footer-custom p,
-.footer-custom li,
-.footer-custom span {
-  color: #cbd5e1 !important;
-}
-
-.footer-custom a {
-  color: #94a3b8 !important;
-}
-
-.footer-custom a:hover {
-  color: #2563eb !important;
-}
-
-
-.journey-page .footer-custom {
-  padding-bottom: 0px; /* Standard war 40px */
-  padding-top: 0px;
-  margin-bottom: 60px;
-  margin-top: 65px;
-}
 
 
 /* ==============================
