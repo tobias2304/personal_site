@@ -100,20 +100,53 @@
           <h6>Motorradreise – Island</h6>
           <p>Mehrwöchige, eigenständig geplante Motorradreise.
             Verantwortung für Routenplanung, Budget, Logistik und Risikomanagement.</p>
+            
+            <div class="story-cards mt-4">
+            <div class="story-card">
+              <h6>Route</h6>
+              <p>Komplette Ringstraße inkl. Westküste & Snæfellsnes.</p>
+            </div>
+
+            <div class="story-card">
+              <h6>Herausforderung</h6>
+              <p>Wetter, lange Distanzen, Eigenverantwortung auf dem Motorrad.</p>
+            </div>
+
+            <div class="story-card">
+              <h6>Learnings</h6>
+              <p>Risikomanagement, Improvisation, strukturierte Planung.</p>
+            </div>
+
+          </div>
+
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-content">
           <h5>07/2024 – 09/2024</h5>
-          <h6>Work & Travel – Südamerika</h6>
+          <h6>Backpackingreise – Südamerika</h6>
           <p>Selbstorganisierte Auslandsphase mit eigenständiger Finanzierung.
-            Arbeiten in wechselnden Umfeldern, Entwicklung von Anpassungsfähigkeit und Selbstverantwortung.</p>
-
-          <div class="map-container mt-3">
-            <img src="assets/southamerica-map.jpg" class="img-fluid rounded" alt="South America">
-            <div class="map-marker"></div>
+            Entwicklung von Anpassungsfähigkeit und Selbstverantwortung und klar kommen in teils schwierigen Situationen</p>
+            
+          <div class="story-cards mt-4">
+          <div class="story-card">
+            <h6>Route</h6>
+            <p>Brasilien → Peru → Bolivien → zurück nach Rio.</p>
           </div>
+
+          <div class="story-card">
+            <h6>Eigenverantwortung</h6>
+            <p>Komplette Organisation von Transport, Unterkunft und Budget.</p>
+          </div>
+
+          <div class="story-card">
+            <h6>Entwicklung</h6>
+            <p>Umgang mit Unsicherheit, kulturellen Unterschieden und komplexen Situationen.</p>
+          </div>
+
+          </div>
+
         </div>
       </div>
 
@@ -151,6 +184,23 @@
 
 
 <script>
+
+//JS für Cards in Island und Südamerika
+const cards = document.querySelectorAll(".story-card");
+
+const cardObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+cards.forEach(card => cardObserver.observe(card));
+
+
+//JS für Timeline glaube ich 
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const items = document.querySelectorAll(".timeline-item");
