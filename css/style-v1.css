@@ -75,9 +75,6 @@ nav.navbar {
     color: var(--text-main);
 }
 
-  .logo-text {
-    display: none;
-  }
 
 .navbar .nav-link {
     position: relative;
@@ -430,10 +427,11 @@ nav.navbar {
     display: block;
   }
 
-  /*Logo weiter links*/
-  .navbar-brand {
-    transform: translateX(-1.5rem);
-  } 
+  /*Logo*/
+.navbar-logo {
+  height: 50px;
+  width: auto;
+}
 
   /*Profilbild weiter nach rechts*/
   .hero .hero-image {
@@ -671,52 +669,11 @@ main {
 /* =========================
    LOGO – MONOGRAMM + WORTMARKE
 ========================= */
-
-
-.logo {
+.navbar-logo {
+  height: 70px;
+  width: auto;
   display: flex;
   align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.25s ease;
-}
-
-.logo-mark {
-  position: relative;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  font-size: 0.9rem;
-  padding: 6px 10px;
-  border-radius: 999px;
-
-  /* Fallback – IMMER sichtbar */
-  border: 2px solid currentColor;
-  color: currentColor;
-  background: transparent;
-
-  /* Enhancement – moderne Browser */
-  background: linear-gradient(135deg, #5c56cf, #040508);
-  color: #ffffff;
-
-  box-shadow: 0 8px 30px rgba(79, 70, 229, 0.45);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-@supports not (background: linear-gradient(red, blue)) {
-  .logo-mark {
-    background: none;
-    color: currentColor;
-    box-shadow: none;
-  }
-}
-
-
-.logo-text {
-  font-weight: 500;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-  position: relative;
 }
 
 /* Hover – lebt, aber schreit nicht */
