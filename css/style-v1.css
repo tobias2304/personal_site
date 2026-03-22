@@ -309,7 +309,7 @@ nav.navbar {
   .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url("../assets/img/mobile_background.png");
+    background-image: url("../assets/img/Profilbild2.jpg");
     
     background-size: cover;
     background-position: center top;
@@ -336,7 +336,7 @@ nav.navbar {
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.55),
-      rgba(0, 0, 0, 0.75)
+      rgba(0, 0, 0, 0.90)
     );
     z-index: 1;
   }
