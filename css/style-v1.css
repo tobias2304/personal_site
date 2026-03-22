@@ -233,6 +233,7 @@ nav.navbar {
   max-width: 100% !important;
   width: 100% !important;
   overflow: hidden !important;
+  margin-left: -20px; /* Wert anpassen */
 }
 
 /* Verhindert horizontales Scrollen generell */
