@@ -222,24 +222,63 @@ nav.navbar {
 }
 
 /* =========================
+   CALENDLY SKELETON
+========================= */
+
+.calendly-skeleton {
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fafafa;
+  min-height: 500px;
+}
+
+.skeleton-line {
+  height: 18px;
+  background: linear-gradient(90deg, #ececec 25%, #f5f5f5 50%, #ececec 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  width: 60%;
+}
+
+.skeleton-line.short { width: 35%; }
+
+.skeleton-grid {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skeleton-block {
+  flex: 1;
+  height: 80px;
+  background: linear-gradient(90deg, #ececec 25%, #f5f5f5 50%, #ececec 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+.skeleton-hint {
+  text-align: center;
+  color: #aaa;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+@keyframes shimmer {
+  0%  { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+/* =========================
    HERO – MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
-
-/* Calendly mobile fix */
-.calendly-inline-widget {
-  max-width: 100% !important;
-  width: 100% !important;
-  overflow: hidden !important;
-  margin-left: -20px; /* Wert anpassen */
-}
-
-/* Verhindert horizontales Scrollen generell */
-.info-section {
-  overflow-x: hidden;
-}
 
   /*Überschrift Datenschutzerklärung*/
   h1 {
