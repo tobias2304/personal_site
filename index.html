@@ -134,6 +134,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       background: linear-gradient(135deg, var(--indigo-soft) 0%, #DDE1FD 100%);
       border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
       animation: morph 9s ease-in-out infinite;
+      will-change: border-radius;
     }
     @keyframes morph {
       0%,100% { border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%; }
@@ -154,8 +155,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: flex; align-items: center; gap: 11px;
       font-size: .77rem; font-weight: 600; white-space: nowrap;
     }
-    .fc-1 { bottom: 18%; right: -26px; animation: floaty 4s ease-in-out infinite; }
-    .fc-2 { top: 20%;  left: -26px;  animation: floaty 4s ease-in-out infinite 2s; }
+    .fc-1 { bottom: 18%; right: -26px; animation: floaty 4s ease-in-out infinite; will-change: transform;}
+    .fc-2 { top: 20%;  left: -26px;  animation: floaty 4s ease-in-out infinite 2s; will-change: transform;}
     @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
     .fi { width: 33px; height: 33px; border-radius: 9px; display: grid; place-items: center; font-size: 1rem; flex-shrink: 0; }
     .fi-ind { background: var(--indigo-soft); }
@@ -533,6 +534,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             alt="Tobias Meixner – E-Commerce-Student und Freelancer aus Würzburg"
             width="390" height="488"
             loading="eager" fetchpriority="high"
+            fetchpriority="high"
+            decoding="async"
           >
           <div class="fc fc-1" aria-hidden="true">
             <div class="fi fi-grn">📊</div>
@@ -744,10 +747,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <!-- ═══ SCRIPTS ══════════════════════════════════════════════════ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <script>
 /* ── Three.js hero background ── */
-(function() {
+window.addEventListener('load', function() {
   const canvas = document.getElementById('hero-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -809,7 +812,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (scene.children[2]) { scene.children[2].rotation.z = t * .28; scene.children[2].rotation.x = t * .09; }
     renderer.render(scene, camera);
   })();
-})();
+});
 
 /* ── Navbar scroll ── */
 const nav = document.getElementById('nav');
