@@ -54,7 +54,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
-
+  
   <link rel="stylesheet" href="/css/style-v1.css">
 
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
@@ -747,46 +747,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <!-- ═══ SCRIPTS ══════════════════════════════════════════════════ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <script>
-/* ── Three.js hero background ── */
-window.addEventListener('load', function() {
-  const canvas = document.getElementById('hero-canvas');
-  if (!canvas || typeof THREE === 'undefined') return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+/* ── Three.js hero background – nur Desktop + schnelle Verbindung ── */
+const shouldLoadThree =
+  window.innerWidth > 768 &&
+  !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+  (navigator.connection ? navigator.connection.effectiveType === '4g' : true);
 
-  const scene  = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
-  camera.position.z = 5;
+if (shouldLoadThree) {
+  const threeScript = document.createElement('script');
+  threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+  threeScript.onload = function() {
+    const canvas = document.getElementById('hero-canvas');
+    if (!canvas || typeof THREE === 'undefined') return;
 
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-  renderer.setClearColor(0x000000, 0);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const scene  = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
+    camera.position.z = 5;
 
-  const hero = canvas.closest('.hero');
-  function resize() {
-    const w = hero.offsetWidth, h = hero.offsetHeight;
-    renderer.setSize(w, h);
-    camera.aspect = w / h;
-    camera.updateProjectionMatrix();
-  }
-  resize();
-  new ResizeObserver(resize).observe(hero);
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setClearColor(0x000000, 0);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-  const isMobile = window.innerWidth < 768;
-  const N   = isMobile ? 55 : 120;
-  const pos = new Float32Array(N * 3);
-  for (let i = 0; i < N * 3; i++) pos[i] = (Math.random() - .5) * 14;
-  const pGeo = new THREE.BufferGeometry();
-  pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  const pts = new THREE.Points(pGeo, new THREE.PointsMaterial({
-    color: 0x6366f1, size: .045,
-    transparent: true, opacity: isMobile ? .25 : .4,
-    sizeAttenuation: true,
-  }));
-  scene.add(pts);
+    const hero = canvas.closest('.hero');
+    function resize() {
+      const w = hero.offsetWidth, h = hero.offsetHeight;
+      renderer.setSize(w, h);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+    resize();
+    new ResizeObserver(resize).observe(hero);
 
-  if (!isMobile) {
+    const N   = 120;
+    const pos = new Float32Array(N * 3);
+    for (let i = 0; i < N * 3; i++) pos[i] = (Math.random() - .5) * 14;
+    const pGeo = new THREE.BufferGeometry();
+    pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const pts = new THREE.Points(pGeo, new THREE.PointsMaterial({
+      color: 0x6366f1, size: .045,
+      transparent: true, opacity: .4,
+      sizeAttenuation: true,
+    }));
+    scene.add(pts);
+
     const ico = new THREE.Mesh(
       new THREE.IcosahedronGeometry(2, 1),
       new THREE.MeshBasicMaterial({ color: 0x6366f1, wireframe: true, transparent: true, opacity: .07 })
@@ -800,19 +804,20 @@ window.addEventListener('load', function() {
     );
     tor.position.set(-3.2, -1.2, -.5);
     scene.add(tor);
-  }
 
-  let t = 0;
-  (function loop() {
-    requestAnimationFrame(loop);
-    t += .004;
-    pts.rotation.y = t * .1;
-    pts.rotation.x = t * .04;
-    if (scene.children[1]) { scene.children[1].rotation.y = t * .22; scene.children[1].rotation.x = t * .12; }
-    if (scene.children[2]) { scene.children[2].rotation.z = t * .28; scene.children[2].rotation.x = t * .09; }
-    renderer.render(scene, camera);
-  })();
-});
+    let t = 0;
+    (function loop() {
+      requestAnimationFrame(loop);
+      t += .004;
+      pts.rotation.y = t * .1;
+      pts.rotation.x = t * .04;
+      if (scene.children[1]) { scene.children[1].rotation.y = t * .22; scene.children[1].rotation.x = t * .12; }
+      if (scene.children[2]) { scene.children[2].rotation.z = t * .28; scene.children[2].rotation.x = t * .09; }
+      renderer.render(scene, camera);
+    })();
+  };
+  document.head.appendChild(threeScript);
+}
 
 /* ── Navbar scroll ── */
 const nav = document.getElementById('nav');
