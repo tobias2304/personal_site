@@ -224,7 +224,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 /* ── Logo ── */
-.nav-logo { height: 64px; width: auto; flex-shrink: 0; display: block; margin-top: 7.5px; }
+.nav-logo    { height: 64px; width: auto; flex-shrink: 0; display: block; }
 .logo-dot    { fill: #72c5e8; }
 .logo-stroke { stroke: #0c147a; stroke-width: 42; stroke-linecap: round; fill: none; }
 .logo-t      { font-family: var(--fd); font-size: 128px; font-weight: 800; letter-spacing: -0.03em; fill: var(--navy); }
