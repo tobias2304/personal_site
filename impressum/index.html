@@ -323,7 +323,7 @@ function updateThemeLabel() {
   });
 }
 
-if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+if (savedTheme === 'dark') {
   document.documentElement.setAttribute('data-theme', 'dark');
 }
 updateThemeLabel();

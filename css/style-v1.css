@@ -574,13 +574,25 @@ img { display: block; max-width: 100%; height: auto; }
   font-family: var(--fd);
   font-size: .875rem;
   font-weight: 600;
-  color: var(--navy);
+  background: var(--navy) !important;
+  border-color: var(--navy) !important;
+  color: #fff !important;
+}
+
+.drawer .theme-toggle:hover {
+  background: var(--navy) !important;
+  color: #fff !important;
 }
 
 [data-theme="dark"] .drawer .theme-toggle {
-  color: #F1F5F9;
-  background: rgba(255,255,255,.06);
-  border-color: rgba(255,255,255,.1);
+  background: #F1F5F9 !important;
+  border-color: rgba(255,255,255,.1) !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .drawer .theme-toggle:hover {
+  background: #F1F5F9 !important;
+  color: #000000 !important;
 }
 
 
