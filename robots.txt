@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+Disallow: /impressum/
+Disallow: /datenschutz/
+Disallow: /agb/
+
 Sitemap: https://meixner-tobias.com/sitemap.xml
