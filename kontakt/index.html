@@ -663,11 +663,12 @@ form.addEventListener('submit', async (e) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name:    document.getElementById('name').value.trim(),
-        email:   document.getElementById('email').value.trim(),
-        company: document.getElementById('company').value.trim(),
-        topic:   document.getElementById('topic').value,
-        message: document.getElementById('message').value.trim()
+        name:           document.getElementById('name').value.trim(),
+        email:          document.getElementById('email').value.trim(),
+        company:        document.getElementById('company').value.trim(),
+        topic:          document.getElementById('topic').value,
+        message:        document.getElementById('message').value.trim(),
+        addon_tracking: document.getElementById('addon_tracking_val').value
       })
     });
     if (!res.ok) throw new Error();
