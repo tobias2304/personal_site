@@ -1124,7 +1124,6 @@ body, .nav, .svc-card, .proj-card, .faq-item, .form-card, .about-strip {
    RESPONSIVE — 560px
 ═══════════════════════════════════════════════════ */
 @media (max-width: 560px) {
-  .hobby-list { justify-content: center; }
   .cta-btns .btn { width: 100%; justify-content: center; }
 }
 
