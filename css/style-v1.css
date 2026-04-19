@@ -239,6 +239,9 @@
   outline-color: rgba(255,255,255,.4);
 }
 
+[data-theme="dark"] .story-section {
+  background: #0D1B2A !important;
+}
 
 
 

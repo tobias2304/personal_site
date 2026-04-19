@@ -19,7 +19,6 @@
 <script>
   if (window.location.hostname !== 'localhost' && 
       window.location.hostname !== '127.0.0.1') {
-    
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.charset = 'UTF-8';
@@ -33,42 +32,36 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5QLXDT4T');</script>
-<!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- HTML Meta Tags -->
   <title>Tobias Meixner – Freelancer Websites & Tracking | Würzburg</title>
-  <meta name="description" content="E-Commerce-Student & Freelancer aus Würzburg. Websites erstellen, GTM & GA4 einrichten – direkt, verlässlich, ohne Agentur-Overhead.">
+  <meta name="description" content="Website erstellen, GTM & GA4 einrichten, oder jemanden der sich dauerhaft kümmert – Freelancer aus Würzburg. Direkt, verlässlich, fair.">
 
-<!-- Facebook Meta Tags -->
-  <meta property="og:type"          content="website">
-  <meta property="og:locale"        content="de_DE">
-  <meta property="og:site_name"     content="Tobias Meixner">
-  <meta property="og:url"           content="https://meixner-tobias.com/">
-  <meta property="og:type"          content="website">
-  <meta property="og:title"         content="Tobias Meixner – Freelancer für Websites & Tracking | Würzburg">
-  <meta property="og:description"   content="E-Commerce-Student & Freelancer aus Würzburg. Websites erstellen, GTM & GA4 einrichten – direkt, verlässlich, ohne Agentur-Overhead.">
-  <meta property="og:image"         content="https://meixner-tobias.com/assets/img/og-image.jpg">
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="de_DE">
+  <meta property="og:site_name"   content="Tobias Meixner">
+  <meta property="og:url"         content="https://meixner-tobias.com/">
+  <meta property="og:title"       content="Tobias Meixner – Freelancer für Websites & Tracking | Würzburg">
+  <meta property="og:description" content="Website erstellen, GTM & GA4 einrichten, oder jemanden der sich dauerhaft kümmert – Freelancer aus Würzburg.">
+  <meta property="og:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
 
-<!-- Twitter Meta Tags -->
-  <meta name="twitter:card"         content="summary_large_image">
-  <meta property="twitter:domain"   content="meixner-tobias.com">
-  <meta property="twitter:url"      content="https://meixner-tobias.com/">
-  <meta name="twitter:title"        content="Tobias Meixner – Freelancer für Websites & Tracking | Würzburg">
-  <meta name="twitter:description"  content="E-Commerce-Student & Freelancer aus Würzburg. Websites erstellen, GTM & GA4 einrichten – direkt, verlässlich, ohne Agentur-Overhead.">
-  <meta name="twitter:image"        content="https://meixner-tobias.com/assets/img/og-image.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta property="twitter:domain"  content="meixner-tobias.com">
+  <meta property="twitter:url"     content="https://meixner-tobias.com/">
+  <meta name="twitter:title"       content="Tobias Meixner – Freelancer für Websites & Tracking | Würzburg">
+  <meta name="twitter:description" content="Website erstellen, GTM & GA4 einrichten, oder jemanden der sich dauerhaft kümmert – Freelancer aus Würzburg.">
+  <meta name="twitter:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
 
-
-  <!-- Canonical -->
   <link rel="canonical" href="https://meixner-tobias.com/">
-
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=DM+Sans:wght@400;500&display=swap">
+  <link rel="preload" as="image" href="/assets/img/Profilbild2.webp" type="image/webp">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="/css/style-v1.css">
 
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
@@ -78,25 +71,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
   <style>
-    /* ═══════════════════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════════════════ */
+    /* ── HERO ── */
     .hero {
       position: relative; overflow: hidden; background: var(--bg);
       min-height: 100vh; min-height: 100svh;
     }
     #hero-canvas { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
     .blob { position: absolute; border-radius: 50%; pointer-events: none; z-index: 0; }
-    .blob-1 {
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(91,108,248,.11) 0%, transparent 70%);
-      top: -120px; right: -80px; filter: blur(60px);
-    }
-    .blob-2 {
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(91,108,248,.07) 0%, transparent 70%);
-      bottom: 40px; left: -100px; filter: blur(50px);
-    }
+    .blob-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(91,108,248,.11) 0%, transparent 70%); top: -120px; right: -80px; filter: blur(60px); }
+    .blob-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(91,108,248,.07) 0%, transparent 70%); bottom: 40px; left: -100px; filter: blur(50px); }
 
     .hero-grid {
       position: relative; z-index: 1;
@@ -112,7 +95,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-size: .74rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
       margin-bottom: 26px;
     }
-
     .hero-h1 {
       font-family: var(--fd);
       font-size: clamp(2rem, 4.5vw, 3.5rem);
@@ -120,22 +102,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: 1.1; letter-spacing: -.025em; margin-bottom: 10px;
     }
     .hero-h1 .ac { color: var(--indigo); }
-
     .hero-sub {
-      font-family: var(--fd);
-      font-size: clamp(.85rem, 1.6vw, 1.05rem);
-      font-weight: 500; color: var(--muted);
-      margin-bottom: 22px; letter-spacing: .01em;
+      font-family: var(--fd); font-size: clamp(.85rem, 1.6vw, 1.05rem);
+      font-weight: 500; color: var(--muted); margin-bottom: 22px; letter-spacing: .01em;
     }
-
     .hero-p {
       font-size: clamp(.875rem, 1.5vw, 1.05rem);
       color: var(--muted); line-height: 1.75; margin-bottom: 34px; max-width: 500px;
     }
     .hero-p strong { color: var(--text); font-weight: 600; }
-
     .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
-
     .trust { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
     .trust-chip { display: flex; align-items: center; gap: 7px; font-size: .79rem; font-weight: 500; color: var(--muted); }
     .trust-chip svg { color: var(--indigo); flex-shrink: 0; }
@@ -147,8 +123,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       position: absolute; inset: -18px; z-index: 0;
       background: linear-gradient(135deg, var(--indigo-soft) 0%, #DDE1FD 100%);
       border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
-      animation: morph 9s ease-in-out infinite;
-      will-change: border-radius;
+      animation: morph 9s ease-in-out infinite; will-change: border-radius;
     }
     @keyframes morph {
       0%,100% { border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%; }
@@ -156,12 +131,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       66%      { border-radius: 55% 45% 38% 62% / 45% 55% 57% 43%; }
     }
     .hero-img-frame img {
-      position: relative; z-index: 1;
-      width: 100%; border-radius: 36px;
+      position: relative; z-index: 1; width: 100%; border-radius: 36px;
       aspect-ratio: 4/5; object-fit: cover; object-position: top center;
       box-shadow: var(--sh-lg);
     }
-
     .fc {
       position: absolute; z-index: 2;
       background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r);
@@ -169,20 +142,91 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display: flex; align-items: center; gap: 11px;
       font-size: .77rem; font-weight: 600; white-space: nowrap;
     }
-    .fc-1 { bottom: 18%; right: -26px; animation: floaty 4s ease-in-out infinite; will-change: transform;}
-    .fc-2 { top: 20%;  left: -65px;  animation: floaty 4s ease-in-out infinite 2s; will-change: transform;}
+    .fc-1 { bottom: 18%; right: -26px; animation: floaty 4s ease-in-out infinite; }
+    .fc-2 { top: 20%;  left: -65px;  animation: floaty 4s ease-in-out infinite 2s; }
     @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
-    .fi { width: 33px; height: 33px; border-radius: 9px; display: grid; place-items: center; font-size: 1rem; flex-shrink: 0; }
+    .fi { width: 33px; height: 33px; border-radius: 9px; display: grid; place-items: center; flex-shrink: 0; }
     .fi-ind { background: var(--indigo-soft); }
     .fi-grn { background: #ECFDF5; }
     .fc-lbl { color: var(--navy); line-height: 1.3; }
     .fc-meta { color: var(--muted); font-weight: 400; font-size: .69rem; margin-top: 1px; }
 
-    /* ═══════════════════════════════════════════════════
-       ABOUT (dark strip)
-    ═══════════════════════════════════════════════════ */
-    .about-strip { background: var(--navy); padding-block: clamp(48px, 7vw, 80px); }
-    .about-grid  { display: grid; grid-template-columns: 55% 1fr; gap: clamp(36px, 6vw, 72px); align-items: start; }
+    /* ── PAIN SECTION ── */
+    .pain-section { background: var(--navy); padding-block: clamp(52px, 7vw, 80px); }
+    .pain-section .sec-label { color: rgba(199,203,253,.85); }
+    .pain-section .sec-title { color: #fff; }
+    .pain-section .sec-desc  { color: rgba(255,255,255,.58); }
+
+    .pain-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 20px; margin-top: clamp(32px, 4vw, 48px);
+    }
+
+    .pain-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--r-lg);
+      padding: 28px 24px;
+      display: flex; flex-direction: column;
+      transition: border-color .3s, background .3s, transform .3s;
+      cursor: default;
+    }
+    .pain-card:hover {
+      border-color: rgba(199,203,253,.35);
+      background: rgba(255,255,255,.08);
+      transform: translateY(-4px);
+    }
+    .pain-card.featured {
+      background: var(--indigo);
+      border-color: transparent;
+      box-shadow: 0 16px 48px rgba(91,108,248,.45);
+    }
+    .pain-card.featured:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 56px rgba(91,108,248,.5);
+    }
+
+    .pain-icon {
+      width: 46px; height: 46px; border-radius: 13px;
+      background: rgba(255,255,255,.1);
+      display: grid; place-items: center;
+      color: #fff; margin-bottom: 18px; flex-shrink: 0;
+    }
+    .pain-card.featured .pain-icon { background: rgba(255,255,255,.2); }
+
+    .pain-situation {
+      font-size: .74rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(199,203,253,.7);
+      margin-bottom: 10px;
+    }
+    .pain-card.featured .pain-situation { color: rgba(255,255,255,.7); }
+
+    .pain-h {
+      font-family: var(--fd); font-size: clamp(1rem, 1.8vw, 1.15rem);
+      font-weight: 800; color: #fff; line-height: 1.25;
+      margin-bottom: 12px; letter-spacing: -.01em;
+    }
+
+    .pain-p {
+      font-size: .875rem; color: rgba(255,255,255,.6);
+      line-height: 1.7; margin-bottom: 22px; flex: 1;
+    }
+    .pain-card.featured .pain-p { color: rgba(255,255,255,.82); }
+
+    .pain-solution {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.08);
+      border-radius: 99px; padding: 8px 14px;
+      font-size: .8rem; font-weight: 700; color: #fff;
+      width: fit-content; margin-bottom: 20px;
+    }
+    .pain-card.featured .pain-solution { background: rgba(255,255,255,.2); }
+    .pain-solution svg { color: rgba(199,203,253,.8); flex-shrink: 0; }
+    .pain-card.featured .pain-solution svg { color: #fff; }
+
+    /* ── ABOUT STRIP (dark) ── */
+    .about-strip { background: #0A1628; padding-block: clamp(48px, 7vw, 80px); }
+    .about-grid  { display: grid; grid-template-columns: 1fr 340px; gap: clamp(36px, 6vw, 72px); align-items: center; }
 
     .about-h2 {
       font-family: var(--fd); font-size: clamp(1.45rem, 3vw, 2rem);
@@ -193,43 +237,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .about-p strong { color: rgba(255,255,255,.88); font-weight: 600; }
     .about-lbl { color: rgba(199,203,253,.85) !important; margin-bottom: 12px; }
 
-    .about-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 18px; }
-    .about-list li { display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,.7); font-size: .88rem; line-height: 1.5; }
-    .chk { width: 18px; height: 18px; border-radius: 50%; background: var(--indigo); flex-shrink: 0; margin-top: 2px; display: grid; place-items: center; }
-    .chk svg { color: #fff; }
-
-    .about-cert {
-      margin-top: 22px; display: flex; align-items: center; gap: 13px;
-      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
-      border-radius: var(--r); padding: 13px 15px;
+    .about-facts-row {
+      display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 28px;
     }
-    .about-cert img { width: 42px; height: 42px; object-fit: contain; flex-shrink: 0; }
-    .cert-txt { font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.45; }
-    .cert-txt strong { display: block; color: rgba(255,255,255,.88); font-size: .84rem; margin-bottom: 2px; }
+    .about-fact-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 99px; padding: 7px 14px;
+      font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.7);
+    }
+    .about-fact-pill svg { color: var(--indigo-mid); flex-shrink: 0; }
 
-    a.about-cert { display: flex; text-decoration: none; transition: opacity .2s; }
-    a.about-cert:hover { opacity: .85; }
+    /* Profilbild rechts klein */
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img {
+      width: 100%; border-radius: var(--r-lg);
+      aspect-ratio: 3/4; object-fit: cover; object-position: top;
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    }
+    .about-img-badge {
+      position: absolute; bottom: -16px; left: 50%; transform: translateX(-50%);
+      background: var(--indigo); color: #fff;
+      border-radius: 99px; padding: 10px 20px;
+      font-family: var(--fd); font-size: .8rem; font-weight: 700;
+      white-space: nowrap; box-shadow: 0 8px 24px rgba(91,108,248,.5);
+    }
 
-    /* ═══════════════════════════════════════════════════
-       STATS
-    ═══════════════════════════════════════════════════ */
-    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
-    .stat { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: var(--r); padding: 20px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    .stat-n { font-family: var(--fd); font-size: clamp(1.5rem, 3vw, 1.9rem); font-weight: 800; color: #fff; line-height: 1; margin-bottom: 5px; }
-    .stat-n em { color: var(--indigo); font-style: normal; }
-    .stat-lbl { font-size: .77rem; color: rgba(255,255,255,.45); line-height: 1.45; font-weight: 500; }
-
-    /* ═══════════════════════════════════════════════════
-       SERVICES (homepage 2x2 grid)
-    ═══════════════════════════════════════════════════ */
+    /* ── SERVICES ── */
     .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-
     .svc-card {
       background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg);
       padding: clamp(22px, 3vw, 30px) clamp(18px, 2.5vw, 26px);
       position: relative; overflow: hidden; cursor: default;
       transition: transform .35s, box-shadow .35s, border-color .35s;
-      will-change: transform;
     }
     .svc-card::before {
       content: ''; position: absolute; inset: 0;
@@ -238,113 +278,90 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .svc-card:hover { box-shadow: var(--sh-lg); border-color: var(--indigo-mid); }
     .svc-card:hover::before { opacity: 1; }
-
-    .svc-icon { width: 48px; height: 48px; border-radius: 13px; background: var(--indigo-soft); display: grid; place-items: center; font-size: 1.3rem; margin-bottom: 16px; position: relative; }
+    .svc-icon { width: 48px; height: 48px; border-radius: 13px; background: var(--indigo-soft); display: grid; place-items: center; margin-bottom: 16px; position: relative; color: var(--indigo); }
     .svc-h { font-family: var(--fd); font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; position: relative; }
     .svc-p { font-size: .875rem; color: var(--muted); line-height: 1.65; position: relative; }
+    .svc-price-tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--indigo-soft); color: var(--indigo);
+      border-radius: 99px; padding: 4px 10px;
+      font-size: .75rem; font-weight: 700;
+      margin-top: 14px; position: relative;
+    }
     .svc-foot { text-align: center; margin-top: 38px; }
 
-    /* ═══════════════════════════════════════════════════
-       PROJECTS (homepage preview)
-    ═══════════════════════════════════════════════════ */
+    /* ── PROJECTS ── */
     .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-
     .proj-card {
       background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg);
       padding: clamp(22px, 3vw, 34px) clamp(18px, 2.5vw, 30px);
       transition: transform .3s, box-shadow .3s, border-color .3s;
     }
     .proj-card:hover { transform: translateY(-4px); box-shadow: var(--sh-lg); border-color: var(--indigo-mid); }
-
     .proj-logo { height: 34px; width: auto; max-width: 130px; object-fit: contain; object-position: left; margin-bottom: 16px; filter: grayscale(1) opacity(.6); transition: filter .3s; }
     .proj-card:hover .proj-logo { filter: none; }
     @media (hover: none) { .proj-logo { filter: none; } }
-
     .proj-h { font-family: var(--fd); font-size: clamp(.95rem, 1.8vw, 1.12rem); font-weight: 700; color: var(--navy); margin-bottom: 9px; }
     .proj-p { font-size: .875rem; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
-
     .proj-list { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 20px; }
     .proj-list li { font-size: .83rem; color: var(--muted); display: flex; align-items: flex-start; gap: 7px; line-height: 1.45; }
     .proj-list li::before { content: '→'; color: var(--indigo); font-weight: 700; font-size: .84rem; flex-shrink: 0; margin-top: 1px; }
-
     .proj-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--fd); font-size: .76rem; font-weight: 700; color: var(--indigo); letter-spacing: .05em; text-transform: uppercase; transition: gap .2s; }
     .proj-link:hover { gap: 10px; }
     .proj-foot { text-align: center; margin-top: 30px; }
 
-    /* ═══════════════════════════════════════════════════
-       WHY ME
-    ═══════════════════════════════════════════════════ */
+    /* ── WHY BOX ── */
     .why-box {
-      background: linear-gradient(155deg, #E8EBFE 0%, #EEF2FF 65%);
-      border: 1px solid var(--indigo-soft); border-radius: var(--r-lg);
+      background: linear-gradient(155deg, #D4D9FD 0%, #E8EBFE 50%, #F0F4FF 100%);
+      border: 1px solid var(--indigo-mid); border-radius: var(--r-lg);
       padding: clamp(32px, 6vw, 68px) clamp(22px, 5vw, 60px);
     }
     .why-inner { display: grid; grid-template-columns: 40% 1fr; gap: clamp(28px, 5vw, 60px); align-items: start; }
-
     .why-item { display: flex; gap: 16px; align-items: flex-start; padding: 17px 0; border-bottom: 1px solid rgba(91,108,248,.12); }
     .why-item:first-child { padding-top: 0; }
     .why-item:last-child  { border-bottom: none; padding-bottom: 0; }
-
     .why-n { font-family: var(--fd); font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; color: var(--indigo-mid); line-height: 1; flex-shrink: 0; width: 42px; }
     .why-h { font-family: var(--fd); font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: 5px; }
     .why-p { font-size: .86rem; color: var(--muted); line-height: 1.65; }
     .why-p strong { color: var(--text); font-weight: 600; }
 
-    /* ═══════════════════════════════════════════════════
-       RESPONSIVE — 1024px
-    ═══════════════════════════════════════════════════ */
+    /* ── DARK MODE ── */
+    [data-theme="dark"] .pain-section { background: #0A1628; }
+    [data-theme="dark"] .about-strip  { background: #060E1A; }
+
+    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .hero-grid  { grid-template-columns: 1fr 1fr; gap: 32px; padding-block: calc(var(--nav-h) + 44px) 60px; }
-      .about-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .about-grid { grid-template-columns: 1fr 260px; gap: 36px; }
       .why-inner  { grid-template-columns: 40% 1fr; gap: 36px; }
+      .pain-grid  { grid-template-columns: repeat(3, 1fr); gap: 16px; }
     }
-
-    /* ═══════════════════════════════════════════════════
-       RESPONSIVE — 768px
-    ═══════════════════════════════════════════════════ */
     @media (max-width: 768px) {
-      .hero-grid {
-        grid-template-columns: 1fr; gap: 28px;
-        padding-block: calc(var(--nav-h) + 28px) 52px;
-        text-align: center;
-      }
-      .hero-img-wrap  { order: -1; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; padding-block: calc(var(--nav-h) + 28px) 52px; text-align: center; }
+      .hero-img-wrap { order: -1; }
       .hero-img-frame { max-width: 260px; }
       .hero-badge, .hero-p { margin-inline: auto; }
-      .hero-btns, .trust   { justify-content: center; }
-      .fc         { display: none; }
-      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+      .hero-btns, .trust { justify-content: center; }
+      .fc { display: none; }
+      .pain-grid  { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-wrap { max-width: 280px; margin-inline: auto; }
       .proj-grid  { grid-template-columns: 1fr; }
       .why-inner  { grid-template-columns: 1fr; gap: 28px; }
-      .svc-grid { grid-template-columns: 1fr; }
+      .svc-grid   { grid-template-columns: 1fr; }
     }
-
-    /* ═══════════════════════════════════════════════════
-       RESPONSIVE — 560px
-    ═══════════════════════════════════════════════════ */
     @media (max-width: 560px) {
-      .svc-grid         { grid-template-columns: 1fr; }
-      .stats            { grid-template-columns: 1fr 1fr; }
-      .hero-btns .btn   { flex: 1 1 130px; justify-content: center; }
-      .hero-img-frame   { max-width: 230px; }
+      .hero-btns .btn { flex: 1 1 130px; justify-content: center; }
+      .hero-img-frame { max-width: 230px; }
     }
-
-    /* ═══════════════════════════════════════════════════
-       RESPONSIVE — 390px
-    ═══════════════════════════════════════════════════ */
     @media (max-width: 390px) {
       .hero-img-frame { max-width: 200px; }
-      .hero-h1        { font-size: 1.85rem; }
-      .stats          { gap: 10px; }
-      .stat           { padding: 16px 12px; }
-      .stat-n         { font-size: 1.5rem; }
-      .why-n          { font-size: 1.55rem; width: 34px; }
-      .why-item       { gap: 12px; }
-      .cta-box        { padding: 36px 18px; }
+      .hero-h1 { font-size: 1.85rem; }
+      .why-n { font-size: 1.55rem; width: 34px; }
+      .why-item { gap: 12px; }
     }
   </style>
 
-<!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -358,69 +375,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "email": "contact@meixner-tobias.com",
       "telephone": "+4915225308491",
       "image": "https://meixner-tobias.com/assets/img/Profilbild2.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Würzburg",
-        "addressRegion": "Bayern",
-        "addressCountry": "DE"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/meixner-tobias"
-      ],
-      "knowsAbout": [
-        "Google Tag Manager",
-        "Google Analytics 4",
-        "Conversion Tracking",
-        "Website-Entwicklung",
-        "E-Commerce",
-        "Shopify",
-        "WordPress",
-        "Consent Mode v2",
-        "Google Ads"
-      ],
-      "description": "Tobias Meixner ist E-Commerce-Student und Freelancer aus Würzburg. Er unterstützt kleine Unternehmen bei der technischen Umsetzung von Websites, Tracking-Setups mit Google Tag Manager und GA4 sowie E-Commerce-Lösungen – direkt, verlässlich und ohne Agentur-Overhead."
+      "address": { "@type": "PostalAddress", "addressLocality": "Würzburg", "addressRegion": "Bayern", "addressCountry": "DE" },
+      "sameAs": ["https://www.linkedin.com/in/meixner-tobias"],
+      "knowsAbout": ["Google Tag Manager","Google Analytics 4","Conversion Tracking","Website-Entwicklung","E-Commerce","Shopify","WordPress","Consent Mode v2","Google Ads"],
+      "description": "Tobias Meixner ist E-Commerce-Student und Freelancer aus Würzburg. Er unterstützt kleine Unternehmen bei Websites, GTM/GA4-Tracking und E-Commerce – direkt, verlässlich und ohne Agentur-Overhead."
     },
     {
       "@type": "WebSite",
       "@id": "https://meixner-tobias.com/#website",
       "url": "https://meixner-tobias.com",
       "name": "Tobias Meixner – Freelancer Würzburg",
-      "description": "Persönliche Website von Tobias Meixner – Freelancer für Websites, GTM/GA4-Tracking und E-Commerce aus Würzburg.",
-      "publisher": {
-        "@id": "https://meixner-tobias.com/#person"
-      },
+      "publisher": { "@id": "https://meixner-tobias.com/#person" },
       "inLanguage": "de-DE"
     },
     {
       "@type": "ProfessionalService",
       "@id": "https://meixner-tobias.com/#service",
       "name": "Tobias Meixner – Freelancer für Web & Tracking",
-      "image": "https://meixner-tobias.com/assets/img/Profilbild2.jpg",
       "url": "https://meixner-tobias.com",
-      "description": "Freelance-Dienstleistungen für kleine Unternehmen und Startups: Website-Erstellung, Google Tag Manager Setup, GA4-Implementierung, E-Commerce-Lösungen und Conversion Tracking.",
-      "founder": {
-        "@type": "Person",
-        "@id": "https://meixner-tobias.com/#person",
-        "name": "Tobias Meixner"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Würzburg",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Würzburg",
-          "addressRegion": "Bayern",
-          "addressCountry": "DE"
-        }
-      },
+      "founder": { "@type": "Person", "@id": "https://meixner-tobias.com/#person", "name": "Tobias Meixner" },
+      "areaServed": { "@type": "City", "name": "Würzburg" },
       "telephone": "+4915225308491",
       "email": "contact@meixner-tobias.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Würzburg",
-        "addressRegion": "Bayern",
-        "addressCountry": "DE"
-      },
       "priceRange": "€€"
     }
   ]
@@ -431,18 +407,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body>
 
-<!-- Skip Navigation Link -->
 <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
 
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QLXDT4T"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- ═══ NAVBAR ══════════════════════════════════════════════════ -->
+<!-- NAVBAR -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="/" aria-label="Tobias Meixner – Startseite" style="display:flex; align-items:center; padding-top:8px;">
+    <a href="/" aria-label="Tobias Meixner – Startseite" style="display:flex; align-items:center; padding-top:6px;">
       <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 230" role="img" aria-labelledby="logo-t">
         <title id="logo-t">Tobias Meixner</title>
         <g transform="translate(8 6)">
@@ -453,9 +426,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </g>
       </svg>
     </a>
-
     <ul class="nav-links">
-      <li><a href="/" class="active">Über mich</a></li>
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/ueber-mich/">Über mich</a></li>
       <li><a href="/leistungen/">Leistungen</a></li>
       <li><a href="/projekte/">Projekte</a></li>
       <li><a href="/kontakt/" class="nav-cta">Kontakt aufnehmen</a></li>
@@ -472,7 +445,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="drawer" id="drawer" aria-label="Mobile Navigation">
   <ul>
-    <li><a href="/" class="active">Über mich <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/" class="active">Home <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/ueber-mich/">Über mich <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
     <li><a href="/leistungen/">Leistungen <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
     <li><a href="/projekte/">Projekte <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
     <li><a href="/kontakt/">Kontakt aufnehmen <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
@@ -487,8 +461,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 
 
-<!-- ═══ HERO ═════════════════════════════════════════════════════ -->
-<section class="hero" id="main-content" aria-label="Einführung – Tobias Meixner Freelancer Würzburg">
+<!-- HERO -->
+<section class="hero" id="main-content" aria-label="Tobias Meixner – Freelancer Würzburg">
   <canvas id="hero-canvas" aria-hidden="true"></canvas>
   <div class="blob blob-1" aria-hidden="true"></div>
   <div class="blob blob-2" aria-hidden="true"></div>
@@ -503,8 +477,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <h1 class="hero-h1">
-          Digitale Lösungen,<br>
-          die <span class="ac">wirklich</span> funktionieren.
+          Du hast ein Problem.<br>
+          Ich habe die <span class="ac">Lösung.</span>
         </h1>
 
         <p class="hero-sub">
@@ -512,18 +486,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
 
         <p class="hero-p">
-          Ich helfe kleinen Unternehmen und Startups dabei, ihre
-          <strong>digitale Infrastruktur aufzubauen</strong> – von der Website über
-          Tracking-Setups bis hin zu E-Commerce-Systemen.
-          Du schreibst mir, ich antworte – kein Zwischenhändler
+          Egal ob du eine Website brauchst, endlich dein Tracking zum Laufen bringen willst
+          oder einfach <strong>jemanden suchst der sich zuverlässig um die Technik kümmert</strong> –
+          ich bin direkt erreichbar, sage klar was geht und was nicht, und ziehe Dinge durch.
         </p>
 
         <div class="hero-btns">
           <a href="/kontakt/" class="btn btn-primary">
-            Projekt besprechen
+            Kostenlos anfragen
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="/leistungen/" class="btn btn-outline">Leistungen ansehen</a>
+          <a href="/leistungen/" class="btn btn-outline">Preise ansehen</a>
         </div>
 
         <div class="trust">
@@ -539,7 +512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="trust-div" aria-hidden="true"></div>
           <div class="trust-chip">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Selbstständig seit Feb. 2026
+            Antwort innerhalb 24h
           </div>
         </div>
       </div>
@@ -549,21 +522,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="img-blob" aria-hidden="true"></div>
           <picture>
             <source srcset="/assets/img/Profilbild2.webp" type="image/webp">
-            <img
-              src="/assets/img/Profilbild2.jpg"
-              alt="Tobias Meixner – E-Commerce-Student und Freelancer aus Würzburg"
-              width="390" height="488"
-              loading="eager"
-              fetchpriority="high"
-              decoding="async"
-            >
+            <img src="/assets/img/Profilbild2.jpg"
+              alt="Tobias Meixner – Freelancer aus Würzburg"
+              width="390" height="488" loading="eager" fetchpriority="high" decoding="async">
           </picture>
           <div class="fc fc-1" aria-hidden="true">
-            <div class="fi fi-grn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg></div>
+            <div class="fi fi-grn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg></div>
             <div><div class="fc-lbl">Gumb AG</div><div class="fc-meta">GTM · GA4 · Consent Mode v2</div></div>
           </div>
           <div class="fc fc-2" aria-hidden="true">
-            <div class="fi fi-ind"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+            <div class="fi fi-ind"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
             <div><div class="fc-lbl">Stefanie Mischka</div><div class="fc-meta">Website · Hosting · DNS</div></div>
           </div>
         </div>
@@ -574,53 +542,138 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!-- ═══ ABOUT ════════════════════════════════════════════════════ -->
+<!-- PAIN SECTION – 3 Kundenprobleme -->
+<section class="pain-section reveal" aria-labelledby="pain-heading">
+  <div class="container">
+    <div class="sec-head text-center">
+      <span class="sec-label">Wobei kann ich helfen?</span>
+      <h2 class="sec-title" id="pain-heading">Erkennst du dich wieder?</h2>
+      <p class="sec-desc" style="margin-inline:auto;">
+        Die meisten die mich kontaktieren haben genau eines dieser drei Probleme.
+        Wenn du dir nicht sicher bist – schreib mir einfach kurz.
+      </p>
+    </div>
+
+    <div class="pain-grid">
+
+      <!-- Problem 1 -->
+      <div class="pain-card reveal" data-d="1">
+        <div class="pain-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg>
+        </div>
+        <div class="pain-situation">Situation 1</div>
+        <h3 class="pain-h">„Ich habe eine Website – aber keine Ahnung was dort passiert."</h3>
+        <p class="pain-p">
+          Du hast eine Website, Besucher kommen – aber du weißt nicht woher, was sie tun
+          oder ob die Kontaktformulare wirklich ankommen. Kein Tracking, kein Cookie-Banner
+          der wirklich funktioniert, kein Überblick.
+        </p>
+        <div class="pain-solution">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          GTM &amp; GA4 Setup – ab 149 €
+        </div>
+        <a href="/leistungen/" class="btn btn-outline-indigo btn-sm">Mehr erfahren</a>
+      </div>
+
+      <!-- Problem 2 (featured) -->
+      <div class="pain-card featured reveal" data-d="2">
+        <div class="pain-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <div class="pain-situation">Situation 2</div>
+        <h3 class="pain-h">„Ich brauche endlich eine ordentliche Website – einfach, schnell, fertig."</h3>
+        <p class="pain-p">
+          Du bist selbstständig, hast ein kleines Business oder einen Verein –
+          und läufst noch mit einer veralteten oder gar keiner Website rum.
+          Kein Riesenbudget, keine monatelange Agentur-Kommunikation. Einfach eine solide
+          Website die rechtlich passt und gut aussieht.
+        </p>
+        <div class="pain-solution">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Website erstellen – ab 349 €
+        </div>
+        <a href="/leistungen/" class="btn btn-white btn-sm">Mehr erfahren</a>
+      </div>
+
+      <!-- Problem 3 -->
+      <div class="pain-card reveal" data-d="3">
+        <div class="pain-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="pain-situation">Situation 3</div>
+        <h3 class="pain-h">„Ich will jemanden der sich einfach um die ganze Technik kümmert."</h3>
+        <p class="pain-p">
+          SSL abgelaufen, Hosting-Rechnung verstehen, ein Text auf der Website ändern –
+          du hast Besseres zu tun als dich mit technischen Kleinigkeiten herumzuschlagen.
+          Du willst eine Nummer die du anrufen kannst, und jemanden der es einfach macht.
+        </p>
+        <div class="pain-solution">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Sorglos-Betreuung – ab 49 €/Monat
+        </div>
+        <a href="/leistungen/" class="btn btn-outline-indigo btn-sm">Mehr erfahren</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ABOUT STRIP – persönlich, kurz, mit Link zu Über mich -->
 <section class="about-strip reveal" aria-labelledby="about-heading">
   <div class="container">
     <div class="about-grid">
 
       <div>
-        <span class="sec-label about-lbl">Wer bin ich</span>
-        <h2 class="about-h2" id="about-heading">Student, Freelancer –<br><em>ehrlich &amp; praxisnah.</em></h2>
+        <span class="sec-label about-lbl">Wer steckt dahinter?</span>
+        <h2 class="about-h2" id="about-heading">
+          Ich bin Tobias – 21,<br><em>Freelancer aus Würzburg.</em>
+        </h2>
         <p class="about-p">
-          Ich studiere E-Commerce und habe mich im Februar 2026 selbstständig gemacht.
-          Das bedeutet für dich: <strong>faire Preise ohne Agentur-Aufschlag,
-          ein direkter Ansprechpartner</strong> und echtes Engagement – weil mir jedes Projekt wichtig ist.
+          Ich studiere E-Commerce, habe nach dem Abi erst Thailand erkundet, bin alleine mit dem
+          Motorrad durch Island gefahren und danach zwei Monate durch Südamerika gereist.
+          <strong>Genau deshalb will ich einen Job der von überall funktioniert.</strong>
+          Freelancing ist mein Weg dahin.
         </p>
         <p class="about-p">
-          Durch meine Arbeit bei der <strong>Gumb AG</strong> habe ich nicht nur theoretisches Wissen,
-          sondern ein vollständiges Tracking-Ecosystem real konzipiert und implementiert.
+          Bei der Gumb AG habe ich das komplette Tracking-Ecosystem von Grund auf aufgebaut –
+          GTM, GA4, Meta Pixel, Enhanced Conversions, Consent Mode v2. Kein Schulprojekt,
+          echte Systeme die heute produktiv laufen.
         </p>
-        <ul class="about-list">
-          <li><span class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Kein Overhead – du sprichst direkt mit mir</li>
-          <li><span class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Ich bin transparent, wenn etwas außerhalb meines Bereichs liegt</li>
-          <li><span class="chk"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Strukturiert, verlässlich, pragmatisch</li>
-        </ul>
-        <a href="https://skillshop.credential.net/7c7f49fe-c3ff-481c-b22b-fb7470d94dd5" target="_blank" rel="noopener" class="about-cert">
-          <img src="/assets/img/badge.webp" alt="Google Ads Suchmaschinen-Zertifizierung">
-          <div class="cert-txt">
-            <strong>Google Ads Suchmaschinen-Zertifizierung</strong>
-            Skillshop · Kampagnenaufbau, Keyword-Strategie &amp; Performance
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/meixner-tobias" target="_blank" rel="noopener" class="about-cert">
-          <div style="width:42px; height:42px; background:rgba(255,255,255,.08); border-radius:9px; display:grid; place-items:center; flex-shrink:0;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <div class="cert-txt">
-            <strong>LinkedIn – Tobias Meixner</strong>
-            Praxiserfahrung, Projekte &amp; beruflicher Werdegang
-          </div>
+
+        <div class="about-facts-row">
+          <span class="about-fact-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            3 Kontinente bereist
+          </span>
+          <span class="about-fact-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Gibt nie auf
+          </span>
+          <span class="about-fact-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Direkt erreichbar
+          </span>
+          <span class="about-fact-pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Google Ads zertifiziert
+          </span>
+        </div>
+
+        <a href="/ueber-mich/" class="btn btn-outline-indigo" style="margin-top:4px;">
+          Mehr über mich
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
 
-      <div>
-        <div class="stats">
-          <div class="stat"><div class="stat-n">2<em></em></div><div class="stat-lbl">Kundenprojekte aktiv</div></div>
-          <div class="stat"><div class="stat-n">GTM<em>/</em>GA4</div><div class="stat-lbl">Enhanced Conversions &amp; Consent Mode v2</div></div>
-          <div class="stat"><div class="stat-n">3<em>+</em></div><div class="stat-lbl"> Monate Gumb AG Tracking-Setup</div></div>
-          <div class="stat"><div class="stat-n">2023  <em></em></div><div class="stat-lbl">Studium E-Commerce</div></div>
-        </div>
+      <div class="about-img-wrap reveal">
+        <picture>
+          <source srcset="/assets/img/Profilbild2.webp" type="image/webp">
+          <img src="/assets/img/Profilbild2.jpg"
+            alt="Tobias Meixner – Freelancer aus Würzburg"
+            width="340" height="453" loading="lazy">
+        </picture>
+        <div class="about-img-badge">Verfügbar für neue Projekte</div>
       </div>
 
     </div>
@@ -628,82 +681,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!-- ═══ SERVICES ═════════════════════════════════════════════════ -->
+<!-- SERVICES -->
 <section class="section" aria-labelledby="services-heading">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="sec-label">Was ich mache</span>
-      <h2 class="sec-title" id="services-heading">Meine Leistungen</h2>
-      <p class="sec-desc">Von der technischen Umsetzung bis zur laufenden Betreuung – ich übernehme die digitalen Aufgaben, die Zeit und Know-how kosten.</p>
+      <span class="sec-label">Leistungen &amp; Preise</span>
+      <h2 class="sec-title" id="services-heading">Drei Leistungen. Klare Preise.</h2>
+      <p class="sec-desc">Keine versteckten Kosten. Du weißt vorher was du bekommst.</p>
     </div>
 
     <div class="svc-grid">
       <div class="svc-card reveal" data-d="1">
-        <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg></div>
+        <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg></div>
         <h3 class="svc-h">GTM &amp; GA4 Setup</h3>
-        <p class="svc-p">Du willst wissen was auf deiner Website passiert – sauber, DSGVO-konform, ohne Datenschutzchaos. GTM, GA4, Conversion-Events und Consent Mode v2.</p>
-        <div class="svc-tags"><span class="svc-tag">GTM</span><span class="svc-tag">GA4</span><span class="svc-tag">Consent Mode v2</span><span class="svc-tag">DSGVO</span></div>
+        <p class="svc-p">GTM einrichten, GA4 konfigurieren, Conversion-Events setzen, Consent Mode v2 – DSGVO-konform und mit Übergabe-Erklärung.</p>
+        <div class="svc-price-tag">ab 149 € einmalig</div>
+        <div class="svc-tags" style="margin-top:12px;"><span class="svc-tag">GTM</span><span class="svc-tag">GA4</span><span class="svc-tag">DSGVO</span></div>
       </div>
       <div class="svc-card reveal" data-d="2">
-        <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
         <h3 class="svc-h">Website erstellen</h3>
-        <p class="svc-p">Moderne Website mit SSL, Hosting, Kontaktformular, Impressum, Datenschutz und SEO-Grundstruktur. Optional direkt mit Tracking-Setup kombinierbar.</p>
-        <div class="svc-tags"><span class="svc-tag">SSL</span><span class="svc-tag">SEO</span><span class="svc-tag">Schema.org</span><span class="svc-tag">Hosting</span></div>
+        <p class="svc-p">Moderne Website mit SSL, Hosting, Kontaktformular, Impressum, Datenschutz und SEO-Grundstruktur. Optional direkt mit Tracking.</p>
+        <div class="svc-price-tag">ab 349 € einmalig</div>
+        <div class="svc-tags" style="margin-top:12px;"><span class="svc-tag">SSL</span><span class="svc-tag">SEO</span><span class="svc-tag">Hosting</span></div>
       </div>
       <div class="svc-card reveal" data-d="3">
-        <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="svc-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3 class="svc-h">Sorglos-Betreuung</h3>
-        <p class="svc-p">Deine Website läuft – und du hast immer jemanden der sich darum kümmert. Hosting, SSL, kleine Anpassungen, direkter Ansprechpartner. Monatlich kündbar.</p>
-        <div class="svc-tags"><span class="svc-tag">Hosting</span><span class="svc-tag">SSL</span><span class="svc-tag">Support</span><span class="svc-tag">ab 49 €/Monat</span></div>
+        <p class="svc-p">Hosting läuft, SSL ist aktiv, kleine Anpassungen werden zeitnah erledigt. Du hast immer einen direkten Ansprechpartner – mich.</p>
+        <div class="svc-price-tag">ab 49 € / Monat</div>
+        <div class="svc-tags" style="margin-top:12px;"><span class="svc-tag">Support</span><span class="svc-tag">Hosting</span><span class="svc-tag">kündbar</span></div>
       </div>
     </div>
 
     <div class="svc-foot reveal">
-      <a href="/leistungen/" class="btn btn-primary">Alle Leistungen &amp; Preise ansehen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="/leistungen/" class="btn btn-primary">
+        Alle Leistungen &amp; Details ansehen
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
 
-<!-- ═══ PROJECTS ═════════════════════════════════════════════════ -->
+<!-- PROJECTS -->
 <section class="section" style="padding-top:0;" aria-labelledby="projects-heading">
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-label">Praxis &amp; Projekte</span>
       <h2 class="sec-title" id="projects-heading">Was ich bisher gemacht habe</h2>
-      <p class="sec-desc">Ich habe in realen Projekten Verantwortung übernommen und messbare Ergebnisse geliefert.</p>
+      <p class="sec-desc">Echte Projekte, echte Verantwortung.</p>
     </div>
 
     <div class="proj-grid">
       <div class="proj-card reveal" data-d="1">
-        <img src="/assets/img/gumb.webp"
-              alt="Gumb App – Vereinsmanagement Software"
-              class="proj-logo"
-              width="130" height="34"
-              loading="lazy">
+        <img src="/assets/img/gumb.webp" alt="Gumb App – Vereinsmanagement Software" class="proj-logo" width="130" height="34" loading="lazy">
         <h3 class="proj-h">Gumb App – Tracking-Ecosystem</h3>
-        <p class="proj-p">Eigenverantwortliche Konzeption und Implementierung der gesamten Marketing-Technology-Infrastruktur.</p>
+        <p class="proj-p">Eigenverantwortliche Konzeption und Implementierung der gesamten Tracking-Infrastruktur.</p>
         <ul class="proj-list">
           <li>GTM-Setup für Website &amp; Web-App</li>
           <li>GA4, Meta Pixel &amp; Google Ads Conversions</li>
           <li>Enhanced Conversions &amp; Consent Mode v2</li>
-          <li>Sales-Outreach &amp; CRM-Management</li>
         </ul>
         <a href="/projekte/" class="proj-link">Mehr erfahren <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
       <div class="proj-card reveal" data-d="2">
-        <img src="/assets/img/stefanie-mischka.webp"
-              alt="Stefanie Mischka – Raum für Gesundheit"
-              class="proj-logo"
-              width="130" height="34"
-              loading="lazy">
+        <img src="/assets/img/stefanie-mischka.webp" alt="Stefanie Mischka – Raum für Gesundheit" class="proj-logo" width="130" height="34" loading="lazy">
         <h3 class="proj-h">Stefanie Mischka – Website &amp; Technik</h3>
-        <p class="proj-p">Vollständige technische Umsetzung und laufende Betreuung der Website eines Online-Business.</p>
+        <p class="proj-p">Vollständige technische Umsetzung und laufende Betreuung der Website.</p>
         <ul class="proj-list">
           <li>Website-Aufbau mit CMS-Lösung</li>
           <li>Domain- und Hosting-Wechsel</li>
-          <li>DNS-Konfiguration &amp; technische Einstellungen</li>
-          <li>Laufende technische Betreuung</li>
+          <li>DNS-Konfiguration &amp; laufende Betreuung</li>
         </ul>
         <a href="https://www.stefaniemischka.com/" target="_blank" rel="noopener" class="proj-link">Website ansehen <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
@@ -716,21 +765,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!-- ═══ WHY ME ═══════════════════════════════════════════════════ -->
+<!-- WHY ME -->
 <section class="section" style="padding-top:0;" aria-labelledby="whyme-heading">
   <div class="container">
     <div class="why-box reveal">
       <div class="why-inner">
         <div>
-          <span class="sec-label">Warum mit mir arbeiten?</span>
-          <h2 class="sec-title" id="whyme-heading" style="max-width:320px;">Kein Agentur-Overhead. Direkter Kontakt.</h2>
-          <p class="sec-desc">Ich bin Student – das ist kein Nachteil, sondern Transparenz. Du weißt genau, mit wem du arbeitest.</p>
+          <span class="sec-label">Warum ich?</span>
+          <h2 class="sec-title" id="whyme-heading" style="max-width:320px;">Kein Overhead. Direkt mit mir.</h2>
+          <p class="sec-desc">Du weißt genau wer dein Projekt umsetzt – ich bin 21, ehrgeizig und gebe nicht auf.</p>
         </div>
         <div>
-          <div class="why-item"><div class="why-n" aria-hidden="true">01</div><div><div class="why-h">Faire Preise, kein Agentur-Markup</div><div class="why-p">Du bezahlst für die Leistung – nicht für ein Büro und fünf Zwischenhändler. <strong>Ehrliche Kalkulation auf Anfrage.</strong></div></div></div>
-          <div class="why-item"><div class="why-n" aria-hidden="true">02</div><div><div class="why-h">Echte Projekterfahrung, kein Lernfeld</div><div class="why-p">Meine Arbeit bei der Gumb AG war kein Schulprojekt – <strong>ich habe echte Systeme gebaut,</strong> die heute produktiv laufen.</div></div></div>
-          <div class="why-item"><div class="why-n" aria-hidden="true">03</div><div><div class="why-h">Ich sage dir, wenn etwas nicht mein Gebiet ist</div><div class="why-p">Ehrlichkeit vor Selbstdarstellung. <strong>Ich kommuniziere direkt.</strong></div></div></div>
-          <div class="why-item"><div class="why-n" aria-hidden="true">04</div><div><div class="why-h">Flexibel &amp; persönlich</div><div class="why-p">Kein Ticket-System. Du erreichst mich direkt – <strong>und ich reagiere schnell.</strong></div></div></div>
+          <div class="why-item">
+            <div class="why-n" aria-hidden="true">01</div>
+            <div>
+              <div class="why-h">Faire Preise ohne Agentur-Markup</div>
+              <div class="why-p">Du zahlst für die Arbeit – nicht für ein Büro und drei Projektmanager dazwischen. <strong>Ehrliche Kalkulation, kein Kleingedrucktes.</strong></div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-n" aria-hidden="true">02</div>
+            <div>
+              <div class="why-h">Ich gebe nie auf</div>
+              <div class="why-p">Wer alleine mit dem Zelt durch Island fährt und zwei Tage Dauerregen übersteht gibt auch bei einem kniffligen GTM-Setup nicht auf. <strong>Ich arbeite daran bis es läuft.</strong></div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-n" aria-hidden="true">03</div>
+            <div>
+              <div class="why-h">Direkte Kommunikation</div>
+              <div class="why-p">Ich sage dir ehrlich wenn etwas nicht mein Gebiet ist oder länger dauert. <strong>Keine Überraschungen, kein Agentur-Sprech.</strong></div>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-n" aria-hidden="true">04</div>
+            <div>
+              <div class="why-h">Echte Praxiserfahrung</div>
+              <div class="why-p">Die Gumb AG war kein Schulprojekt – <strong>ich habe echte Tracking-Systeme gebaut</strong> die heute im Einsatz sind.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -738,23 +811,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!-- ═══ CTA ═══════════════════════════════════════════════════════ -->
+<!-- CTA -->
 <section class="section" style="padding-top:0;" aria-label="Kontakt-Aufforderung">
   <div class="container">
     <div class="cta-box reveal">
-      <p class="cta-lbl">Schreib mir kurz</p>
-      <h2 class="cta-h">Hast du ein Projekt?<br>Ich freue mich über eine Nachricht.</h2>
-      <p class="cta-p">Zwei Sätze reichen. Was brauchst du, bis wann, welches Budget. Den Rest klären wir im Gespräch.</p>
+      <p class="cta-lbl">Lass uns reden</p>
+      <h2 class="cta-h">Erkennst du dich wieder?<br>Dann schreib mir einfach.</h2>
+      <p class="cta-p">Zwei Sätze reichen. Was brauchst du, bis wann, welches Budget ungefähr. Den Rest klären wir im Gespräch – unverbindlich und kostenlos.</p>
       <div class="cta-btns">
-        <a href="/kontakt/" class="btn btn-white">Kontakt aufnehmen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="/leistungen/" class="btn btn-ghost">Leistungen ansehen</a>
+        <a href="/kontakt/" class="btn btn-white">
+          Jetzt anfragen
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/ueber-mich/" class="btn btn-ghost">Mehr über mich</a>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══ FOOTER ═══════════════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-row">
@@ -777,14 +853,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 
-<!-- ═══ SCRIPTS ══════════════════════════════════════════════════ -->
 <script>
-
 /* ── Dark Mode ── */
 const themeToggle = document.getElementById('themeToggle');
 const themeToggleMobile = document.getElementById('themeToggleMobile');
-const savedTheme  = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme');
 
 function updateThemeLabel() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
@@ -813,113 +886,72 @@ function toggleTheme() {
 if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
 
-/* ── Three.js hero background – nur Desktop + schnelle Verbindung ── */
+/* ── Three.js – nur Desktop + schnelle Verbindung ── */
 const shouldLoadThree =
   window.innerWidth > 768 &&
   !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
   (navigator.connection ? navigator.connection.effectiveType === '4g' : true);
 
 if (shouldLoadThree) {
-  const threeScript = document.createElement('script');
-  threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-  threeScript.onload = function() {
+  const s = document.createElement('script');
+  s.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+  s.onload = function() {
     const canvas = document.getElementById('hero-canvas');
     if (!canvas || typeof THREE === 'undefined') return;
-
-    const scene  = new THREE.Scene();
+    const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
     camera.position.z = 5;
-
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
     renderer.setClearColor(0x000000, 0);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
     const hero = canvas.closest('.hero');
-    function resize() {
-      const w = hero.offsetWidth, h = hero.offsetHeight;
-      renderer.setSize(w, h);
-      camera.aspect = w / h;
-      camera.updateProjectionMatrix();
-    }
+    function resize() { const w = hero.offsetWidth, h = hero.offsetHeight; renderer.setSize(w, h); camera.aspect = w/h; camera.updateProjectionMatrix(); }
     resize();
     new ResizeObserver(resize).observe(hero);
-
-    const N   = 120;
-    const pos = new Float32Array(N * 3);
-    for (let i = 0; i < N * 3; i++) pos[i] = (Math.random() - .5) * 14;
+    const N = 120, pos = new Float32Array(N*3);
+    for (let i = 0; i < N*3; i++) pos[i] = (Math.random()-.5)*14;
     const pGeo = new THREE.BufferGeometry();
     pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-    const pts = new THREE.Points(pGeo, new THREE.PointsMaterial({
-      color: 0x6366f1, size: .045,
-      transparent: true, opacity: .4,
-      sizeAttenuation: true,
-    }));
+    const pts = new THREE.Points(pGeo, new THREE.PointsMaterial({ color: 0x6366f1, size: .045, transparent: true, opacity: .4, sizeAttenuation: true }));
     scene.add(pts);
-
-    const ico = new THREE.Mesh(
-      new THREE.IcosahedronGeometry(2, 1),
-      new THREE.MeshBasicMaterial({ color: 0x6366f1, wireframe: true, transparent: true, opacity: .07 })
-    );
-    ico.position.set(2.8, .4, -1.5);
-    scene.add(ico);
-
-    const tor = new THREE.Mesh(
-      new THREE.TorusGeometry(.9, .22, 12, 36),
-      new THREE.MeshBasicMaterial({ color: 0x6366f1, wireframe: true, transparent: true, opacity: .05 })
-    );
-    tor.position.set(-3.2, -1.2, -.5);
-    scene.add(tor);
-
+    const ico = new THREE.Mesh(new THREE.IcosahedronGeometry(2, 1), new THREE.MeshBasicMaterial({ color: 0x6366f1, wireframe: true, transparent: true, opacity: .07 }));
+    ico.position.set(2.8, .4, -1.5); scene.add(ico);
+    const tor = new THREE.Mesh(new THREE.TorusGeometry(.9, .22, 12, 36), new THREE.MeshBasicMaterial({ color: 0x6366f1, wireframe: true, transparent: true, opacity: .05 }));
+    tor.position.set(-3.2, -1.2, -.5); scene.add(tor);
     let t = 0;
     (function loop() {
-      requestAnimationFrame(loop);
-      t += .004;
-      pts.rotation.y = t * .1;
-      pts.rotation.x = t * .04;
-      if (scene.children[1]) { scene.children[1].rotation.y = t * .22; scene.children[1].rotation.x = t * .12; }
-      if (scene.children[2]) { scene.children[2].rotation.z = t * .28; scene.children[2].rotation.x = t * .09; }
+      requestAnimationFrame(loop); t += .004;
+      pts.rotation.y = t*.1; pts.rotation.x = t*.04;
+      if (scene.children[1]) { scene.children[1].rotation.y = t*.22; scene.children[1].rotation.x = t*.12; }
+      if (scene.children[2]) { scene.children[2].rotation.z = t*.28; scene.children[2].rotation.x = t*.09; }
       renderer.render(scene, camera);
     })();
   };
-  document.head.appendChild(threeScript);
+  document.head.appendChild(s);
 }
 
 /* ── Navbar scroll ── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12), { passive: true });
 
-/* ── Mobile burger / drawer ── */
+/* ── Burger / Drawer ── */
 const burger = document.getElementById('burger');
 const drawer = document.getElementById('drawer');
-
-function closeDrawer() {
-  drawer.classList.remove('is-open');
-  burger.classList.remove('is-open');
-  burger.setAttribute('aria-expanded', 'false');
-  document.body.style.overflow = '';
-}
-
+function closeDrawer() { drawer.classList.remove('is-open'); burger.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
 burger.addEventListener('click', () => {
   const open = !drawer.classList.contains('is-open');
-  drawer.classList.toggle('is-open', open);
-  burger.classList.toggle('is-open', open);
-  burger.setAttribute('aria-expanded', String(open));
-  document.body.style.overflow = open ? 'hidden' : '';
-    // Focus ins Drawer setzen wenn geöffnet
-  if (open) {
-    const firstLink = drawer.querySelector('a');
-    if (firstLink) firstLink.focus();
-  }
+  drawer.classList.toggle('is-open',open); burger.classList.toggle('is-open',open);
+  burger.setAttribute('aria-expanded',String(open)); document.body.style.overflow=open?'hidden':'';
+  if (open) { const fl = drawer.querySelector('a'); if (fl) fl.focus(); }
 });
-
 drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
 document.addEventListener('click', e => { if (!nav.contains(e.target) && !drawer.contains(e.target)) closeDrawer(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+document.addEventListener('keydown', e => { if (e.key==='Escape') closeDrawer(); });
 
 /* ── Scroll reveal ── */
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 /* ── Card 3D tilt ── */
@@ -927,8 +959,8 @@ if (!window.matchMedia('(hover: none)').matches) {
   document.querySelectorAll('.svc-card').forEach(card => {
     card.addEventListener('mousemove', e => {
       const r = card.getBoundingClientRect();
-      const dx = (e.clientX - r.left - r.width  / 2) / (r.width  / 2);
-      const dy = (e.clientY - r.top  - r.height / 2) / (r.height / 2);
+      const dx = (e.clientX - r.left - r.width/2) / (r.width/2);
+      const dy = (e.clientY - r.top - r.height/2) / (r.height/2);
       card.style.transform = `translateY(-6px) perspective(700px) rotateX(${-dy*6}deg) rotateY(${dx*6}deg)`;
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
