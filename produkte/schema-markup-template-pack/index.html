@@ -35,13 +35,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Schema Markup Template Pack – 9 JSON-LD Templates für besseres Google-Ranking | Tobias Meixner</title>
-<meta name="description" content="9 fertige JSON-LD Templates + 3 kombinierte Sets + 32-seitige PDF-Anleitung. Für Freelancer, lokale Unternehmen, Blogs und Startups. Sofort einsetzbar, keine Vorkenntnisse nötig. Ab €39.">
+<meta name="description" content="9 fertige JSON-LD Templates + 3 kombinierte Sets + 32-seitige PDF-Anleitung. Für Freelancer, lokale Unternehmen, Blogs und Startups. Sofort einsetzbar, keine Vorkenntnisse nötig. Ab €9.">
 <meta name="robots" content="index, follow">
 
 <meta property="og:type"         content="product">
 <meta property="og:url"          content="https://meixner-tobias.com/produkte/schema-markup-template-pack/">
 <meta property="og:title"        content="Schema Markup Template Pack – 9 JSON-LD Templates | Tobias Meixner">
-<meta property="og:description"  content="9 fertige JSON-LD Templates + 3 kombinierte Sets + 32-seitige PDF-Anleitung. Sofort einsetzbar. €39 einmalig.">
+<meta property="og:description"  content="9 fertige JSON-LD Templates + 3 kombinierte Sets + 32-seitige PDF-Anleitung. Sofort einsetzbar. €9 einmalig.">
 <meta property="og:image"        content="https://meixner-tobias.com/assets/img/og-image.jpg">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="Schema Markup Template Pack – 9 JSON-LD Templates">
-<meta name="twitter:description" content="9 fertige JSON-LD Templates + PDF-Anleitung. Sofort einsetzbar. €39 einmalig.">
+<meta name="twitter:description" content="9 fertige JSON-LD Templates + PDF-Anleitung. Sofort einsetzbar. €9 einmalig.">
 <meta name="twitter:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
 
 <link rel="canonical" href="https://meixner-tobias.com/produkte/schema-markup-template-pack/">
@@ -116,7 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     },
     "offers": {
       "@type": "Offer",
-      "url": "https://tobiasmeixner.gumroad.com/l/schema-markup?wanted=true",
+      "url": "https://tobiasmeixner.gumroad.com/l/schema-markup",
       "price": "9.00",
       "priceCurrency": "EUR",
       "availability": "https://schema.org/InStock",
@@ -183,8 +183,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 /* ── Breadcrumb ── */
 .breadcrumb-nav {
-  padding-top: clamp(20px, 3vw, 32px);
+  padding-top: clamp(24px, 3vw, 32px);
   padding-bottom: 0;
+  /* Ensure enough space below the fixed navbar on mobile */
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-nav {
+    padding-top: 28px;
+  }
+}
+
+/* ── Mobile navbar clearance safety ── */
+@media (max-width: 768px) {
+  .breadcrumb-nav,
+  .product-hero {
+    scroll-margin-top: 72px;
+  }
+}
+
+/* ── Explicit body padding fallback for fixed nav ── */
+@media (max-width: 480px) {
+  #main-content {
+    /* Extra breathing room under navbar on small screens */
+    padding-top: 8px;
+  }
 }
 .breadcrumb {
   display: flex; align-items: center; gap: 6px;
@@ -452,6 +476,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   display: flex; align-items: center; justify-content: space-between;
   gap: 24px; flex-wrap: wrap; margin-top: clamp(40px, 6vw, 64px);
 }
+.bottom-cta-text {}
 .bottom-cta-label { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--indigo); margin-bottom: 6px; }
 .bottom-cta-title { font-family: var(--fd); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 800; color: var(--navy); line-height: 1.2; }
 .bottom-cta-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
@@ -643,16 +668,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="buy-box-body">
           <div class="buy-box-price">
             <span class="buy-price-currency">€</span>
-            <span class="buy-price-amount">39</span>
+            <span class="buy-price-amount">9</span>
           </div>
           <p class="buy-price-note">einmalig · kein Abo · sofort downloadbar</p>
 
-          <a href="https://tobiasmeixner.gumroad.com/l/schema-markup?wanted=true"
+          <a href="https://tobiasmeixner.gumroad.com/l/schema-markup"
              target="_blank" rel="noopener"
              class="buy-cta"
-             aria-label="Schema Markup Template Pack für €39 kaufen – öffnet Gumroad Checkout">
+             aria-label="Schema Markup Template Pack für €9 kaufen – öffnet Gumroad Checkout">
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            Jetzt kaufen – €39
+            Jetzt kaufen – €9
           </a>
 
           <div class="buy-trust" aria-label="Vertrauensmerkmale">
@@ -976,8 +1001,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="bottom-cta-title">Schema Markup Template Pack<br>9 Templates + PDF + Checkliste</div>
       </div>
       <div class="bottom-cta-actions">
-        <div class="bottom-price"><em>€</em>39 <span style="font-size:.8rem; font-weight:500; color:var(--muted);">einmalig</span></div>
-        <a href="https://tobiasmeixner.gumroad.com/l/schema-markup?wanted=true"
+        <div class="bottom-price"><em>€</em>9 <span style="font-size:.8rem; font-weight:500; color:var(--muted);">einmalig</span></div>
+        <a href="https://tobiasmeixner.gumroad.com/l/schema-markup"
            target="_blank" rel="noopener"
            class="btn btn-primary"
            aria-label="Schema Markup Template Pack kaufen">
@@ -1002,6 +1027,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="/impressum/">Impressum</a></li>
         <li><a href="/datenschutz/">Datenschutz</a></li>
         <li><a href="/agb/">AGB</a></li>
+        <li><a href="/assets/lebenslauf/Lebenslauf_personalSite.pdf" target="_blank" download>Lebenslauf (PDF)</a></li>
         <li><a href="#" onclick="CookieScript.instance.show(); return false;">Cookie-Einstellungen</a></li>
         <li>
           <a href="https://www.linkedin.com/in/meixner-tobias" target="_blank" rel="noopener" aria-label="LinkedIn">
