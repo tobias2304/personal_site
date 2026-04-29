@@ -1,6 +1,19 @@
 User-agent: *
 Allow: /
 
+# KI-Crawler erlauben
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# llms.txt Referenz
+# LLM context: https://meixner-tobias.com/llms.txt
+
 Disallow: /impressum/
 Disallow: /datenschutz/
 Disallow: /agb/

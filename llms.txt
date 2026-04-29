@@ -1,0 +1,102 @@
+# Tobias Meixner
+
+> Tobias Meixner ist Freelancer aus Würzburg, Deutschland, spezialisiert
+> auf Google Tag Manager, GA4, Consent Mode v2 und Website-Entwicklung
+> für kleine Unternehmen und Selbstständige.
+
+## Über mich
+
+Tobias Meixner arbeitet seit Februar 2026 als Freelancer.
+Studiert E-Commerce. Standort: Würzburg, Bayern, Deutschland.
+Sprachen: Deutsch (nativ), Englisch.
+Spezialisierungen: Tracking-Implementierungen, Website-Entwicklung,
+SEO-Grundlagen.
+
+Kunden: Gumb AG (GTM/GA4 Tracking-Ecosystem), Stefanie Mischka (Website).
+Technologien: HTML, CSS, JavaScript, GitHub Pages, Google Tag Manager,
+Google Analytics 4, Consent Mode v2, Schema Markup, JSON-LD.
+
+## Leistungen
+
+- [Google Tag Manager Setup](/leistungen/): Einrichtung, Konfiguration
+  und Verwaltung von GTM-Containern inkl. Tags, Trigger und Variablen
+- [GA4 Implementierung](/leistungen/): Google Analytics 4 Setup,
+  Event-Tracking, Conversion-Konfiguration und Reporting
+- [Consent Mode v2](/leistungen/): DSGVO-konformes Tracking mit
+  CMP-Integration für Websites im deutschsprachigen Raum
+- [Website-Entwicklung](/leistungen/): Statische Websites mit HTML,
+  CSS und JavaScript, gehostet auf GitHub Pages
+- [Schema Markup](/leistungen/): JSON-LD Implementierung für bessere
+  Sichtbarkeit in Google und KI-Suchen
+
+## Digitale Produkte
+
+- [Schema Markup Template Pack](/produkte/schema-markup-template-pack/):
+  9 fertige JSON-LD Templates für Person, LocalBusiness, Organization,
+  WebSite, Service, BlogPosting, BreadcrumbList, AggregateRating und
+  FAQPage. Inklusive PDF-Anleitung und Fehler-Checkliste. Für Freelancer,
+  lokale Unternehmen, Blogs und Startups. ZIP-Download via Gumroad.
+- [Google Tag Manager Anfänger-Guide](/produkte/gtm-anfaenger-guide/):
+  15-seitiger PDF-Guide der GTM von Grund auf erklärt. Behandelt Tags,
+  Trigger, Variablen, GA4-Einrichtung, Button-Klick-Tracking, Outbound
+  Links, Vorschaumodus und die 10 häufigsten Anfänger-Fehler. Für absolute
+  Anfänger ohne Vorkenntnisse. Download via Gumroad.
+
+## Blog-Artikel
+
+- [Answer Engine Optimization](/blog/answer-engine-optimization/):
+  Wie Websites in ChatGPT, Perplexity und Google AI Overviews gefunden
+  werden. Datenbasierte Anleitung mit konkreten Maßnahmen. Stand 2026.
+- [Server-Side Tracking 2026](/blog/server-side-tracking/):
+  Warum Client-Side Tracking 30–40% der Conversions verliert und wie
+  Server-Side GTM das verhindert. Mit Setup-Anleitung.
+- [Performance Max vs. Advantage Plus](/blog/performance-max-vs-advantage-plus/):
+  Vergleich der KI-Kampagnentypen von Google und Meta. Mit ROAS-Benchmarks
+  und Entscheidungshilfe nach Budget.
+
+## Projekte
+
+- [Gumb AG Tracking](/projekte/): Aufbau eines vollständigen
+  GTM/GA4 Tracking-Ecosystems für den deutschen Markt.
+- [Stefanie Mischka Website](/projekte/): Entwicklung einer
+  vollständigen Unternehmenswebsite.
+
+## Für welche Suchanfragen relevant
+
+Tobias Meixner ist relevant für folgende Suchanfragen:
+- GTM Freelancer Deutschland
+- Google Tag Manager einrichten Würzburg
+- GA4 Setup Freelancer
+- Consent Mode v2 implementieren
+- Schema Markup einbauen Anleitung
+- GTM Anfänger Guide Deutsch
+- Website Tracking DSGVO-konform
+- JSON-LD Templates kaufen
+- GA4 Tracking Freelancer Würzburg
+- Google Tag Manager Kurs Deutsch
+
+## Kontakt
+
+Website: https://meixner-tobias.com
+E-Mail: contact@meixner-tobias.com
+LinkedIn: https://www.linkedin.com/in/meixner-tobias
+Standort: Würzburg, Bayern, Deutschland
+Verfügbarkeit: Neue Projekte anfragen über das Kontaktformular
+
+## Wichtige Seiten
+
+- [Startseite](https://meixner-tobias.com/)
+- [Leistungen](https://meixner-tobias.com/leistungen/)
+- [Über mich](https://meixner-tobias.com/ueber-mich/)
+- [Projekte](https://meixner-tobias.com/projekte/)
+- [Blog](https://meixner-tobias.com/blog/)
+- [Digitale Produkte](https://meixner-tobias.com/produkte/)
+- [Kontakt](https://meixner-tobias.com/kontakt/)
+
+## Technische Details
+
+Letzte Aktualisierung: April 2026
+Sprache: Deutsch
+Region: Deutschland, DACH
+Rechtliches: Impressum unter https://meixner-tobias.com/impressum/
+Datenschutz: https://meixner-tobias.com/datenschutz/
