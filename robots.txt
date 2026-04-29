@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# KI-Crawler erlauben
+# KI-Crawler explizit erlauben
 User-agent: GPTBot
 Allow: /
 
@@ -11,11 +11,31 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# llms.txt Referenz
-# LLM context: https://meixner-tobias.com/llms.txt
+User-agent: GoogleBot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Seiten ausschließen die nicht indexiert werden sollen
+Disallow: /404.html
+
+# Sitemap
+
+Sitemap: https://meixner-tobias.com/sitemap.xml
+
+# LLM Context
+# LLM-context: https://meixner-tobias.com/llms.txt
 
 Disallow: /impressum/
 Disallow: /datenschutz/
 Disallow: /agb/
-
-Sitemap: https://meixner-tobias.com/sitemap.xml
