@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied', 'ad_storage': 'denied',
+    'ad_user_data': 'denied', 'ad_personalization': 'denied',
+    'functionality_storage': 'denied', 'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+<script>
+  if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    var s = document.createElement('script'); s.type = 'text/javascript'; s.charset = 'UTF-8';
+    s.src = '//cdn.cookie-script.com/s/d261fb8134670358b6795a49b5d04574.js';
+    document.head.appendChild(s);
+  }
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5QLXDT4T');</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Server-Side Tracking 2026: The Complete Guide for Small Businesses &amp; Startups</title>
+  <meta name="description" content="Server-side tracking captures conversion events on your own server instead of in the browser - independent of ad blockers, iOS 14.5 and Safari ITP. Standard tracking loses 30-40% of all conversions. This guide explains architecture, costs and the step-by-step setup.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meixner-tobias.com/en/blog/server-side-tracking/">
+  <link rel="alternate" hreflang="de" href="https://meixner-tobias.com/blog/server-side-tracking/">
+  <link rel="alternate" hreflang="en" href="https://meixner-tobias.com/en/blog/server-side-tracking/">
+  <link rel="alternate" hreflang="x-default" href="https://meixner-tobias.com/en/blog/server-side-tracking/">
+
+  <meta property="og:type"                content="article">
+  <meta property="og:url"                 content="https://meixner-tobias.com/en/blog/server-side-tracking/">
+  <meta property="og:title"               content="Server-Side Tracking 2026: The Complete Guide for Small Businesses &amp; Startups">
+  <meta property="og:description"         content="Server-side tracking captures conversions on your own server instead of in the browser. Standard tracking loses 30-40%. With architecture options, costs and setup guidance.">
+  <meta property="og:image"               content="https://meixner-tobias.com/assets/img/og-image.jpg">
+  <meta property="og:image:width"         content="1200">
+  <meta property="og:image:height"        content="630">
+  <meta property="og:locale"              content="en_US">
+  <meta property="og:site_name"           content="Tobias Meixner">
+  <meta property="article:author"         content="Tobias Meixner">
+  <meta property="article:published_time" content="2026-04-19">
+  <meta property="article:modified_time"  content="2026-05-02">
+  <meta name="twitter:card"               content="summary_large_image">
+  <meta name="twitter:title"              content="Server-Side Tracking 2026: The Complete Guide">
+  <meta name="twitter:description"        content="Server-side tracking bypasses ad blockers and iOS restrictions. Standard tracking loses 30-40% of conversions. Setup, costs and APIs explained.">
+  <meta name="twitter:image"              content="https://meixner-tobias.com/assets/img/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=DM+Sans:wght@400;500&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style-v1.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+  <style>
+    .article-hero {
+      background: linear-gradient(135deg, #020617 0%, #0c1a2e 40%, #0f3460 100%);
+      padding: calc(var(--nav-h) + 48px) 0 clamp(48px,7vw,80px);
+      position: relative; overflow: hidden;
+    }
+    .article-hero::before {
+      content:''; position:absolute; top:-80px; right:-60px;
+      width:600px; height:600px;
+      background:radial-gradient(circle,rgba(14,165,233,.2) 0%,transparent 70%);
+      filter:blur(80px); pointer-events:none;
+    }
+    .article-hero::after {
+      content:''; position:absolute; bottom:-60px; left:-40px;
+      width:400px; height:400px;
+      background:radial-gradient(circle,rgba(56,189,248,.15) 0%,transparent 70%);
+      filter:blur(60px); pointer-events:none;
+    }
+    .article-hero-inner { position:relative; z-index:1; max-width:780px; }
+    .article-cat {
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(14,165,233,.2); color:#7dd3fc;
+      border:1px solid rgba(14,165,233,.35);
+      border-radius:99px; padding:5px 14px;
+      font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      margin-bottom:20px;
+    }
+    .article-title {
+      font-family:var(--fd); font-size:clamp(1.8rem,4vw,3rem);
+      font-weight:800; color:#fff; line-height:1.1;
+      letter-spacing:-.025em; margin-bottom:16px;
+    }
+    .article-title em { color:#7dd3fc; font-style:normal; }
+    .article-excerpt {
+      font-size:clamp(.9rem,1.6vw,1.05rem);
+      color:rgba(255,255,255,.65); line-height:1.75;
+      margin-bottom:28px; max-width:640px;
+    }
+    .article-meta-row {
+      display:flex; flex-wrap:wrap; align-items:center; gap:16px;
+      font-size:.82rem; color:rgba(255,255,255,.5);
+    }
+    .article-meta-row strong { color:rgba(255,255,255,.85); }
+    .article-meta-div { width:1px; height:14px; background:rgba(255,255,255,.2); }
+    .article-body {
+      display:grid; grid-template-columns:1fr 260px;
+      gap:clamp(32px,5vw,64px); align-items:start;
+      padding-block:clamp(48px,6vw,72px);
+    }
+    .article-content { min-width:0; }
+    .article-content h2 {
+      font-family:var(--fd); font-size:clamp(1.2rem,2.5vw,1.55rem);
+      font-weight:800; color:var(--navy); line-height:1.25; letter-spacing:-.02em;
+      margin:clamp(40px,5vw,56px) 0 14px;
+      padding-top:clamp(40px,5vw,56px); border-top:1px solid var(--border);
+      scroll-margin-top:calc(var(--nav-h) + 24px);
+    }
+    .article-content h2:first-of-type { margin-top:0; padding-top:0; border-top:none; }
+    .article-content h3 {
+      font-family:var(--fd); font-size:1.05rem; font-weight:700;
+      color:var(--navy); margin:28px 0 10px;
+    }
+    .article-content p {
+      font-size:clamp(.9rem,1.5vw,1rem);
+      color:var(--text); line-height:1.82; margin-bottom:16px;
+    }
+    .article-content p:last-child { margin-bottom:0; }
+    .article-content strong { color:var(--navy); font-weight:600; }
+    .article-content ul {
+      margin:14px 0 16px; padding:0; list-style:none;
+      display:flex; flex-direction:column; gap:8px;
+    }
+    .article-content li {
+      display:block; padding-left:22px; position:relative;
+      font-size:clamp(.9rem,1.5vw,1rem); color:var(--text); line-height:1.65;
+    }
+    .article-content li::before {
+      content:'\2192'; color:var(--indigo); font-weight:700;
+      position:absolute; left:0; top:1px; font-size:.9rem;
+    }
+    .intro-box {
+      background:linear-gradient(135deg,rgba(14,165,233,.07) 0%,rgba(56,189,248,.05) 100%);
+      border:1px solid rgba(14,165,233,.2);
+      border-radius:var(--r-lg); padding:24px 28px; margin-bottom:32px;
+      font-size:clamp(.9rem,1.5vw,1.05rem); color:var(--text); line-height:1.8;
+    }
+    .intro-box p { margin-bottom:12px; }
+    .intro-box p:last-child { margin-bottom:0; }
+    .toc-box {
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--r-lg); padding:24px 28px; margin-bottom:40px;
+    }
+    .toc-box-title {
+      font-family:var(--fd); font-size:.78rem; font-weight:700;
+      text-transform:uppercase; letter-spacing:.1em; color:var(--muted);
+      margin-bottom:16px;
+    }
+    .toc-box ol {
+      list-style:none; margin:0; padding:0;
+      display:grid; grid-template-columns:1fr 1fr; gap:6px 24px;
+    }
+    .toc-box li { display:flex; align-items:flex-start; gap:8px; }
+    .toc-box li::before { content:none; }
+    .toc-box li span {
+      font-size:.75rem; font-weight:800; color:var(--indigo);
+      flex-shrink:0; margin-top:2px; min-width:16px;
+    }
+    .toc-box a { font-size:.84rem; color:var(--muted); text-decoration:none; line-height:1.4; transition:color .2s; }
+    .toc-box a:hover { color:var(--indigo); }
+    .stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:24px 0; }
+    .stat-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r); padding:16px 18px; }
+    .stat-card-val { font-family:var(--fd); font-size:clamp(1.3rem,2.5vw,1.75rem); font-weight:800; color:var(--indigo); line-height:1; margin-bottom:5px; }
+    .stat-card-val.red { color:#ef4444; }
+    .stat-card-label { font-size:.82rem; color:var(--text); line-height:1.4; margin-bottom:4px; }
+    .stat-card-source { font-size:.72rem; color:var(--muted); }
+    .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:20px 0; border-radius:var(--r); }
+    .table-wrap .compare-table { margin:0; border-radius:0; }
+    .compare-table { width:100%; border-collapse:collapse; font-size:.875rem; overflow:hidden; border-radius:var(--r); }
+    .compare-table thead tr { background:var(--navy); }
+    .compare-table th { color:#fff; font-family:var(--fd); font-size:.75rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:12px 16px; text-align:left; }
+    .compare-table td { padding:11px 16px; border-bottom:1px solid var(--border); color:var(--text); vertical-align:top; line-height:1.55; }
+    .compare-table tr:last-child td { border-bottom:none; }
+    .compare-table tr:nth-child(even) td { background:var(--bg); }
+    .compare-table td:first-child { font-weight:600; color:var(--navy); font-size:.82rem; white-space:nowrap; }
+    .compare-table .ok { color:#059669; font-weight:700; }
+    .compare-table .nok { color:#ef4444; font-weight:700; }
+    .fact-box { background:var(--indigo-soft); border:1px solid var(--indigo-mid); border-radius:var(--r); padding:20px 22px; margin:24px 0; }
+    .fact-box-title { font-family:var(--fd); font-size:.78rem; font-weight:700; color:var(--indigo); text-transform:uppercase; letter-spacing:.1em; margin-bottom:10px; display:flex; align-items:center; gap:7px; }
+    .fact-box p { font-size:.9rem; color:var(--text); line-height:1.7; margin-bottom:8px; }
+    .fact-box p:last-child { margin-bottom:0; }
+    .warn-box { background:#FFF7ED; border:1px solid #FED7AA; border-radius:var(--r); padding:20px 22px; margin:24px 0; }
+    .warn-box-title { font-family:var(--fd); font-size:.78rem; font-weight:700; color:#92400E; text-transform:uppercase; letter-spacing:.1em; margin-bottom:10px; display:flex; align-items:center; gap:7px; }
+    .warn-box p { font-size:.9rem; color:#78350F; line-height:1.7; margin-bottom:8px; }
+    .warn-box p:last-child { margin-bottom:0; }
+    .approach-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-lg); padding:22px 24px; margin-bottom:16px; }
+    .approach-header { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+    .approach-num { background:var(--navy); color:#fff; width:32px; height:32px; border-radius:50%; display:grid; place-items:center; flex-shrink:0; font-family:var(--fd); font-size:.8rem; font-weight:800; }
+    .approach-title { font-family:var(--fd); font-size:1rem; font-weight:700; color:var(--navy); }
+    .approach-subtitle { font-size:.8rem; color:var(--muted); margin-top:1px; }
+    .approach-card p { font-size:.9rem; color:var(--text); line-height:1.7; margin-bottom:10px; }
+    .approach-card p:last-child { margin-bottom:0; }
+    .approach-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .approach-tag { font-size:.74rem; font-weight:700; padding:4px 11px; border-radius:99px; letter-spacing:.04em; }
+    .tag-pro { background:#ECFDF5; color:#059669; }
+    .tag-con { background:#FEF2F2; color:#DC2626; }
+    .step-card { display:flex; gap:18px; align-items:flex-start; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-lg); padding:20px 22px; margin-bottom:12px; }
+    .step-num { width:36px; height:36px; border-radius:50%; background:var(--indigo); color:#fff; display:grid; place-items:center; flex-shrink:0; font-family:var(--fd); font-size:.85rem; font-weight:800; }
+    .step-content h3 { font-family:var(--fd); font-size:.95rem; font-weight:700; color:var(--navy); margin:0 0 8px; }
+    .step-content p { font-size:.875rem; color:var(--muted); line-height:1.65; margin:0 0 8px; }
+    .step-content p:last-child { margin-bottom:0; }
+    .error-list { display:flex; flex-direction:column; gap:12px; margin:20px 0; }
+    .error-item { background:var(--bg-card); border:1px solid var(--border); border-left:3px solid #ef4444; border-radius:0 var(--r) var(--r) 0; padding:16px 18px; }
+    .error-title { font-family:var(--fd); font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:5px; }
+    .error-text { font-size:.875rem; color:var(--muted); line-height:1.65; }
+    .faq-list { display:flex; flex-direction:column; gap:10px; margin:20px 0; }
+    .faq-item { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r); overflow:hidden; transition:border-color .2s; }
+    .faq-item.open { border-color:var(--indigo-mid); }
+    .faq-q { width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 18px; background:none; border:none; cursor:pointer; font-family:var(--fd); font-size:.9rem; font-weight:700; color:var(--navy); text-align:left; }
+    .faq-q svg { flex-shrink:0; color:var(--indigo); transition:transform .25s; }
+    .faq-item.open .faq-q svg { transform:rotate(180deg); }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; padding:0 18px; }
+    .faq-a-inner { font-size:.875rem; color:var(--muted); line-height:1.75; padding-bottom:16px; }
+    .faq-item.open .faq-a { max-height:500px; }
+    .sources-box { background:var(--bg); border:1px solid var(--border); border-radius:var(--r); padding:16px 20px; margin-top:40px; font-size:.78rem; color:var(--muted); line-height:1.7; }
+    .sources-box strong { color:var(--text); display:block; margin-bottom:6px; }
+    .article-sidebar { position:sticky; top:calc(var(--nav-h) + 24px); }
+    .toc-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-lg); padding:22px 20px; margin-bottom:16px; }
+    .toc-card-title { font-family:var(--fd); font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin-bottom:14px; }
+    .toc-links { list-style:none; display:flex; flex-direction:column; gap:2px; }
+    .toc-links a { display:block; padding:5px 8px; border-radius:7px; font-size:.78rem; font-weight:500; color:var(--muted); transition:background .2s,color .2s; text-decoration:none; line-height:1.4; }
+    .toc-links a:hover { background:var(--indigo-soft); color:var(--indigo); }
+    .author-card { background:var(--navy); border-radius:var(--r-lg); padding:22px 20px; }
+    .author-card img { width:48px; height:48px; border-radius:50%; object-fit:cover; margin-bottom:12px; }
+    .author-name { font-family:var(--fd); font-size:.9rem; font-weight:700; color:#fff; margin-bottom:3px; }
+    .author-role { font-size:.78rem; color:rgba(255,255,255,.5); margin-bottom:12px; }
+    .author-bio { font-size:.8rem; color:rgba(255,255,255,.6); line-height:1.65; }
+    [data-theme="dark"] .article-content h2 { border-top-color:#374151; }
+    [data-theme="dark"] .compare-table thead tr { background:#1F2937; }
+    [data-theme="dark"] .compare-table tr:nth-child(even) td { background:#1a2535; }
+    [data-theme="dark"] .compare-table td:first-child { color:#E2E8F0; }
+    [data-theme="dark"] .stat-card { background:#1F2937; border-color:#374151; }
+    [data-theme="dark"] .toc-box { background:#1F2937; border-color:#374151; }
+    [data-theme="dark"] .step-card { background:#1F2937; border-color:#374151; }
+    [data-theme="dark"] .step-content h3 { color:#F1F5F9; }
+    [data-theme="dark"] .approach-card { background:#1F2937; border-color:#374151; }
+    [data-theme="dark"] .approach-title { color:#F1F5F9; }
+    [data-theme="dark"] .error-item { background:#1F2937; border-color:#374151; border-left-color:#ef4444; }
+    [data-theme="dark"] .error-title { color:#F1F5F9; }
+    [data-theme="dark"] .sources-box { background:#1a2535; border-color:#374151; }
+    [data-theme="dark"] .fact-box { background:rgba(91,108,248,.12); border-color:rgba(91,108,248,.3); }
+    [data-theme="dark"] .warn-box { background:#1c0f00; border-color:#92400E; }
+    [data-theme="dark"] .warn-box-title { color:#FCD34D; }
+    [data-theme="dark"] .warn-box p { color:#FDE68A; }
+    [data-theme="dark"] .intro-box { background:rgba(14,165,233,.07); border-color:rgba(14,165,233,.2); }
+    [data-theme="dark"] .tag-pro { background:rgba(5,150,105,.2); color:#6EE7B7; }
+    [data-theme="dark"] .tag-con { background:rgba(220,38,38,.2); color:#FCA5A5; }
+    [data-theme="dark"] .article-content > div[style*="background:var(--navy)"] { background:#1F2937 !important; }
+    [data-theme="dark"] .article-content > div[style*="background:var(--navy)"] p { color:rgba(255,255,255,.6) !important; }
+    [data-theme="dark"] .article-sidebar .author-card { background:#1F2937 !important; }
+    @media (max-width:1024px) { .article-body { grid-template-columns:1fr 220px; gap:32px; } }
+    @media (max-width:768px) { .article-body { grid-template-columns:1fr; } .article-sidebar { display:none; } .toc-box ol { grid-template-columns:1fr; } }
+    @media (max-width:480px) { .stats-grid { grid-template-columns:1fr; } .step-card { flex-direction:column; } }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://meixner-tobias.com/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://meixner-tobias.com/en/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Server-Side Tracking 2026", "item": "https://meixner-tobias.com/en/blog/server-side-tracking/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://meixner-tobias.com/en/blog/server-side-tracking/",
+      "headline": "Server-Side Tracking 2026: Why you are losing 30-40% of your conversion data right now - and how to stop it",
+      "description": "Server-side tracking captures conversion events on your own server instead of in the browser - independent of ad blockers, iOS 14.5 and Safari ITP. Standard tracking loses 30-40% of all conversions. In Germany, fewer than 25% of users consent to cookie tracking. Three implementation approaches: GTM server container, platform apps such as Elevar, and direct API integration.",
+      "url": "https://meixner-tobias.com/en/blog/server-side-tracking/",
+      "datePublished": "2026-04-19",
+      "dateModified": "2026-05-02",
+      "author": { "@type": "Person", "@id": "https://meixner-tobias.com/#person", "name": "Tobias Meixner" },
+      "publisher": { "@type": "Person", "@id": "https://meixner-tobias.com/#person" },
+      "image": "https://meixner-tobias.com/assets/img/og-image.jpg",
+      "inLanguage": "en-US",
+      "keywords": "server-side tracking, server side tracking setup, first-party data strategy, Consent Mode v2, GA4 server side, Meta Conversions API, GDPR tracking, GTM server container, tracking data loss",
+      "articleSection": "Tracking"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://meixner-tobias.com/en/blog/server-side-tracking/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is server-side tracking in simple terms?", "acceptedAnswer": { "@type": "Answer", "text": "With server-side tracking, user events such as purchases or form submissions are not captured in the user's browser, but on a server you control. This server then sends the data directly to advertising platforms such as Google or Meta - independent of ad blockers, iOS restrictions or cookie settings. Companies using server-side tracking measure 10 to 40 percent more conversions depending on setup and audience; Meta itself confirms an average 19 percent more attribution through the Conversions API." } },
+        { "@type": "Question", "name": "Is server-side tracking GDPR-compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes - provided it is implemented correctly together with a valid consent solution and Consent Mode v2. Server-side tracking alone does not automatically make your tracking GDPR-compliant. The legal basis for data processing must still be in place." } },
+        { "@type": "Question", "name": "What does server-side tracking cost?", "acceptedAnswer": { "@type": "Answer", "text": "Shopify platform apps such as Elevar or TrackBee typically cost from around 79 to 200 USD per month, with higher plans above that. A GTM server container can start free or at around 20 USD per month via Stape, plus roughly EUR 500-2,000 for setup. Agency-managed setups usually cost EUR 50-150 per month plus EUR 1,000-3,000 setup. Direct API integration can cost EUR 2,000-10,000 depending on complexity." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QLXDT4T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/en/" aria-label="Tobias Meixner - Home" style="display:flex;align-items:center;padding-top:6px;">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 230" role="img" aria-labelledby="logo-sst-en">
+        <title id="logo-sst-en">Tobias Meixner</title>
+        <g transform="translate(8 6)">
+          <circle class="logo-dot" cx="50" cy="108" r="18"/>
+          <line class="logo-stroke" x1="68" y1="62" x2="98" y2="118"/>
+          <line class="logo-stroke" x1="136" y1="62" x2="166" y2="118"/>
+          <text class="logo-t" x="208" y="136">eixner</text>
+        </g>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/en/">Home</a></li>
+      <li><a href="/en/about/">About</a></li>
+      <li><a href="/en/services/">Services</a></li>
+      <li><a href="/en/projects/">Projects</a></li>
+      <li class="nav-dropdown">
+        <a href="/en/blog/" class="active">Blog</a>
+        <ul class="nav-drop-menu" role="menu">
+          <li role="none"><a href="/en/blog/answer-engine-optimization/" role="menuitem">Answer Engine Optimization</a></li>
+          <li role="none"><a href="/en/blog/performance-max-vs-advantage-plus/" role="menuitem">Performance Max vs. Advantage Plus</a></li>
+          <li role="none"><a href="/en/blog/server-side-tracking/" role="menuitem" class="active">Server-Side Tracking</a></li>
+        </ul>
+      </li>
+      <li><a href="/en/products/">Products</a></li>
+      <li class="lang-switch">
+        <button class="lang-btn" id="langBtn" aria-label="Choose language" aria-expanded="false">
+          <div class="flag-circle"><div class="flag-us"></div></div>
+          EN
+          <span class="lang-arrow">&#9662;</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="menu">
+          <a href="/blog/server-side-tracking/" class="lang-option" role="menuitem">
+            <div class="flag-lg"><div class="flag-de"></div></div>
+            <div class="lang-option-text">
+              <span class="lang-option-name">Deutsch</span>
+              <span class="lang-option-sub">Deutschland</span>
+            </div>
+          </a>
+          <a href="/en/blog/server-side-tracking/" class="lang-option active" role="menuitem">
+            <div class="flag-lg"><div class="flag-us"></div></div>
+            <div class="lang-option-text">
+              <span class="lang-option-name">English</span>
+              <span class="lang-option-sub">United States</span>
+            </div>
+            <span class="lang-check">&#10003;</span>
+          </a>
+        </div>
+      </li>
+      <li><a href="/en/contact/" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <svg class="icon-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+    </button>
+    <button class="burger" id="burger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="drawer" id="drawer" aria-label="Mobile Navigation">
+  <ul>
+    <li>
+      <div class="drawer-lang">
+        <a href="/blog/server-side-tracking/" class="drawer-lang-btn">
+          <div class="flag-circle"><div class="flag-de"></div></div>
+          Deutsch
+        </a>
+        <a href="/en/blog/server-side-tracking/" class="drawer-lang-btn active">
+          <div class="flag-circle"><div class="flag-us"></div></div>
+          English
+        </a>
+      </div>
+    </li>
+    <li><a href="/en/">Home <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/about/">About <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/services/">Services <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/projects/">Projects <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/blog/" class="active">Blog <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/products/">Products <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/contact/">Get in touch <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li style="padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:center;">
+      <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle dark mode">
+        <svg class="icon-sun" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+        <span class="theme-label">Dark Mode</span>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<main id="main-content">
+
+  <header class="article-hero" aria-labelledby="article-heading">
+    <div class="container">
+      <div class="article-hero-inner">
+        <div class="article-cat">
+          <svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+          Tracking &amp; Data
+        </div>
+        <h1 class="article-title" id="article-heading">
+          Server-Side Tracking 2026:<br>
+          <em>Why you are losing 30-40% of your conversion data</em> -
+          and how to stop it
+        </h1>
+        <p class="article-excerpt">
+          Server-side tracking captures conversion events on your own server instead of in the
+          browser - independent of ad blockers, iOS 14.5 and Safari ITP. Standard tracking
+          loses 30-40% of all conversions. In Germany, fewer than 25% of users consent to
+          cookie tracking. Depending on the setup, companies using server-side tracking measure
+          10 to 40% more conversions - Meta itself confirms an average 19% more attribution
+          through the Conversions API.
+        </p>
+        <div class="article-meta-row">
+          <span><strong>Tobias Meixner</strong></span>
+          <div class="article-meta-div" aria-hidden="true"></div>
+          <span>19 April 2026</span>
+          <div class="article-meta-div" aria-hidden="true"></div>
+          <span>15-17 min read</span>
+          <div class="article-meta-div" aria-hidden="true"></div>
+          <span>Fact-based &middot; real numbers</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Breadcrumb" style="background:var(--bg);border-bottom:1px solid var(--border);padding:12px 0;">
+    <div class="container">
+      <ol style="list-style:none;display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:0;padding:0;">
+        <li style="display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted);">
+          <a href="/en/" style="color:var(--muted);text-decoration:none;">Home</a>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </li>
+        <li style="display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted);">
+          <a href="/en/blog/" style="color:var(--muted);text-decoration:none;">Blog</a>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </li>
+        <li style="font-size:.8rem;color:var(--navy);font-weight:600;" aria-current="page">Server-Side Tracking</li>
+      </ol>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="article-body">
+      <article class="article-content" aria-label="Article content">
+
+        <div class="intro-box">
+          <p>
+            <strong>Server-side tracking is a tracking architecture where conversion events are not captured in the user's browser, but on a server controlled by the website operator and then sent directly to the APIs of Google, Meta and other platforms.</strong>
+            This bypasses ad blockers, Safari ITP and the dependence on the browser pixel - all factors that block 30-40% of all conversion data in standard tracking setups.
+          </p>
+          <p>
+            The consequence of missing server-side tracking: Google Ads optimizes on incorrect data. Meta Advantage+ learns from a distorted picture. You pay for performance you cannot see - and optimize noise instead of reality.
+          </p>
+          <p>
+            This article explains why that happens, what server-side tracking does about it - and how you can start as a small business or startup.
+          </p>
+        </div>
+
+        <nav class="toc-box" aria-label="Table of contents">
+          <div class="toc-box-title">Table of Contents</div>
+          <ol>
+            <li><span>1</span><a href="#data-loss">How much tracking data are you losing right now?</a></li>
+            <li><span>2</span><a href="#standard-tracking">Why is standard tracking no longer enough?</a></li>
+            <li><span>3</span><a href="#what-is-sst">What is server-side tracking?</a></li>
+            <li><span>4</span><a href="#comparison">Client-side vs. server-side: direct comparison</a></li>
+            <li><span>5</span><a href="#first-party">What is first-party data?</a></li>
+            <li><span>6</span><a href="#consent-mode">What is Consent Mode v2?</a></li>
+            <li><span>7</span><a href="#architecture">Which architecture approaches exist?</a></li>
+            <li><span>8</span><a href="#small-businesses">What does a small business need?</a></li>
+            <li><span>9</span><a href="#apis">Which platform APIs matter?</a></li>
+            <li><span>10</span><a href="#step-by-step">Step by step: how to get started</a></li>
+            <li><span>11</span><a href="#costs">What does server-side tracking cost?</a></li>
+            <li><span>12</span><a href="#mistakes">Which implementation mistakes happen?</a></li>
+            <li><span>13</span><a href="#faq">FAQ</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="data-loss">1. How much tracking data are you losing right now?</h2>
+        <p>The numbers are uncomfortable - but important.</p>
+
+        <div class="stats-grid" role="list" aria-label="Causes and extent of tracking data loss">
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val red">50%+</div>
+            <div class="stat-card-label">iOS 14.5+ restricts third-party tracking - affecting more than half of all smartphone users in Germany</div>
+            <div class="stat-card-source">StatCounter, 2026 / Apple ATT framework</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val red">&gt;40%</div>
+            <div class="stat-card-label">Ad blockers block client-side GTM tags on desktop - Germany leads Europe with around 49% usage</div>
+            <div class="stat-card-source">PageFair / sqmagazine, 2026</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val red">~30%</div>
+            <div class="stat-card-label">Cookie consent rejection worldwide - significantly higher in Germany (55-75%)</div>
+            <div class="stat-card-source">Ignite.video / clickport.io, 2025-2026</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val red">&lt;25%</div>
+            <div class="stat-card-label">German consent rate - fewer than one in four users actively opt in</div>
+            <div class="stat-card-source">Advance Metrics / clickport.io, 2025-2026</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val red">30-40%</div>
+            <div class="stat-card-label">Total data loss with standard tracking</div>
+            <div class="stat-card-source">multiple industry sources, 2026</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val red">50-60%</div>
+            <div class="stat-card-label">The share of real conversions a client-side pixel captures</div>
+            <div class="stat-card-source">Cometly, 2026</div>
+          </div>
+        </div>
+
+        <p>In plain terms: if you generate 100 conversions today, you measure 60 to 70 of them at best. In the worst case, even fewer.</p>
+        <p><strong>What happens to the missing data?</strong> It exists. The purchase was completed. The form was submitted. The lead is in your CRM. But Google Ads and Meta do not know it - because the JavaScript pixel in the user's browser never fired.</p>
+        <p>Google's Smart Bidding and Meta's Advantage+ both learn from conversion signals. If 30 to 40 percent of those signals are missing, the algorithm optimizes on a distorted picture. This is not a marketing problem. It is a measurement problem.</p>
+
+        <h2 id="standard-tracking">2. Why is standard tracking no longer enough in 2026?</h2>
+        <p>The classic setup: you install a pixel on your website. The pixel fires in the user's browser. The data is sent directly to Meta, Google or TikTok. That worked well - until the digital world became more complicated.</p>
+
+        <h3>iOS 14.5 and App Tracking Transparency (ATT)</h3>
+        <p>With iOS 14.5 in April 2021, Apple introduced an opt-in system: apps may only track users if they actively consent. According to Adjust, the global opt-in rate in Q2 2025 was around 35 percent - in Germany, according to ONEtoONE (May 2025), it rose to 47 percent. That means more than half of German iOS users still actively block tracking via ATT.</p>
+
+        <h3>Safari and Intelligent Tracking Prevention (ITP)</h3>
+        <p>Safari has actively blocked third-party cookies since 2017. Google originally planned to phase out third-party cookies in Chrome by early 2025 - but that plan was withdrawn in <strong>July 2024</strong>. In April 2025, Google added that Chrome would not introduce a separate consent prompt for third-party cookies either. Chrome therefore still allows third-party cookies. But Safari and Firefox block them completely. Safari has around 18 percent market share in Germany (StatCounter, March 2026).</p>
+
+        <h3>Ad blockers</h3>
+        <p>Germany leads Europe in ad blocker usage: around 49 percent of German internet users use ad blockers. Combined with Safari's tracking prevention, client-side GTM tags are blocked in more than 40 percent of desktop sessions. Technically savvy audiences are especially affected.</p>
+
+        <h3>GDPR and cookie consent</h3>
+        <p>In Germany, more than 60 to 75 percent of users reject tracking cookies when given a choice. According to senorit.de and clickport.io, cookie-based analytics in Germany therefore capture only 10 to 20 percent of actual traffic. A standard tracking setup that depends on consent operates with a massive data gap in Germany.</p>
+
+        <div class="warn-box">
+          <div class="warn-box-title">
+            <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            The Result
+          </div>
+          <p>Anyone relying exclusively on client-side tracking in 2026 is not optimizing their marketing - they are optimizing the noise in their data.</p>
+        </div>
+
+        <h2 id="what-is-sst">3. What is server-side tracking - and how does it work?</h2>
+        <p>The idea: move data collection out of the user's browser and onto a server you control.</p>
+
+        <h3>How classic client-side tracking works</h3>
+        <ul>
+          <li>The user visits your website</li>
+          <li>A JavaScript pixel loads in the user's browser</li>
+          <li>The user event (purchase, form submission, click) is captured by the pixel</li>
+          <li>The pixel sends data directly to Google, Meta or TikTok</li>
+        </ul>
+        <p>The problem: the pixel can be blocked. It may fail to load. It may be disabled because cookies were rejected.</p>
+
+        <h3>How server-side tracking works</h3>
+        <ul>
+          <li>The user visits your website</li>
+          <li>The user event is registered by your server, independent of the browser</li>
+          <li>Your server sends the data directly to the APIs of Google, Meta and TikTok</li>
+          <li>Server-to-server communication - no browser, no pixel, no blocking point</li>
+        </ul>
+        <p><strong>Your server knows that a purchase happened because it processed the transaction itself.</strong> It does not need a JavaScript pixel in the browser that may or may not fire.</p>
+
+        <h3>What server-side tracking bypasses</h3>
+        <ul>
+          <li><strong>Ad blockers</strong> - they block client-side scripts in the browser; server-to-server communication is invisible to them</li>
+          <li><strong>Safari ITP</strong> - JavaScript cookies are limited to 7 days (24 hours with tracking parameters such as fbclid/gclid); with correctly configured SST on same-origin infrastructure, first-party cookies can last up to 400 days</li>
+          <li><strong>iOS App Tracking Transparency (ATT)</strong> - ATT regulates app tracking via IDFA; for web-based tracking, SST helps by removing dependence on the browser pixel and sending conversion data server-side to platform APIs</li>
+          <li><strong>Slow internet or missing JavaScript in the browser</strong> - the server does not wait for the client</li>
+        </ul>
+
+        <div class="fact-box">
+          <div class="fact-box-title">
+            <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Important note
+          </div>
+          <p>What server-side tracking does <strong>not</strong> bypass: the need for valid consent under GDPR and the logic of Consent Mode v2. Server-side tracking improves data quality - but it does not replace the legal obligation to obtain consent.</p>
+        </div>
+
+        <h2 id="comparison">4. What is the difference between client-side and server-side tracking?</h2>
+
+        <div class="table-wrap">
+          <table class="compare-table" aria-label="Comparison of client-side and server-side tracking">
+            <thead>
+              <tr><th>Feature</th><th>Client-side (standard)</th><th>Server-side</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Data collection</td><td>In the user's browser</td><td>On your server</td></tr>
+              <tr><td>Vulnerable to ad blockers</td><td class="nok">&times; Yes</td><td class="ok">&#10003; No</td></tr>
+              <tr><td>Vulnerable to Safari ITP</td><td class="nok">&times; Yes</td><td class="ok">&#10003; Mostly not</td></tr>
+              <tr><td>Cookie lifetime</td><td>7 days (Safari, JS cookies)<br><small>24 hours with tracking parameters</small></td><td>Up to 400 days (first-party, same-origin)</td></tr>
+              <tr><td>Data accuracy</td><td class="nok">50-70%</td><td class="ok">95-99%</td></tr>
+              <tr><td>Page speed</td><td class="nok">Slower (more scripts)</td><td class="ok">Faster</td></tr>
+              <tr><td>Control over data flow</td><td>Limited</td><td>Full</td></tr>
+              <tr><td>GDPR control</td><td>Harder</td><td>Easier</td></tr>
+              <tr><td>Implementation effort</td><td class="ok">Low</td><td class="nok">Medium to high</td></tr>
+              <tr><td>Costs</td><td class="ok">Low</td><td>From ~&euro;100-200/month</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The practical numbers: companies that implement server-side tracking report <strong>10 to 40 percent more measured conversions</strong> in their Google Ads and Meta Ads accounts depending on setup and audience - Meta itself confirms an average 19 percent more attribution through the Conversions API. This is not more revenue. It is more visibility into revenue that was already there.</p>
+
+        <h2 id="first-party">5. What is first-party data - and why is it the foundation?</h2>
+        <p>First-party data is any information you receive directly from your users - with their consent and through direct interaction with your website. This includes email addresses from newsletter signups, purchase histories, form submissions, page views with consent and CRM data.</p>
+
+        <div class="stats-grid" role="list" aria-label="Value of first-party data">
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val">2.9x</div>
+            <div class="stat-card-label">Higher revenue uplift for brands using all four first-party data activations compared with brands without a first-party strategy</div>
+            <div class="stat-card-source">Google &amp; Boston Consulting Group, 2020/2023</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val">1.5x</div>
+            <div class="stat-card-label">Higher cost efficiency for brands with at least one first-party activation compared with brands without any activation</div>
+            <div class="stat-card-source">Google &amp; BCG, 2020</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val">+40%</div>
+            <div class="stat-card-label">More revenue from personalization among fast-growing companies compared with slower competitors</div>
+            <div class="stat-card-source">McKinsey, 2021</div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-card-val">-50%</div>
+            <div class="stat-card-label">Reduction in customer acquisition costs through data-driven personalization, including first-party data</div>
+            <div class="stat-card-source">McKinsey, Personalization Research</div>
+          </div>
+        </div>
+
+        <p>For small businesses, this is especially relevant: anyone who starts collecting first-party data systematically early builds a structural competitive advantage - in targeting quality, algorithmic learning and attribution.</p>
+        <p><strong>First-party data is also privacy-friendly by design.</strong> You receive it directly, with consent, for a clear purpose. It is the opposite of third-party tracking.</p>
+
+        <h2 id="consent-mode">6. What is Consent Mode v2 and why is it mandatory?</h2>
+        <p>If you operate in the EU and use Google Ads or GA4, there is no way around Consent Mode v2. Since March 2024, Google has required its implementation for all EEA users - without it, audience and measurement features are lost entirely.</p>
+        <p>Consent Mode v2 tells Google which data your website may collect based on user consent. The four central parameters are <code style="background:rgba(0,0,0,.06);padding:2px 6px;border-radius:4px;font-size:.85em;">ad_storage</code>, <code style="background:rgba(0,0,0,.06);padding:2px 6px;border-radius:4px;font-size:.85em;">analytics_storage</code>, <code style="background:rgba(0,0,0,.06);padding:2px 6px;border-radius:4px;font-size:.85em;">ad_user_data</code> and <code style="background:rgba(0,0,0,.06);padding:2px 6px;border-radius:4px;font-size:.85em;">ad_personalization</code>.</p>
+        <p>If a user rejects consent, Consent Mode v2 prevents tracking cookies from being set - but enables statistical modelling based on aggregated, anonymized signals from consenting users. Google itself confirms that, when implemented correctly, Consent Mode v2 can recover up to 65% of otherwise lost conversions.</p>
+
+        <h3>The sobering reality</h3>
+
+        <div class="table-wrap">
+          <table class="compare-table" aria-label="Consent Mode v2 adoption and quality">
+            <thead>
+              <tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Consent Mode v2 adoption in the EEA</td><td class="ok">&gt;90%</td><td>Didomi, 2026 (estimate)</td></tr>
+              <tr><td>Implementations that are not compliant</td><td class="nok">~67%</td><td>Didomi / XICTRON, 2026 (industry estimate)</td></tr>
+              <tr><td>Possible conversion recovery with correct implementation</td><td class="nok">up to 65%</td><td>Google / Didomi, officially confirmed</td></tr>
+              <tr><td>Consent rate in Germany</td><td class="nok">&lt;25%</td><td>CookieYes / XICTRON, 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Almost everyone has Consent Mode v2 - but most have implemented it incorrectly. They believe they are compliant, yet still lose massive amounts of data.</p>
+        <p><strong>What correct implementation requires:</strong></p>
+        <ul>
+          <li>Clean consent UI without dark patterns; the "Reject all" button must not be hidden</li>
+          <li>Compliance with the German Consent Regulation (EinwV, in force since April 2025, based on TDDDG Section 26(2))</li>
+          <li>Tags that default to "denied" - no activation before consent</li>
+          <li>Correct cross-domain configuration across multiple domains</li>
+          <li>Server-side fallback for events that may also be captured without consent</li>
+        </ul>
+        <p><strong>Important:</strong> Consent Mode v2 alone does not solve the data problem. It complements server-side tracking. The strongest architecture combines both.</p>
+
+        <h2 id="architecture">7. Which architecture approaches exist for server-side tracking?</h2>
+        <p>There are three common approaches - with different levels of effort and cost.</p>
+
+        <div class="approach-card">
+          <div class="approach-header">
+            <div class="approach-num" aria-hidden="true">1</div>
+            <div>
+              <div class="approach-title">GTM server-side container (standard setup)</div>
+              <div class="approach-subtitle">The most commonly used approach</div>
+            </div>
+          </div>
+          <p>You run a Google Tag Manager server container on a cloud server, configured behind your own subdomain such as <code style="background:rgba(0,0,0,.06);padding:2px 6px;border-radius:4px;font-size:.85em;">metrics.yourdomain.com</code>. Your browser sends events to your own server instead of directly to Google or Meta. The server receives, processes and forwards them to the respective platform APIs. Because requests come from your own domain, they are treated as first-party requests.</p>
+          <p>For hosting, a managed service such as <strong>Stape</strong> is recommended - the most popular solution for GTM server-side hosting. Stape starts free (up to 10,000 requests/month) and costs around $20/month for typical small and medium-sized websites. The alternative, Google Cloud Run directly, costs at least around $120/month.</p>
+          <div class="approach-tags">
+            <span class="approach-tag tag-pro">&#10003; Flexible configuration</span>
+            <span class="approach-tag tag-pro">&#10003; Broad tool support</span>
+            <span class="approach-tag tag-pro">&#10003; Proven in practice</span>
+            <span class="approach-tag tag-con">&times; Server costs: free to ~$20/month via Stape for typical SMB sites</span>
+            <span class="approach-tag tag-con">&times; Technical setup effort</span>
+          </div>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-header">
+            <div class="approach-num" aria-hidden="true">2</div>
+            <div>
+              <div class="approach-title">Platform-native solutions (for Shopify and similar systems)</div>
+              <div class="approach-subtitle">Ready-made solution without your own infrastructure</div>
+            </div>
+          </div>
+          <p>For Shopify stores, specialized tools such as Elevar, TrackBee or Littledata exist. You install an app, configure your API keys and the tool handles the entire infrastructure. Your shop events are captured automatically, enriched with first-party data and sent to Meta CAPI, Google Enhanced Conversions, TikTok Events API and other destinations.</p>
+          <div class="approach-tags">
+            <span class="approach-tag tag-pro">&#10003; No own server infrastructure</span>
+            <span class="approach-tag tag-pro">&#10003; Fast setup</span>
+            <span class="approach-tag tag-pro">&#10003; Low maintenance</span>
+            <span class="approach-tag tag-con">&times; Tool costs: Littledata from ~$99/month, Elevar from ~$200/month</span>
+            <span class="approach-tag tag-con">&times; Less flexibility than your own GTM container</span>
+          </div>
+        </div>
+
+        <div class="approach-card">
+          <div class="approach-header">
+            <div class="approach-num" aria-hidden="true">3</div>
+            <div>
+              <div class="approach-title">Direct integration via platform APIs</div>
+              <div class="approach-subtitle">The cleanest technically, but also the most complex</div>
+            </div>
+          </div>
+          <p>You integrate Meta Conversions API, Google Enhanced Conversions and TikTok Events API directly from your backend. Your application server processes transactions and sends conversion events directly to the APIs at the same time. No dependency on an external tool, maximum data control.</p>
+          <div class="approach-tags">
+            <span class="approach-tag tag-pro">&#10003; Maximum accuracy</span>
+            <span class="approach-tag tag-pro">&#10003; Full control</span>
+            <span class="approach-tag tag-pro">&#10003; No tool dependency</span>
+            <span class="approach-tag tag-con">&times; Significant development effort</span>
+            <span class="approach-tag tag-con">&times; Maintenance is fully your responsibility</span>
+          </div>
+        </div>
+
+        <div class="fact-box">
+          <div class="fact-box-title">
+            <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Recommendation for small businesses
+          </div>
+          <p>Approach 1 with Stape hosting or approach 2 - depending on whether you run a custom website or a Shopify store. Stape makes approach 1 realistic even for smaller budgets: start free and scale as traffic grows.</p>
+        </div>
+
+        <h2 id="small-businesses">8. What does a small business need for server-side tracking?</h2>
+        <p>You do not need an enterprise setup. You need a solid foundation that supplies your ad accounts with clean data.</p>
+
+        <h3>Layer 1 - conversion signals (required)</h3>
+        <ul>
+          <li><strong>Meta Conversions API</strong> (CAPI): server-side transmission of all relevant events (Purchase, Lead, AddToCart) directly to Meta - independent of the browser pixel</li>
+          <li><strong>Google Enhanced Conversions</strong>: SHA-256 hashing and server-side transmission of first-party data (email, phone, address) to improve conversion matching</li>
+          <li><strong>TikTok Events API</strong>: if TikTok Ads are part of your mix</li>
+        </ul>
+
+        <h3>Layer 2 - analytics (important)</h3>
+        <ul>
+          <li><strong>GA4 via server-side GTM</strong>: GA4 data through your server container - cleaner data, better attribution, longer cookie lifetimes</li>
+        </ul>
+
+        <h3>Layer 3 - consent and compliance (required)</h3>
+        <ul>
+          <li><strong>Consent Management Platform (CMP)</strong>: certified tool that correctly collects user consent and forwards it to all tracking systems, such as Cookiebot, CookieYes, Didomi or Usercentrics</li>
+          <li><strong>Consent Mode v2</strong>: implemented correctly, not merely installed</li>
+        </ul>
+        <p>This is the minimum every business running serious performance marketing should have in 2026.</p>
+
+        <h2 id="apis">9. Which platform APIs are relevant for server-side tracking?</h2>
+
+        <h3>Meta Conversions API (CAPI)</h3>
+        <p>The most direct solution against data loss in Meta campaigns. You send conversion events from the server to Meta - independent of what happens in the user's browser.</p>
+        <p><strong>Most important parameters:</strong>
+          <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_name</code>,
+          <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_time</code>,
+          <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">action_source</code> (required field - for web events always <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">"website"</code>),
+          <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">user_data</code> (hashed email, phone number, IP address, optionally name, address, <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">fbp</code>, <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">external_id</code>),
+          <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">custom_data</code> (cart value, product IDs),
+          <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_source_url</code>
+        </p>
+        <p><strong>Deduplication:</strong> In a hybrid setup (pixel + CAPI at the same time), both <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_id</code> and <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_name</code> must be identical in pixel and CAPI. Meta uses this to detect duplicate events within 48 hours and count them only once.</p>
+
+        <h3>Google Enhanced Conversions</h3>
+        <p>You transmit hashed first-party data (SHA-256 hash of the email address, phone number or address) together with conversion data. Google matches these hashes with signed-in Google accounts - even if no cookie is present. This is especially effective for B2B campaigns and e-commerce with customer login.</p>
+
+        <h3>TikTok Events API</h3>
+        <p>Works similarly to Meta CAPI. For businesses running TikTok Ads, the direct server connection is the only way to get reliable conversion data because the TikTok Pixel is restricted on iOS devices by Safari ITP and App Tracking Transparency.</p>
+
+        <h3>GA4 Measurement Protocol</h3>
+        <p>Enables direct sending of events to Google Analytics 4 from the server. Ideal for offline conversions, backend events or events that do not occur in a browser context.</p>
+
+        <h2 id="step-by-step">10. Step by step: how to get started with server-side tracking</h2>
+
+        <div class="step-card">
+          <div class="step-num" aria-hidden="true">1</div>
+          <div class="step-content">
+            <h3>Measure current data loss</h3>
+            <p>Compare the number of transactions in Google Analytics 4 with your actual database (Shopify orders, CRM leads). The difference is your tracking gap.</p>
+            <p>Typical starting point: GA4 measures 60-70 percent of real conversions. If the difference is more than 20 percent, action is needed.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num" aria-hidden="true">2</div>
+          <div class="step-content">
+            <h3>Check the consent foundation</h3>
+            <p>Check your cookie banner for three things: is the "Reject" button as prominent as "Accept"? Is Consent Mode v2 correctly integrated? Are all tags set to "denied" by default?</p>
+            <p>If not: fix that first. Server-side tracking without a clean consent foundation is a legal risk.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num" aria-hidden="true">3</div>
+          <div class="step-content">
+            <h3>Activate platform APIs</h3>
+            <p><strong>Meta CAPI:</strong> Meta Business Manager &rarr; Events Manager &rarr; Your data source &rarr; Settings &rarr; Activate Conversions API &rarr; Choose implementation path.</p>
+            <p><strong>Google Enhanced Conversions:</strong> In Google Ads &rarr; Goals &rarr; Settings &rarr; Activate Enhanced Conversions &rarr; Configure event tagging via GTM.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num" aria-hidden="true">4</div>
+          <div class="step-content">
+            <h3>Set up the server container or choose a tool</h3>
+            <p><strong>Option A - Shopify:</strong> install Elevar or TrackBee, enter API keys, follow the setup. No own server required.</p>
+            <p><strong>Option B - custom website / WordPress:</strong> deploy GTM server container on Stape or Google Cloud Run, set up subdomain (for example <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">t.yourdomain.com</code>), reconfigure client-side GTM tags, set up server-side tags for GA4, Meta CAPI and Google Ads.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num" aria-hidden="true">5</div>
+          <div class="step-content">
+            <h3>Set up deduplication</h3>
+            <p>In a hybrid setup (pixel + server-side at the same time), every event needs a unique <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_id</code> - and <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_name</code> must be identical in pixel and CAPI (mind capitalization: "Purchase" is not the same as "purchase"). This prevents double counting in your ad accounts.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num" aria-hidden="true">6</div>
+          <div class="step-content">
+            <h3>Validate the data</h3>
+            <p>Check the <strong>Event Match Quality (EMQ) score</strong> in Meta Events Manager (scale 0-10; target for purchase events: &ge;8). Check the Enhanced Conversions diagnostics report under conversion actions in Google Ads. Compare GA4 against real order data again after 7-14 days.</p>
+          </div>
+        </div>
+
+        <h2 id="costs">11. What does server-side tracking cost?</h2>
+
+        <div class="table-wrap">
+          <table class="compare-table" aria-label="Costs of different server-side tracking setups">
+            <thead>
+              <tr><th>Setup</th><th>Monthly costs</th><th>One-time</th><th>Best for</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Platform app (Elevar / TrackBee)</td>
+                <td>from ~$79/month (TrackBee Start) to $150/month (Elevar Essentials); higher plans $200-750/month</td>
+                <td>&euro;0-500</td>
+                <td>Shopify stores, fast start</td>
+              </tr>
+              <tr>
+                <td>GTM server container (self-hosted, e.g. Stape)</td>
+                <td>free to ~$20/month (Stape Free / Pro)</td>
+                <td>&euro;500-2,000</td>
+                <td>Custom websites, technically confident teams</td>
+              </tr>
+              <tr>
+                <td>GTM server container (agency-managed)</td>
+                <td>&euro;50-150/month</td>
+                <td>&euro;1,000-3,000</td>
+                <td>Businesses without their own tech resource</td>
+              </tr>
+              <tr>
+                <td>Direct API integration (custom development)</td>
+                <td>&euro;0-20 (server)</td>
+                <td>&euro;2,000-10,000 (depending on complexity)</td>
+                <td>Technical teams, maximum control</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="fact-box">
+          <div class="fact-box-title">
+            <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            The most important comparison
+          </div>
+          <p>With a monthly Google Ads budget of &euro;2,000 and 35 percent missing conversions, the algorithm optimizes on a distorted picture. As a rule of thumb: as long as SST costs stay below 3 percent of monthly online marketing budget, the investment makes economic sense. Payback usually does not come from more conversions - but from more efficient use of the budget that is already being spent.</p>
+        </div>
+
+        <h2 id="mistakes">12. Which mistakes happen when implementing server-side tracking?</h2>
+
+        <div class="error-list" role="list">
+          <div class="error-item" role="listitem">
+            <div class="error-title">Mistake 1: server-side tracking without a clean consent foundation</div>
+            <p class="error-text">The most common and most dangerous mistake. Server-side tracking does not change the legal obligation to obtain consent. Sending conversion data server-side without consent can violate GDPR. The order is: set up consent cleanly first, then implement server-side tracking.</p>
+          </div>
+          <div class="error-item" role="listitem">
+            <div class="error-title">Mistake 2: no deduplication in a hybrid setup</div>
+            <p class="error-text">Without matching <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_id</code> and <code style="background:rgba(0,0,0,.06);padding:2px 5px;border-radius:4px;font-size:.84em;">event_name</code>, events are counted twice when pixel and CAPI run in parallel. This inflates conversion numbers and distorts attribution.</p>
+          </div>
+          <div class="error-item" role="listitem">
+            <div class="error-title">Mistake 3: Consent Mode v2 installed but not configured correctly</div>
+            <p class="error-text">An estimated ~67 percent of implementations are not fully compliant. The most common issue: tags fire before consent because the default configuration is set to "granted" instead of "denied".</p>
+          </div>
+          <div class="error-item" role="listitem">
+            <div class="error-title">Mistake 4: ignoring Event Match Quality</div>
+            <p class="error-text">Meta shows an <strong>Event Match Quality (EMQ) score</strong> for each conversion event in Events Manager on a scale from 0 to 10. A score below 6 indicates missing first-party data. Target for purchase events: &ge;8 out of 10 - achievable by sending hashed first-party data such as email, phone number and IP address.</p>
+          </div>
+          <div class="error-item" role="listitem">
+            <div class="error-title">Mistake 5: one-time setup without maintenance</div>
+            <p class="error-text">Meta CAPI had several breaking changes in 2024 and 2025. Anyone who builds the setup once and never touches it again will eventually face missing data.</p>
+          </div>
+          <div class="error-item" role="listitem">
+            <div class="error-title">Mistake 6: optimizing only one platform</div>
+            <p class="error-text">Many start with Meta CAPI and forget Google Enhanced Conversions. A clean tracking setup needs every channel you actively use.</p>
+          </div>
+        </div>
+
+        <h2 id="faq">13. FAQ: the most important questions about server-side tracking</h2>
+
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              What is server-side tracking in simple terms?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">Server-side tracking is an architecture where conversion events are not captured in the user's browser, but on a server you control. This server sends the data directly to the APIs of Google, Meta or TikTok - independent of ad blockers, iOS restrictions or cookie settings. Depending on setup and audience, companies using server-side tracking measure 10 to 40 percent more conversions - Meta itself confirms an average 19 percent more attribution through the Conversions API.</div></div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              Is server-side tracking GDPR-compliant?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">Yes - provided you implement it correctly together with a valid consent solution and Consent Mode v2. Server-side tracking alone does not automatically make your tracking GDPR-compliant. The legal basis for data processing must still exist.</div></div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              Do I need server-side tracking if I have a small website?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">As a rule of thumb: from around &euro;1,000-1,500 monthly ad budget, a server-side setup is worthwhile because data loss directly affects campaign efficiency. Below that, the hybrid approach (pixel + CAPI via partner integration) is often the more pragmatic entry point. A good benchmark: as long as SST costs stay below 3 percent of your marketing budget, the investment makes economic sense.</div></div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              What is the difference between Meta CAPI and the Meta Pixel?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">The Meta Pixel is JavaScript code that runs in the user's browser - and is therefore vulnerable to ad blockers and iOS restrictions. Meta CAPI sends the same data directly from the server - independent of the browser. In a hybrid setup, you use both in parallel and rely on CAPI as a fallback when the pixel fails.</div></div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              What is the Event Match Quality score in Meta and why does it matter?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">The <strong>Event Match Quality (EMQ) score</strong> shows on a scale from 0 to 10 how well Meta can match received events to a user profile. The target for purchase events is at least 8 - achievable by sending hashed first-party data such as email, phone number and IP address.</div></div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              Can I set up server-side tracking myself?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">The simpler routes - for example Shopify apps like Elevar or TrackBee - can be set up yourself if you have a basic understanding of tracking concepts. A complete GTM server-container setup or direct API integration requires technical know-how or external support.</div></div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-q" aria-expanded="false">
+              How do I check whether my tracking is losing data?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">Compare the transactions in GA4 with your actual orders from Shopify, WooCommerce or your CRM for the same period. If GA4 is more than 20 percent lower, you are systematically losing data.</div></div>
+          </div>
+        </div>
+
+        <h2 id="conclusion" style="scroll-margin-top:calc(var(--nav-h) + 24px);">
+          Conclusion: bad data is more expensive than no tracking
+        </h2>
+        <p>If you build your marketing on data that systematically hides 30 to 40 percent of reality, you are not making informed decisions. You are making decisions based on a distorted mirror.</p>
+        <p>Server-side tracking, together with a clean consent foundation, correct Consent Mode v2 and a first-party data strategy, is the most important lever for a tracking setup that can carry your marketing through 2026 and beyond.</p>
+
+        <div class="fact-box">
+          <div class="fact-box-title">
+            <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            The three steps this week
+          </div>
+          <p>1. <strong>Measure the tracking gap:</strong> compare GA4 transactions with real backend order data - more than 20 percent difference means action is needed</p>
+          <p>2. <strong>Check Consent Mode v2 status:</strong> are all tags set to "denied" by default? Is the CMP Google-certified and compliant with the German Consent Regulation (EinwV, since April 2025)?</p>
+          <p>3. <strong>Activate Meta CAPI:</strong> this is the fastest route to immediately better data - through partner integration in Meta Events Manager, without your own server</p>
+        </div>
+
+        <div class="sources-box" role="note" aria-label="Sources">
+          <strong>Sources</strong>
+
+          <a href="https://www.bcg.com/publications/2020/responsible-marketing-with-first-party-data" target="_blank" rel="noopener" style="color:var(--indigo);">
+            Google &amp; BCG: Responsible Marketing with First-Party Data (2020)
+          </a> &middot;
+          <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-value-of-getting-personalization-right-or-wrong-is-multiplying" target="_blank" rel="noopener" style="color:var(--indigo);">
+            McKinsey: The Value of Getting Personalization Right (2021)
+          </a> &middot;
+          <a href="https://developers.facebook.com/documentation/ads-commerce/conversions-api/parameters" target="_blank" rel="noopener" style="color:var(--indigo);">
+            Meta for Developers: Conversions API parameter documentation
+          </a> &middot;
+          <a href="https://support.google.com/google-ads/answer/9888656" target="_blank" rel="noopener" style="color:var(--indigo);">
+            Google Ads Help: Enhanced Conversions (official)
+          </a> &middot;
+          <a href="https://www.bfdi.bund.de/SharedDocs/Kurzmeldungen/DE/2024/24_Einwilligungsverordnung.html" target="_blank" rel="noopener" style="color:var(--indigo);">
+            BfDI: German Consent Regulation applies from 2025
+          </a> &middot;
+          <a href="https://www.signalbridgedata.com/blog/server-side-tracking-benchmark-report-2026" target="_blank" rel="noopener" style="color:var(--indigo);">
+            SignalBridgeData: Server-Side Tracking Benchmark Report 2026
+          </a> &middot;
+          <a href="https://stape.io/blog/benefits-server-side-tagging" target="_blank" rel="noopener" style="color:var(--indigo);">
+            Stape: Server-Side Tracking Benefits 2026
+          </a> &middot;
+          <a href="https://www.cometly.com/post/server-side-tracking-solutions-for-ecommerce" target="_blank" rel="noopener" style="color:var(--indigo);">
+            Cometly: Server-Side Tracking Guide 2026
+          </a> &middot;
+          <a href="https://pandectes.io/blog/server-side-tagging-and-tracking-a-marketers-guide-for-2026/" target="_blank" rel="noopener" style="color:var(--indigo);">
+            Pandectes: Server-Side Tagging Guide 2026
+          </a> &middot;
+          <a href="https://senorit.de/en/blog/gdpr-analytics-consent-mode-v2-hamburg" target="_blank" rel="noopener" style="color:var(--indigo);">
+            Senorit: GDPR Analytics &amp; Consent Mode v2 (2026)
+          </a> &middot;
+          <a href="https://ego-digital.io/how-to-solve-the-apple-itp-7-day-cookie-limit/" target="_blank" rel="noopener" style="color:var(--indigo);">
+            ego-digital: Apple ITP &amp; Cookieless Tracking (2026)
+          </a> &middot;
+          <a href="https://www.adjust.com/blog/att-opt-in-rates-2025/" target="_blank" rel="noopener" style="color:var(--indigo);">
+            Adjust: ATT Opt-In Rates 2025
+          </a>
+        </div>
+
+        <div style="margin-top:clamp(40px,5vw,60px);padding-top:32px;border-top:1px solid var(--border);display:flex;align-items:flex-start;gap:16px;">
+          <picture>
+            <source srcset="/assets/img/Profilbild2.webp" type="image/webp">
+            <img src="/assets/img/Profilbild2.jpg" alt="Tobias Meixner" width="52" height="52" style="border-radius:50%;object-fit:cover;flex-shrink:0;" loading="lazy">
+          </picture>
+          <div>
+            <div style="font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:2px;">Tobias Meixner</div>
+            <div style="font-size:.8rem;color:var(--muted);margin-bottom:8px;">Freelancer for tracking &amp; websites &middot; Wuerzburg</div>
+            <p style="font-size:.84rem;color:var(--muted);line-height:1.65;margin:0;">I set up GTM, GA4, Consent Mode v2 and Meta CAPI correctly - so your budget optimizes on real data. <a href="/en/contact/" style="color:var(--indigo);">Get in touch</a>.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;background:var(--navy);border-radius:var(--r-lg);padding:28px 32px;">
+          <p style="font-family:var(--fd);font-size:1rem;font-weight:700;color:#fff;margin-bottom:8px;">Want to close your tracking gap?</p>
+          <p style="font-size:.875rem;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:20px;">I measure your current data loss and set up Consent Mode v2, Meta CAPI and Google Enhanced Conversions correctly. Everything on the <a href="/en/services/" style="color:#a5b4fc;">services page</a> - from &euro;149.</p>
+          <a href="/en/contact/" class="btn btn-indigo btn-sm">Get in touch <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <div style="margin-top:24px;">
+          <a href="/en/blog/" style="display:inline-flex;align-items:center;gap:6px;font-size:.84rem;color:var(--muted);text-decoration:none;font-family:var(--fd);font-weight:600;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Back to the blog
+          </a>
+        </div>
+
+      </article>
+
+      <aside class="article-sidebar" aria-label="Table of contents">
+        <nav class="toc-card" aria-label="Jump to section">
+          <div class="toc-card-title">Contents</div>
+          <ul class="toc-links" role="list">
+            <li><a href="#data-loss">1. Measure data loss</a></li>
+            <li><a href="#standard-tracking">2. Standard tracking limits</a></li>
+            <li><a href="#what-is-sst">3. What is SST?</a></li>
+            <li><a href="#comparison">4. Direct comparison</a></li>
+            <li><a href="#first-party">5. First-party data</a></li>
+            <li><a href="#consent-mode">6. Consent Mode v2</a></li>
+            <li><a href="#architecture">7. Architecture approaches</a></li>
+            <li><a href="#small-businesses">8. SMB setup</a></li>
+            <li><a href="#apis">9. Platform APIs</a></li>
+            <li><a href="#step-by-step">10. Step by step</a></li>
+            <li><a href="#costs">11. Costs</a></li>
+            <li><a href="#mistakes">12. Avoid mistakes</a></li>
+            <li><a href="#faq">13. FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="author-card">
+          <picture>
+            <source srcset="/assets/img/Profilbild2.webp" type="image/webp">
+            <img src="/assets/img/Profilbild2.jpg" alt="Tobias Meixner" width="48" height="48" loading="lazy">
+          </picture>
+          <div class="author-name">Tobias Meixner</div>
+          <div class="author-role">Freelancer &middot; Wuerzburg</div>
+          <p class="author-bio">GTM, GA4, Consent Mode v2 &amp; Meta CAPI - clean tracking for your performance marketing.</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <span class="footer-copy">&copy; 2026 Tobias Meixner</span>
+      <ul class="footer-links">
+        <li><a href="/en/blog/">Blog</a></li>
+        <li><a href="/en/legal/">Legal notice</a></li>
+        <li><a href="/en/policy-privacy/">Privacy policy</a></li>
+        <li><a href="/en/terms-and-conditions/">Terms</a></li>
+        <li><a href="#" onclick="CookieScript.instance.show(); return false;">Cookie settings</a></li>
+        <li><a href="https://www.linkedin.com/in/meixner-tobias" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+const themeToggle = document.getElementById('themeToggle');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
+const savedTheme = localStorage.getItem('theme');
+function updateThemeLabel() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.querySelectorAll('.theme-label').forEach(el => { el.textContent = isDark ? 'Light Mode' : 'Dark Mode'; });
+}
+if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+updateThemeLabel();
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme','light'); }
+  else { document.documentElement.setAttribute('data-theme','dark'); localStorage.setItem('theme','dark'); }
+  updateThemeLabel();
+}
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12), { passive: true });
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
+function closeDrawer() { drawer.classList.remove('is-open'); burger.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+burger.addEventListener('click', () => {
+  const open = !drawer.classList.contains('is-open');
+  drawer.classList.toggle('is-open',open); burger.classList.toggle('is-open',open);
+  burger.setAttribute('aria-expanded',String(open)); document.body.style.overflow=open?'hidden':'';
+  if (open) { const fl = drawer.querySelector('a'); if (fl) fl.focus(); }
+});
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+document.addEventListener('click', e => { if (!nav.contains(e.target) && !drawer.contains(e.target)) closeDrawer(); });
+document.addEventListener('keydown', e => { if (e.key==='Escape') closeDrawer(); });
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  });
+});
+
+const langBtn = document.getElementById('langBtn');
+const langDropdown = document.getElementById('langDropdown');
+langBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  const isOpen = langDropdown.classList.contains('is-open');
+  langDropdown.classList.toggle('is-open');
+  langBtn.classList.toggle('is-open');
+  langBtn.setAttribute('aria-expanded', String(!isOpen));
+});
+document.addEventListener('click', function() {
+  langDropdown.classList.remove('is-open');
+  langBtn.classList.remove('is-open');
+  langBtn.setAttribute('aria-expanded', 'false');
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    langDropdown.classList.remove('is-open');
+    langBtn.classList.remove('is-open');
+  }
+});
+</script>
+</body>
+</html>

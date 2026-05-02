@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage':     'denied',
+    'ad_storage':            'denied',
+    'ad_user_data':          'denied',
+    'ad_personalization':    'denied',
+    'functionality_storage': 'denied',
+    'security_storage':      'granted',
+    'wait_for_update':       500
+  });
+</script>
+<script>
+  if (window.location.hostname !== 'localhost' &&
+      window.location.hostname !== '127.0.0.1') {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.charset = 'UTF-8';
+    script.src = '//cdn.cookie-script.com/s/d261fb8134670358b6795a49b5d04574.js';
+    document.head.appendChild(script);
+  }
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5QLXDT4T');</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services - Websites, GTM & GA4 Setup | Tobias Meixner Würzburg</title>
+  <meta name="description" content="Freelancer from Würzburg: website development from €349, GTM & GA4 setup from €149, monthly care package from €49. Direct, transparent, GDPR-compliant.">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://meixner-tobias.com/en/services/">
+  <meta property="og:title"       content="Services & Pricing - Websites, GTM & GA4 | Tobias Meixner">
+  <meta property="og:description" content="Website from €349, GTM & GA4 setup from €149, care package from €49/month. Freelancer from Würzburg - direct, transparent, no agency overhead.">
+  <meta property="og:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"      content="en_US">
+  <meta property="og:site_name"   content="Tobias Meixner">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Services & Pricing - Websites, GTM & GA4 | Tobias Meixner">
+  <meta name="twitter:description" content="Website from €349, GTM & GA4 from €149, care package from €49/month. Freelancer from Würzburg.">
+  <meta name="twitter:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
+
+  <link rel="canonical" href="https://meixner-tobias.com/en/services/">
+  <link rel="alternate" hreflang="de" href="https://meixner-tobias.com/leistungen/">
+  <link rel="alternate" hreflang="en" href="https://meixner-tobias.com/en/services/">
+  <link rel="alternate" hreflang="x-default" href="https://meixner-tobias.com/en/services/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style-v1.css">
+
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+  <style>
+    .page-hero { padding-bottom: 0; }
+    .page-hero-inner { padding-block: clamp(48px, 7vw, 80px) 0; gap: 0; }
+    .page-hero-desc  { margin-bottom: 32px; max-width: 560px; }
+    .hero-wave { width: 100%; overflow: hidden; line-height: 0; margin-top: 40px; }
+    .hero-wave svg { display: block; width: 100%; }
+
+    .svc-main { padding-block: clamp(52px, 7vw, 80px); background: var(--navy); }
+    .svc-main .sec-label { color: rgba(199,203,253,.85); }
+    .svc-main .sec-title { color: #fff; }
+    .svc-main .sec-desc  { color: rgba(255,255,255,.58); }
+
+    .svc-main-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; margin-top: clamp(32px, 4vw, 48px); }
+
+    .svc-main-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--r-lg); padding: clamp(24px, 3vw, 36px) clamp(20px, 2.5vw, 28px); display: flex; flex-direction: column; transition: transform .3s, box-shadow .3s, border-color .3s, background .3s; position: relative; }
+    .svc-main-card:hover { transform: translateY(-5px); border-color: rgba(199,203,253,.4); background: rgba(255,255,255,.08); }
+    .svc-main-card.featured { background: var(--indigo); border-color: transparent; transform: translateY(-6px); box-shadow: 0 20px 60px rgba(91,108,248,.5); }
+    .svc-main-card.featured:hover { transform: translateY(-10px); box-shadow: 0 24px 70px rgba(91,108,248,.55); background: #4e5fe8; }
+
+    .svc-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,.2); color: #fff; font-size: .69rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 4px 10px; border-radius: 99px; width: fit-content; margin-bottom: 18px; }
+    .svc-badge-placeholder { height: 26px; margin-bottom: 18px; }
+
+    .svc-main-icon { width: 48px; height: 48px; border-radius: 13px; background: rgba(255,255,255,.1); display: grid; place-items: center; margin-bottom: 18px; flex-shrink: 0; color: #fff; }
+    .svc-main-card.featured .svc-main-icon { background: rgba(255,255,255,.2); }
+
+    .svc-price { font-family: var(--fd); font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 800; color: #fff; line-height: 1; margin-bottom: 4px; }
+    .svc-price-sub { font-size: .78rem; color: rgba(255,255,255,.45); margin-bottom: 18px; }
+
+    .svc-main-name { font-family: var(--fd); font-size: 1.15rem; font-weight: 800; color: #fff; margin-bottom: 6px; letter-spacing: -.01em; }
+    .svc-main-tagline { font-size: .85rem; color: rgba(255,255,255,.55); margin-bottom: 20px; line-height: 1.55; }
+    .svc-main-card.featured .svc-main-tagline { color: rgba(255,255,255,.8); }
+
+    .svc-divider { height: 1px; background: rgba(255,255,255,.1); margin-bottom: 18px; }
+    .svc-main-card.featured .svc-divider { background: rgba(255,255,255,.25); }
+
+    .svc-feat-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; flex: 1; }
+    .svc-feat-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .875rem; color: rgba(255,255,255,.7); line-height: 1.45; }
+    .svc-main-card.featured .svc-feat-list li { color: rgba(255,255,255,.92); }
+
+    .svc-chk { width: 18px; height: 18px; border-radius: 50%; background: rgba(255,255,255,.15); flex-shrink: 0; margin-top: 1px; display: grid; place-items: center; }
+    .svc-main-card.featured .svc-chk { background: rgba(255,255,255,.3); }
+    .svc-chk svg { color: #fff; }
+
+    .addon-box { background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: 12px 14px; margin-bottom: 20px; font-size: .8rem; color: rgba(255,255,255,.55); line-height: 1.55; }
+    .svc-main-card.featured .addon-box { background: rgba(0,0,0,.25); border-color: rgba(255,255,255,.2); color: rgba(255,255,255,.7); }
+    .addon-box strong { display: block; color: rgba(255,255,255,.85); font-size: .82rem; margin-bottom: 4px; }
+    .addon-price { display: inline-block; background: rgba(255,255,255,.12); border-radius: 99px; padding: 2px 8px; font-size: .72rem; font-weight: 700; color: #fff; margin-top: 5px; }
+
+    .svc-includes { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--r); padding: clamp(24px, 3vw, 32px) clamp(20px, 2.5vw, 28px); margin-top: clamp(28px, 4vw, 40px); }
+    .svc-includes-title { font-family: var(--fd); font-size: .875rem; font-weight: 700; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 18px; text-align: center; }
+    .includes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 24px; }
+    .inc-item { display: flex; align-items: center; gap: 9px; font-size: .85rem; color: rgba(255,255,255,.65); }
+    .inc-item svg { color: var(--indigo-mid); flex-shrink: 0; }
+
+    .svc-section { padding-block: clamp(56px, 8vw, 96px); }
+    .svc-block { display: grid; grid-template-columns: 300px 1fr; gap: clamp(32px, 5vw, 64px); align-items: start; padding-block: clamp(40px, 5vw, 60px); border-bottom: 1px solid var(--border); }
+    .svc-block:first-child { padding-top: 0; }
+    .svc-block:last-child  { border-bottom: none; padding-bottom: 0; }
+    .svc-block-icon { width: 52px; height: 52px; border-radius: 15px; background: var(--indigo-soft); display: grid; place-items: center; margin-bottom: 14px; color: var(--indigo); }
+    .svc-block-title { font-family: var(--fd); font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 800; color: var(--navy); letter-spacing: -.015em; margin-bottom: 8px; }
+    .svc-block-desc  { font-size: .9rem; color: var(--muted); line-height: 1.7; }
+    .svc-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .svc-detail-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); padding: 18px 16px; transition: border-color .25s, box-shadow .25s; }
+    .svc-detail-card:hover { border-color: var(--indigo-mid); box-shadow: var(--sh-md); }
+    .svc-detail-title { font-family: var(--fd); font-size: .875rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .svc-detail-text  { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+    .svc-detail-card .svc-tags { margin-top: 12px; }
+
+    .process-section { background: var(--navy); padding-block: clamp(52px, 7vw, 80px); }
+    .process-section .sec-label { color: rgba(199,203,253,.85); }
+    .process-section .sec-title { color: #fff; }
+    .process-section .sec-desc  { color: rgba(255,255,255,.58); }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: clamp(32px, 4vw, 48px); position: relative; }
+    .process-grid::before { content: ''; position: absolute; top: 26px; left: calc(12.5% + 20px); right: calc(12.5% + 20px); height: 1px; background: rgba(255,255,255,.12); pointer-events: none; }
+    .process-step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 16px; }
+    .step-num { width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); display: flex; align-items: center; justify-content: center; font-family: var(--fd); font-size: 1rem; font-weight: 800; color: var(--indigo-mid); margin-bottom: 16px; position: relative; z-index: 1; flex-shrink: 0; }
+    .step-num.active { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+    .step-title { font-family: var(--fd); font-size: .95rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .step-desc  { font-size: .82rem; color: rgba(255,255,255,.5); line-height: 1.6; }
+
+    .faq-section { padding-block: clamp(56px, 8vw, 96px); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 48px); align-items: start; }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; transition: border-color .2s; }
+    .faq-item.open { border-color: var(--indigo-mid); }
+    .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 18px; background: none; border: none; cursor: pointer; font-family: var(--fd); font-size: .9rem; font-weight: 700; color: var(--navy); text-align: left; }
+    .faq-q svg { flex-shrink: 0; color: var(--indigo); transition: transform .25s; }
+    .faq-item.open .faq-q svg { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s; padding: 0 18px; }
+    .faq-a-inner { font-size: .875rem; color: var(--muted); line-height: 1.7; padding-bottom: 16px; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-info-card { background: var(--navy); border-radius: var(--r-lg); padding: clamp(28px, 4vw, 40px); position: sticky; top: calc(var(--nav-h) + 24px); }
+    .faq-info-title { font-family: var(--fd); font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 14px; }
+    .faq-info-p { font-size: .88rem; color: rgba(255,255,255,.6); line-height: 1.7; margin-bottom: 24px; }
+    .faq-info-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .faq-info-list li { display: flex; align-items: center; gap: 10px; font-size: .84rem; color: rgba(255,255,255,.7); }
+    .fii { width: 20px; height: 20px; border-radius: 50%; background: var(--indigo); flex-shrink: 0; display: grid; place-items: center; }
+    .fii svg { color: #fff; }
+
+    @media (max-width: 1024px) {
+      .svc-main-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .svc-main-card.featured { transform: translateY(-3px); }
+      .svc-block { grid-template-columns: 240px 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      .svc-main-grid { grid-template-columns: 1fr; gap: 16px; }
+      .svc-main-card.featured { transform: none; box-shadow: 0 8px 32px rgba(91,108,248,.4); }
+      .svc-block { grid-template-columns: 1fr; gap: 22px; }
+      .svc-detail-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .process-grid::before { display: none; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .faq-info-card { position: static; }
+    }
+    @media (max-width: 560px) {
+      .svc-detail-grid { grid-template-columns: 1fr; }
+      .includes-grid   { grid-template-columns: 1fr 1fr; }
+      .process-grid    { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 390px) {
+      .process-grid  { grid-template-columns: 1fr 1fr; gap: 20px; }
+      .includes-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://meixner-tobias.com/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://meixner-tobias.com/en/services/" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://meixner-tobias.com/en/services/#service",
+      "name": "Freelancer Services - Web & Tracking",
+      "url": "https://meixner-tobias.com/en/services/",
+      "description": "Website development, GTM & GA4 setup, GDPR-compliant tracking and monthly technical support for small businesses.",
+      "founder": { "@type": "Person", "@id": "https://meixner-tobias.com/#person", "name": "Tobias Meixner" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          { "@type": "Offer", "name": "GTM & GA4 Setup", "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "Website development", "priceSpecification": { "@type": "PriceSpecification", "price": "349", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "Care-free package" }
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QLXDT4T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/en/" aria-label="Tobias Meixner - Home" style="display:flex;align-items:center;padding-top:6px;">
+      <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 230" role="img" aria-labelledby="logo-t">
+        <title id="logo-t">Tobias Meixner</title>
+        <g transform="translate(8 6)">
+          <circle class="logo-dot" cx="50" cy="108" r="18"/>
+          <line class="logo-stroke" x1="68" y1="62" x2="98" y2="118"/>
+          <line class="logo-stroke" x1="136" y1="62" x2="166" y2="118"/>
+          <text class="logo-t" x="208" y="136">eixner</text>
+        </g>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/en/">Home</a></li>
+      <li><a href="/en/about/">About</a></li>
+      <li><a href="/en/services/" class="active">Services</a></li>
+      <li><a href="/en/projects/">Projects</a></li>
+      <li class="nav-dropdown">
+        <a href="/en/blog/">Blog</a>
+        <ul class="nav-drop-menu" role="menu">
+          <li role="none"><a href="/en/blog/answer-engine-optimization/" role="menuitem">Answer Engine Optimization</a></li>
+          <li role="none"><a href="/en/blog/performance-max-vs-advantage-plus/" role="menuitem">Performance Max vs. Advantage Plus</a></li>
+          <li role="none"><a href="/en/blog/server-side-tracking/" role="menuitem">Server-Side Tracking</a></li>
+        </ul>
+      </li>
+      <li><a href="/en/products/">Products</a></li>
+      <li class="lang-switch">
+        <button class="lang-btn" id="langBtn" aria-label="Choose language" aria-expanded="false">
+          <div class="flag-circle"><div class="flag-us"></div></div>
+          EN
+          <span class="lang-arrow">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="menu">
+          <a href="/leistungen/" class="lang-option" role="menuitem">
+            <div class="flag-lg"><div class="flag-de"></div></div>
+            <div class="lang-option-text">
+              <span class="lang-option-name">Deutsch</span>
+              <span class="lang-option-sub">Deutschland</span>
+            </div>
+          </a>
+          <a href="/en/services/" class="lang-option active" role="menuitem">
+            <div class="flag-lg"><div class="flag-us"></div></div>
+            <div class="lang-option-text">
+              <span class="lang-option-name">English</span>
+              <span class="lang-option-sub">United States</span>
+            </div>
+            <span class="lang-check">✓</span>
+          </a>
+        </div>
+      </li>
+      <li><a href="/en/contact/" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <svg class="icon-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <svg class="icon-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+    </button>
+    <button class="burger" id="burger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<nav class="drawer" id="drawer" aria-label="Mobile Navigation">
+  <ul>
+    <li>
+      <div class="drawer-lang">
+        <a href="/leistungen/" class="drawer-lang-btn">
+          <div class="flag-circle"><div class="flag-de"></div></div>
+          Deutsch
+        </a>
+        <a href="/en/services/" class="drawer-lang-btn active">
+          <div class="flag-circle"><div class="flag-us"></div></div>
+          English
+        </a>
+      </div>
+    </li>
+    <li><a href="/en/">Home <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/about/">About <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/services/" class="active">Services <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/projects/">Projects <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/blog/">Blog <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/products/">Products <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/en/contact/">Get in touch <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+    <li style="padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:center;">
+      <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle dark mode">
+        <svg class="icon-sun" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+        <span class="theme-label">Dark Mode</span>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero" id="main-content" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-hero-badge">
+        <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Services &amp; Pricing
+      </div>
+      <h1 class="page-hero-title" id="hero-heading">
+        What I do -<br><em>and what it costs.</em>
+      </h1>
+      <p class="page-hero-desc">
+        Three clear services for small businesses, freelancers and clubs.
+        No agency overhead, no fine print.
+        Directly with me.
+      </p>
+      <a href="/en/contact/" class="btn btn-primary">
+        Get a free quote
+        <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 40" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0 Q360 40 720 20 Q1080 0 1440 30 L1440 40 L0 40Z" fill="#0D1B2A"/>
+    </svg>
+  </div>
+</section>
+
+<!-- MAIN SERVICES -->
+<section class="svc-main reveal" aria-labelledby="main-services-heading">
+  <div class="container">
+    <div class="sec-head text-center">
+      <span class="sec-label">Services</span>
+      <h2 class="sec-title" id="main-services-heading">Three services. Clear prices.</h2>
+      <p class="sec-desc">No hidden costs, no surprises. You know exactly what you're getting and what it costs.</p>
+    </div>
+
+    <div class="svc-main-grid">
+
+      <!-- SERVICE 1: GTM & GA4 -->
+      <div class="svc-main-card reveal" data-d="1">
+        <div class="svc-badge-placeholder"></div>
+        <div class="svc-main-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg>
+        </div>
+        <div class="svc-price">from €149</div>
+        <div class="svc-price-sub">one-time · no subscription</div>
+        <div class="svc-main-name">GTM &amp; GA4 Setup</div>
+        <p class="svc-main-tagline">You want to know what's happening on your website - without privacy issues and without technical chaos.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-feat-list">
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Google Tag Manager set up cleanly</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>GA4 property configured</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Key conversion events set up</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Consent Mode v2 - GDPR-compliant</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>CMP integration (cookie banner)</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Handover with full walkthrough</li>
+        </ul>
+        <div class="addon-box">
+          <strong>+ Google Ads &amp; Meta Pixel</strong>
+          Conversion tracking for ad campaigns including Enhanced Conversions on request.
+          <span class="addon-price">on request</span>
+        </div>
+        <a href="/en/contact/" class="btn btn-outline-indigo btn-full">Get in touch</a>
+      </div>
+
+      <!-- SERVICE 2: Website (FEATURED) -->
+      <div class="svc-main-card featured reveal" data-d="2">
+        <div class="svc-badge">
+          <svg aria-hidden="true" width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Most popular
+        </div>
+        <div class="svc-main-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <div class="svc-price">from €349</div>
+        <div class="svc-price-sub">one-time · no subscription</div>
+        <div class="svc-main-name">Website development</div>
+        <p class="svc-main-tagline">You need a professional website - fast, secure, legally sound, and without any tech headaches.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-feat-list">
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Modern design, mobile-optimised</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>SSL certificate (HTTPS) included</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Hosting &amp; domain setup</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Contact form, legal notice &amp; privacy policy</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>SEO foundation, Schema.org, sitemap</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Handover with complete walkthrough</li>
+        </ul>
+        <div class="addon-box">
+          <strong>+ Tracking included - from €99 extra</strong>
+          GTM &amp; GA4 set up right when the website goes live. Start with clean data from day one.
+          <span class="addon-price">+ from €99</span>
+        </div>
+        <a href="/en/contact/" class="btn btn-white btn-full">Get in touch</a>
+      </div>
+
+      <!-- SERVICE 3: Care-free package -->
+      <div class="svc-main-card reveal" data-d="3">
+        <div class="svc-badge-placeholder"></div>
+        <div class="svc-main-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="svc-price">from €49</div>
+        <div class="svc-price-sub">per month · cancel anytime</div>
+        <div class="svc-main-name">Care-free package</div>
+        <p class="svc-main-tagline">Your website keeps running - and you always have someone who takes care of it. No ticket system, no overhead.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-feat-list">
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Hosting &amp; SSL running reliably</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Small changes handled promptly</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Direct point of contact - me, personally</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Technical support when things go wrong</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Cancel anytime - no lock-in</li>
+          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Transparent monthly billing</li>
+        </ul>
+        <div class="addon-box">
+          <strong>Perfect add-on after a website launch</strong>
+          Just continue after go-live - I stay on it and you don't have to worry about anything.
+        </div>
+        <a href="/en/contact/" class="btn btn-outline-indigo btn-full">Get in touch</a>
+      </div>
+
+    </div>
+
+    <!-- Included in every service -->
+    <div class="svc-includes reveal">
+      <div class="svc-includes-title">Included in every service</div>
+      <div class="includes-grid">
+        <div class="inc-item"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Direct contact - no ticket system</div>
+        <div class="inc-item"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Transparent pricing upfront</div>
+        <div class="inc-item"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>GDPR-conscious implementation</div>
+        <div class="inc-item"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Honest about what's feasible</div>
+        <div class="inc-item"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Handover with explanation</div>
+        <div class="inc-item"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>No agency overhead</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL SECTIONS -->
+<section class="svc-section" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">What's behind it</span>
+      <h2 class="sec-title" id="services-heading">What I actually do</h2>
+      <p class="sec-desc">The details behind each service - so you know exactly what you're getting.</p>
+    </div>
+
+    <div class="svc-block reveal">
+      <div>
+        <div class="svc-block-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg></div>
+        <h3 class="svc-block-title">Tracking &amp; Analytics</h3>
+        <p class="svc-block-desc">My strongest area - with real hands-on experience from Gumb AG. Clean data foundation for good decisions, GDPR-compliant and reliable.</p>
+      </div>
+      <div class="svc-detail-grid">
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Google Tag Manager</div>
+          <p class="svc-detail-text">Building, configuring and maintaining the GTM container. Events, triggers, variables - cleanly structured and documented.</p>
+          <div class="svc-tags"><span class="svc-tag">GTM Setup</span><span class="svc-tag">Events</span><span class="svc-tag">DataLayer</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Google Analytics 4</div>
+          <p class="svc-detail-text">Set up GA4 property, configure events, define conversions - and actually understand what the data is telling you.</p>
+          <div class="svc-tags"><span class="svc-tag">GA4</span><span class="svc-tag">Conversions</span><span class="svc-tag">Reports</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Consent Mode v2 &amp; GDPR</div>
+          <p class="svc-detail-text">Privacy-compliant implementation with CMP integration to Google's standard. Tracking that's legally sound.</p>
+          <div class="svc-tags"><span class="svc-tag">Consent Mode v2</span><span class="svc-tag">GDPR</span><span class="svc-tag">CMP</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Ads &amp; Meta Tracking</div>
+          <p class="svc-detail-text">Google Ads conversion tracking and Meta Pixel including Enhanced Conversions for more precise campaign data.</p>
+          <div class="svc-tags"><span class="svc-tag">Google Ads</span><span class="svc-tag">Meta Pixel</span><span class="svc-tag">Enhanced Conversions</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-block reveal">
+      <div>
+        <div class="svc-block-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <h3 class="svc-block-title">Websites &amp; Tech</h3>
+        <p class="svc-block-desc">Building and maintaining websites - from technical setup to ongoing support. With everything included: SSL, GDPR, SEO foundation.</p>
+      </div>
+      <div class="svc-detail-grid">
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Website build</div>
+          <p class="svc-detail-text">New website from scratch - modern, mobile-optimised, fast loading. With contact form, legal notice and privacy policy.</p>
+          <div class="svc-tags"><span class="svc-tag">HTML/CSS/JS</span><span class="svc-tag">WordPress</span><span class="svc-tag">CMS</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">SEO &amp; visibility</div>
+          <p class="svc-detail-text">Title tags, meta descriptions, Schema.org JSON-LD, sitemap, robots.txt - the technical foundation so Google can find you.</p>
+          <div class="svc-tags"><span class="svc-tag">SEO</span><span class="svc-tag">Schema.org</span><span class="svc-tag">Sitemap</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Hosting, domain &amp; SSL</div>
+          <p class="svc-detail-text">Domain registration, hosting setup, SSL certificate (HTTPS), DNS configuration - everything to keep your website secure and reachable.</p>
+          <div class="svc-tags"><span class="svc-tag">Hosting</span><span class="svc-tag">SSL</span><span class="svc-tag">DNS</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Ongoing maintenance</div>
+          <p class="svc-detail-text">Updates, content changes, bug fixes and technical support - so your website stays current and functional.</p>
+          <div class="svc-tags"><span class="svc-tag">Maintenance</span><span class="svc-tag">Support</span><span class="svc-tag">Updates</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-block reveal">
+      <div>
+        <div class="svc-block-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="svc-block-title">Care-free package</h3>
+        <p class="svc-block-desc">You don't want to deal with tech - that's completely understandable. I take care of everything so your website just works.</p>
+      </div>
+      <div class="svc-detail-grid">
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Hosting &amp; SSL</div>
+          <p class="svc-detail-text">Hosting runs, SSL certificate is active, domain is reachable. You won't notice a thing - because it just works.</p>
+          <div class="svc-tags"><span class="svc-tag">Hosting</span><span class="svc-tag">SSL</span><span class="svc-tag">Uptime</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Small changes</div>
+          <p class="svc-detail-text">Update a text, swap an image, add a new page - small changes are handled promptly without any back-and-forth.</p>
+          <div class="svc-tags"><span class="svc-tag">Content</span><span class="svc-tag">Changes</span><span class="svc-tag">Fast</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Technical support</div>
+          <p class="svc-detail-text">Something not working? You message me directly - no ticket system, no queue. I look at the problem and fix it.</p>
+          <div class="svc-tags"><span class="svc-tag">Support</span><span class="svc-tag">Direct contact</span><span class="svc-tag">Problem solving</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Cancel anytime</div>
+          <p class="svc-detail-text">No minimum term, no annual contracts. Book as long as you want - cancel anytime with 4 weeks' notice.</p>
+          <div class="svc-tags"><span class="svc-tag">Flexible</span><span class="svc-tag">Cancellable</span><span class="svc-tag">from €49/month</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section reveal" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="sec-head text-center">
+      <span class="sec-label" style="color:rgba(199,203,253,.85)">Process</span>
+      <h2 class="sec-title" id="process-heading" style="color:#fff;">How does it work?</h2>
+      <p class="sec-desc" style="color:rgba(255,255,255,.58);margin-inline:auto;">Four steps - from first contact to finished solution. No lengthy questionnaire, no overhead.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num active" aria-hidden="true">01</div>
+        <div class="step-title">Drop me a message</div>
+        <p class="step-desc">Describe in two sentences what you need - via the contact form or email.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num active" aria-hidden="true">02</div>
+        <div class="step-title">Quick call</div>
+        <p class="step-desc">15-30 minutes. We clarify what you want, what I can do, and what it will cost.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num active" aria-hidden="true">03</div>
+        <div class="step-title">Clear quote</div>
+        <p class="step-desc">You get a clear, transparent quote. Once confirmed, we get started.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num active" aria-hidden="true">04</div>
+        <div class="step-title">Handover</div>
+        <p class="step-desc">Finished solution with a walkthrough. You understand what was done and can use it yourself going forward.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="faq-grid">
+      <div>
+        <div class="sec-head reveal">
+          <span class="sec-label">FAQ</span>
+          <h2 class="sec-title" id="faq-heading">Common questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item reveal" data-d="1">
+            <button class="faq-q" id="faq-q-1" aria-expanded="false">
+              What's included in the GTM &amp; GA4 setup?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a" role="region" aria-labelledby="faq-q-1">
+              <div class="faq-a-inner">Setting up the GTM container, configuring the GA4 property, setting up the most important conversion events (form, clicks, scroll), Consent Mode v2 to Google's standard, and a privacy-compliant CMP integration. Handover with a walkthrough explaining what's being tracked and why.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-d="2">
+            <button class="faq-q" id="faq-q-2" aria-expanded="false">
+              What does a website cost exactly?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a" role="region" aria-labelledby="faq-q-2">
+              <div class="faq-a-inner">A simple website for freelancers or small clubs starts from €349 one-time. More pages or complex requirements cost more accordingly. After a quick conversation you'll get a concrete quote - transparent and with no surprises.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-d="3">
+            <button class="faq-q" id="faq-q-3" aria-expanded="false">
+              What exactly is the care-free package?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a" role="region" aria-labelledby="faq-q-3">
+              <div class="faq-a-inner">Each month I make sure your website keeps running: hosting is active, SSL certificate is valid, small content changes are made promptly. You always have a direct point of contact - me, personally. No ticket system, no overhead. From €49/month, cancel anytime.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-d="4">
+            <button class="faq-q" id="faq-q-4" aria-expanded="false">
+              Can website and tracking be combined?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a" role="region" aria-labelledby="faq-q-4">
+              <div class="faq-a-inner">Yes - and I recommend it. Anyone getting a new website should know from the start what's happening on it. As an add-on to the website, I set up GTM and GA4 right at launch. That saves time, you start with clean data from day one, and the add-on costs from €99 instead of the full setup price.</div>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-d="5">
+            <button class="faq-q" id="faq-q-5" aria-expanded="false">
+              How quickly can we get started?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a" role="region" aria-labelledby="faq-q-5">
+              <div class="faq-a-inner">After the first conversation and a clear brief, usually within a few days. I study in parallel so capacity is limited - but I communicate realistic timelines upfront. Better honest than too fast and poor quality.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="faq-info-card reveal">
+          <div class="faq-info-title">Not sure which service fits?</div>
+          <p class="faq-info-p">No problem. Send me a quick description of your situation - I'll tell you directly what makes sense and what it costs. The conversation is free.</p>
+          <ul class="faq-info-list">
+            <li><span class="fii"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>No commitment &amp; free of charge</li>
+            <li><span class="fii"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Reply within 24 hours</li>
+            <li><span class="fii"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Clear recommendation without sales pressure</li>
+            <li><span class="fii"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Direct contact - me, personally</li>
+          </ul>
+          <a href="/en/contact/" class="btn btn-indigo btn-full">
+            Get in touch
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="padding-top:0;" aria-label="Contact call to action">
+  <div class="container">
+    <div class="cta-box reveal">
+      <p class="cta-lbl">Ready to get started?</p>
+      <h2 class="cta-h">Drop me a message -<br>I'll get back to you quickly.</h2>
+      <p class="cta-p">Two sentences are enough. What do you need, by when, rough budget. We'll figure out the rest in a quick call.</p>
+      <div class="cta-btns">
+        <a href="/en/contact/" class="btn btn-white">Get in touch <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/en/projects/" class="btn btn-ghost">View projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <span class="footer-copy">© 2026 Tobias Meixner</span>
+      <ul class="footer-links">
+        <li><a href="/en/blog/">Blog</a></li>
+        <li><a href="/en/legal/">Legal notice</a></li>
+        <li><a href="/en/policy-privacy/">Privacy policy</a></li>
+        <li><a href="/en/terms-and-conditions/">Terms</a></li>
+        <li><a href="#" onclick="CookieScript.instance.show(); return false;">Cookie settings</a></li>
+        <li><a href="https://www.linkedin.com/in/meixner-tobias" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+const themeToggle = document.getElementById('themeToggle');
+const themeToggleMobile = document.getElementById('themeToggleMobile');
+const savedTheme = localStorage.getItem('theme');
+function updateThemeLabel() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.querySelectorAll('.theme-label').forEach(el => { el.textContent = isDark ? 'Light Mode' : 'Dark Mode'; });
+}
+if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+updateThemeLabel();
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+  else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+  updateThemeLabel();
+}
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12), { passive: true });
+
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
+function closeDrawer() { drawer.classList.remove('is-open'); burger.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+burger.addEventListener('click', () => {
+  const open = !drawer.classList.contains('is-open');
+  drawer.classList.toggle('is-open', open); burger.classList.toggle('is-open', open);
+  burger.setAttribute('aria-expanded', String(open)); document.body.style.overflow = open ? 'hidden' : '';
+  if (open) { const fl = drawer.querySelector('a'); if (fl) fl.focus(); }
+});
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+document.addEventListener('click', e => { if (!nav.contains(e.target) && !drawer.contains(e.target)) closeDrawer(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  });
+});
+
+const langBtn = document.getElementById('langBtn');
+const langDropdown = document.getElementById('langDropdown');
+langBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  const isOpen = langDropdown.classList.contains('is-open');
+  langDropdown.classList.toggle('is-open');
+  langBtn.classList.toggle('is-open');
+  langBtn.setAttribute('aria-expanded', String(!isOpen));
+});
+document.addEventListener('click', function() {
+  langDropdown.classList.remove('is-open');
+  langBtn.classList.remove('is-open');
+  langBtn.setAttribute('aria-expanded', 'false');
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { langDropdown.classList.remove('is-open'); langBtn.classList.remove('is-open'); }
+});
+</script>
+</body>
+</html>

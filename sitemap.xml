@@ -71,7 +71,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Legal – noindex, trotzdem in Sitemap für Crawler -->
+  <!-- Legal - noindex, trotzdem in Sitemap für Crawler -->
   <url>
     <loc>https://meixner-tobias.com/impressum/</loc>
     <changefreq>yearly</changefreq>

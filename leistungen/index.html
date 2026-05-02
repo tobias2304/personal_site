@@ -61,6 +61,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Canonical -->
   <link rel="canonical" href="https://meixner-tobias.com/leistungen/">
+  <link rel="alternate" hreflang="de" href="https://meixner-tobias.com/leistungen/">
+  <link rel="alternate" hreflang="en" href="https://meixner-tobias.com/en/services/">
+  <link rel="alternate" hreflang="x-default" href="https://meixner-tobias.com/en/services/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -400,6 +403,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
       </li>
       <li><a href="/produkte/">Produkte</a></li>
+
+      <!-- LANGUAGE SWITCHER -->
+      <li class="lang-switch">
+        <button class="lang-btn" id="langBtn" aria-label="Sprache wählen" aria-expanded="false">
+          <div class="flag-circle"><div class="flag-de"></div></div>
+          DE
+          <span class="lang-arrow">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="menu">
+          <a href="/" class="lang-option active" role="menuitem">
+            <div class="flag-lg"><div class="flag-de"></div></div>
+            <div class="lang-option-text">
+              <span class="lang-option-name">Deutsch</span>
+              <span class="lang-option-sub">Deutschland</span>
+            </div>
+            <span class="lang-check">✓</span>
+          </a>
+          <a href="/en/services/" class="lang-option" role="menuitem">
+            <div class="flag-lg"><div class="flag-us"></div></div>
+            <div class="lang-option-text">
+              <span class="lang-option-name">English</span>
+              <span class="lang-option-sub">United States</span>
+            </div>
+          </a>
+        </div>
+      </li>
+
       <li><a href="/kontakt/" class="nav-cta">Kontakt aufnehmen</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Dark Mode umschalten">
@@ -414,6 +444,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <nav class="drawer" id="drawer" aria-label="Mobile Navigation">
   <ul>
+    <li>
+      <div class="drawer-lang">
+        <a href="/" class="drawer-lang-btn active">
+          <div class="flag-circle"><div class="flag-de"></div></div>
+          Deutsch
+        </a>
+        <a href="/en/services/" class="drawer-lang-btn">
+          <div class="flag-circle"><div class="flag-us"></div></div>
+          English
+        </a>
+      </div>
+    </li>
     <li><a href="/">Home <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
     <li><a href="/ueber-mich/">Über mich <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
     <li><a href="/leistungen/" class="active">Leistungen <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
@@ -944,6 +986,28 @@ document.querySelectorAll('.faq-q').forEach(btn => {
     });
     if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
   });
+});
+
+/* ── Language Switcher ── */
+const langBtn = document.getElementById('langBtn');
+const langDropdown = document.getElementById('langDropdown');
+langBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  const isOpen = langDropdown.classList.contains('is-open');
+  langDropdown.classList.toggle('is-open');
+  langBtn.classList.toggle('is-open');
+  langBtn.setAttribute('aria-expanded', String(!isOpen));
+});
+document.addEventListener('click', function() {
+  langDropdown.classList.remove('is-open');
+  langBtn.classList.remove('is-open');
+  langBtn.setAttribute('aria-expanded', 'false');
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    langDropdown.classList.remove('is-open');
+    langBtn.classList.remove('is-open');
+  }
 });
 </script>
 

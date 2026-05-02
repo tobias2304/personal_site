@@ -22,14 +22,17 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog – AEO, Server-Side Tracking & Performance Max | Tobias Meixner</title>
+  <title>Blog - AEO, Server-Side Tracking & Performance Max | Tobias Meixner</title>
   <meta name="description" content="Faktenbasierte Artikel zu Answer Engine Optimization, Server-Side Tracking und Google Performance Max vs. Meta Advantage+. Praxiswissen von einem Freelancer der es selbst umsetzt.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://meixner-tobias.com/blog/">
+  <link rel="alternate" hreflang="de" href="https://meixner-tobias.com/blog/">
+  <link rel="alternate" hreflang="en" href="https://meixner-tobias.com/en/blog/">
+  <link rel="alternate" hreflang="x-default" href="https://meixner-tobias.com/en/blog/">
 
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://meixner-tobias.com/blog/">
-  <meta property="og:title"       content="Blog – AEO, Server-Side Tracking & Performance Max | Tobias Meixner">
+  <meta property="og:title"       content="Blog - AEO, Server-Side Tracking & Performance Max | Tobias Meixner">
   <meta property="og:description" content="Faktenbasierte Artikel zu AEO, Server-Side Tracking und Performance Max vs. Advantage+. Praxiswissen ohne Agentur-Sprech.">
   <meta property="og:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -37,7 +40,7 @@
   <meta property="og:locale"      content="de_DE">
   <meta property="og:site_name"   content="Tobias Meixner">
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Blog – AEO, Server-Side Tracking & Performance Max | Tobias Meixner">
+  <meta name="twitter:title"       content="Blog - AEO, Server-Side Tracking & Performance Max | Tobias Meixner">
   <meta name="twitter:description" content="Faktenbasierte Artikel zu AEO, Server-Side Tracking und Performance Max vs. Advantage+.">
   <meta name="twitter:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
 
@@ -142,7 +145,7 @@
     {
       "@type": "Blog",
       "@id": "https://meixner-tobias.com/blog/",
-      "name": "Blog – Tobias Meixner",
+      "name": "Blog - Tobias Meixner",
       "description": "Faktenbasierte Artikel zu Answer Engine Optimization, Server-Side Tracking und Google Performance Max vs. Meta Advantage+.",
       "url": "https://meixner-tobias.com/blog/",
       "author": { "@type": "Person", "@id": "https://meixner-tobias.com/#person", "name": "Tobias Meixner" },
@@ -157,7 +160,7 @@
         },
         {
           "@type": "BlogPosting",
-          "headline": "Server-Side Tracking 2026: Warum du gerade 30–40 % deiner Conversion-Daten verlierst",
+          "headline": "Server-Side Tracking 2026: Warum du gerade 30-40 % deiner Conversion-Daten verlierst",
           "url": "https://meixner-tobias.com/blog/server-side-tracking/",
           "datePublished": "2026-04-19",
           "author": { "@type": "Person", "name": "Tobias Meixner" }
@@ -206,6 +209,33 @@
         </ul>
       </li>
       <li><a href="/produkte/">Produkte</a></li>
+
+      <!-- LANGUAGE SWITCHER -->
+      <li class="lang-switch">
+        <button class="lang-btn" id="langBtn" aria-label="Sprache wählen" aria-expanded="false">
+          <div class="flag-circle"><div class="flag-de"></div></div>
+          DE
+          <span class="lang-arrow">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" role="menu">
+          <a href="/" class="lang-option active" role="menuitem">
+            <div class="flag-lg"><div class="flag-de"></div></div>
+            <div class="lang-option-text">
+              <span class="lang-option-name">Deutsch</span>
+              <span class="lang-option-sub">Deutschland</span>
+            </div>
+            <span class="lang-check">✓</span>
+          </a>
+          <a href="/en/blog/" class="lang-option" role="menuitem">
+            <div class="flag-lg"><div class="flag-us"></div></div>
+            <div class="lang-option-text">
+              <span class="lang-option-name">English</span>
+              <span class="lang-option-sub">United States</span>
+            </div>
+          </a>
+        </div>
+      </li>
+
       <li><a href="/kontakt/" class="nav-cta">Kontakt aufnehmen</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Dark Mode umschalten">
@@ -220,6 +250,18 @@
 
 <nav class="drawer" id="drawer" aria-label="Mobile Navigation">
   <ul>
+    <li>
+      <div class="drawer-lang">
+        <a href="/" class="drawer-lang-btn active">
+          <div class="flag-circle"><div class="flag-de"></div></div>
+          Deutsch
+        </a>
+        <a href="/en/blog/" class="drawer-lang-btn">
+          <div class="flag-circle"><div class="flag-us"></div></div>
+          English
+        </a>
+      </div>
+    </li>
     <li><a href="/">Home <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
     <li><a href="/ueber-mich/">Über mich <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
     <li><a href="/leistungen/">Leistungen <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
@@ -239,23 +281,22 @@
 
 <main id="main-content">
 
-  <section class="blog-hero" aria-labelledby="blog-heading">
+  <header class="page-hero" aria-labelledby="blog-heading">
     <div class="container">
-      <div class="blog-hero-inner">
+      <div class="page-hero-inner">
         <div class="page-hero-badge">
           <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           Praxiswissen
         </div>
         <h1 class="page-hero-title" id="blog-heading">
-          Fakten statt Buzzwords –<br><em>was du wirklich wissen musst.</em>
+          Fakten statt Buzzwords -<br><em>was du wirklich wissen musst.</em>
         </h1>
         <p class="page-hero-desc">
-          Drei Themen die ich täglich in der Praxis umsetze: KI-Suchoptimierung, sauberes Tracking und KI-gestützte Werbekampagnen.
-          Alles faktenbasiert, echte Zahlen, kein Agentur-Sprech.
+          Drei Themen die ich täglich in der Praxis umsetze: KI-Suchoptimierung, sauberes Tracking und KI-gestützte Werbekampagnen. Alles faktenbasiert, echte Zahlen, kein Agentur-Sprech.
         </p>
       </div>
     </div>
-  </section>
+  </header>
 
   <section class="section" style="padding-top:0;" aria-labelledby="articles-heading">
     <div class="container">
@@ -273,7 +314,7 @@
               <span class="blog-card-cat cat-marketing">Marketing · KI</span>
               <span>April 2026 · 14 Min</span>
             </div>
-            <h2 class="blog-card-title">Answer Engine Optimization (AEO) – So wirst du 2026 in ChatGPT &amp; Co. gefunden</h2>
+            <h2 class="blog-card-title">Answer Engine Optimization (AEO) - So wirst du 2026 in ChatGPT &amp; Co. gefunden</h2>
             <p class="blog-card-excerpt">Mehr als die Hälfte aller Google-Suchen enden ohne Klick auf eine Website. Wer in KI-Antworten nicht vorkommt, existiert nicht. Was AEO ist, warum AI-Traffic 23x besser konvertiert und wie kleine Unternehmen jetzt handeln.</p>
             <span class="blog-card-link" aria-hidden="true">Artikel lesen <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
@@ -289,8 +330,8 @@
               <span class="blog-card-cat cat-tracking">Tracking</span>
               <span>April 2026 · 15 Min</span>
             </div>
-            <h2 class="blog-card-title">Server-Side Tracking 2026 – Warum du gerade 30–40 % deiner Conversion-Daten verlierst</h2>
-            <p class="blog-card-excerpt">Ad-Blocker, iOS 14.5+, Safari ITP, deutsche Consent-Ablehnungsrate unter 25 % – dein Standard-Pixel erfasst nur noch 50–60 % der echten Conversions. Was Server-Side Tracking dagegen tut und wie du anfängst.</p>
+            <h2 class="blog-card-title">Server-Side Tracking 2026 - Warum du gerade 30-40 % deiner Conversion-Daten verlierst</h2>
+            <p class="blog-card-excerpt">Ad-Blocker, iOS 14.5+, Safari ITP, deutsche Consent-Ablehnungsrate unter 25 % - dein Standard-Pixel erfasst nur noch 50-60 % der echten Conversions. Was Server-Side Tracking dagegen tut und wie du anfängst.</p>
             <span class="blog-card-link" aria-hidden="true">Artikel lesen <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
         </a>
@@ -305,7 +346,7 @@
               <span class="blog-card-cat cat-ads">Marketing · Ads</span>
               <span>April 2026 · 15 Min</span>
             </div>
-            <h2 class="blog-card-title">Google Performance Max vs. Meta Advantage+ – Welche KI-Kampagne gewinnt 2026?</h2>
+            <h2 class="blog-card-title">Google Performance Max vs. Meta Advantage+ - Welche KI-Kampagne gewinnt 2026?</h2>
             <p class="blog-card-excerpt">PMax fangt Nachfrage ein, Advantage+ erschafft sie. Beide können dein Budget verbrennen wenn du sie falsch einsetzt. Mit ROAS-Benchmarks, konkreten Budgetempfehlungen und klarer Entscheidungshilfe für kleine Unternehmen.</p>
             <span class="blog-card-link" aria-hidden="true">Artikel lesen <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
@@ -320,7 +361,7 @@
       <div class="cta-box reveal">
         <p class="cta-lbl">Direkt umsetzen lassen</p>
         <h2 class="cta-h">Lieber jemanden der es<br>einfach macht?</h2>
-        <p class="cta-p">GTM, GA4, Server-Side Tracking oder eine neue Website – ich setze es um. Unverbindlich anfragen, Antwort innerhalb 24h.</p>
+        <p class="cta-p">GTM, GA4, Server-Side Tracking oder eine neue Website - ich setze es um. Unverbindlich anfragen, Antwort innerhalb 24h.</p>
         <div class="cta-btns">
           <a href="/kontakt/" class="btn btn-white">Jetzt anfragen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a href="/leistungen/" class="btn btn-ghost">Leistungen ansehen</a>
@@ -385,6 +426,28 @@ document.addEventListener('click', e => { if (!nav.contains(e.target) && !drawer
 document.addEventListener('keydown', e => { if (e.key==='Escape') closeDrawer(); });
 const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ── Language Switcher ── */
+const langBtn = document.getElementById('langBtn');
+const langDropdown = document.getElementById('langDropdown');
+langBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  const isOpen = langDropdown.classList.contains('is-open');
+  langDropdown.classList.toggle('is-open');
+  langBtn.classList.toggle('is-open');
+  langBtn.setAttribute('aria-expanded', String(!isOpen));
+});
+document.addEventListener('click', function() {
+  langDropdown.classList.remove('is-open');
+  langBtn.classList.remove('is-open');
+  langBtn.setAttribute('aria-expanded', 'false');
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    langDropdown.classList.remove('is-open');
+    langBtn.classList.remove('is-open');
+  }
+});
 </script>
 </body>
 </html>

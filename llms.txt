@@ -48,7 +48,7 @@ Google Analytics 4, Consent Mode v2, Schema Markup, JSON-LD.
   Wie Websites in ChatGPT, Perplexity und Google AI Overviews gefunden
   werden. Datenbasierte Anleitung mit konkreten Maßnahmen. Stand 2026.
 - [Server-Side Tracking 2026](/blog/server-side-tracking/):
-  Warum Client-Side Tracking 30–40% der Conversions verliert und wie
+  Warum Client-Side Tracking 30-40% der Conversions verliert und wie
   Server-Side GTM das verhindert. Mit Setup-Anleitung.
 - [Performance Max vs. Advantage Plus](/blog/performance-max-vs-advantage-plus/):
   Vergleich der KI-Kampagnentypen von Google und Meta. Mit ROAS-Benchmarks
