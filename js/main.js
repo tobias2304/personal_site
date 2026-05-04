@@ -434,8 +434,7 @@ function initContactForm() {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event:            'generate_lead',
-          lead_topic:       topicValue,
-          lead_topic_label: topicMap[topicValue] || '',
+          lead_topic:       topicMap[topicValue] || '',
           lead_addon:       addonValue,
           lead_has_company: companyValue !== '' ? 'yes' : 'no',
           lead_has_phone:   phoneValue   !== '' ? 'yes' : 'no'
