@@ -295,9 +295,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.875rem; color:var(--text);">
                 <input type="checkbox" id="addon_tracking" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;"
                   onchange="document.getElementById('addon_tracking_val').value = this.checked ? 'Ja - GTM & GA4 Add-on gewünscht' : 'Nein'">
-                <span><strong style="color:var(--navy); font-family:var(--fd);">+ Tracking direkt mit dazu - ab 99 € Aufpreis</strong><br>
+                <span><strong style="color:var(--navy); font-family:var(--fd);">+ Tracking direkt mit dazu - ab 199 € Aufpreis</strong><br>
                 GTM &amp; GA4 gleich beim Website-Launch einrichten.</span>
               </label>
+            </div>
+
+            <input type="hidden" id="addon_modules_val" name="addon_modules" value="">
+            <div id="addonBoxTracking" style="display:none; margin-top:12px; background:var(--indigo-soft); border:1px solid var(--indigo-mid); border-radius:var(--r); padding:14px 16px;">
+              <div style="font-size:.85rem; font-weight:700; color:var(--navy); font-family:var(--fd); margin-bottom:10px;">
+                Welche Module brauchst du wahrscheinlich? <span style="font-weight:400; color:var(--muted);">(optional, mehrfach möglich)</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:9px;">
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="checkbox" name="module" value="cross-domain" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Cross-Domain Tracking</strong> <span style="color:var(--muted);">- ab 150 €</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="checkbox" name="module" value="server-side" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Server-Side Tracking</strong> <span style="color:var(--muted);">- ab 500 €</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="checkbox" name="module" value="google-ads" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Google Ads Conversion Tracking</strong> <span style="color:var(--muted);">- ab 200 €</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="checkbox" name="module" value="crm" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">CRM-Anbindung</strong> <span style="color:var(--muted);">- ab 250 €</span></span>
+                </label>
+              </div>
+            </div>
+
+            <input type="hidden" id="addon_tier_val" name="addon_tier" value="">
+            <div id="addonBoxBetreuung" style="display:none; margin-top:12px; background:var(--indigo-soft); border:1px solid var(--indigo-mid); border-radius:var(--r); padding:14px 16px;">
+              <div style="font-size:.85rem; font-weight:700; color:var(--navy); font-family:var(--fd); margin-bottom:10px;">
+                Welcher Tier passt für dich? <span style="font-weight:400; color:var(--muted);">(unverbindlich)</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:9px;">
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="radio" name="tier" value="starter" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Starter</strong> <span style="color:var(--muted);">- ab 49 €/Mt. — Hosting, SSL, kleine Anpassungen, direkter Kontakt</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="radio" name="tier" value="plus" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Plus</strong> <span style="color:var(--muted);">- ab 99 €/Mt. — zusätzlich Tracking-Wartung, Mini-Reporting, Priority-Reaktion</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="radio" name="tier" value="unsure" checked style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Noch unsicher</strong> <span style="color:var(--muted);">- besprechen wir im Gespräch</span></span>
+                </label>
+              </div>
             </div>
             <div class="form-group">
               <label class="form-label" for="message">Deine Nachricht <span class="req">*</span></label>
@@ -359,7 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="faq-card-title">Kurze Antworten</div>
           <div class="faq-mini">
             <div class="faq-mini-item"><strong>Wie schnell geht es los?</strong>Nach dem ersten Gespräch und klarem Auftrag meist innerhalb weniger Tage. Ich studiere parallel - aber ich sage dir von Anfang an ehrlich was realistisch ist.</div>
-            <div class="faq-mini-item"><strong>Was kostet das?</strong>GTM & GA4 ab 149 €, Website ab 349 €, Betreuung ab 49 €/Monat. Nach dem Gespräch bekommst du ein konkretes Angebot ohne Überraschungen.</div>
+            <div class="faq-mini-item"><strong>Was kostet das?</strong>GTM & GA4 ab 390 €, Website ab 890 €, Betreuung ab 49 €/Mt. (Plus ab 99 €). Module wie Server-Side oder CRM-Anbindung baue ich modular dazu. Konkretes Angebot nach dem Gespräch.</div>
             <div class="faq-mini-item"><strong>Was wenn du etwas nicht kannst?</strong>Dann sage ich das direkt - lieber vorher als mittendrin. Ich verkaufe keine Luft.</div>
           </div>
         </div>

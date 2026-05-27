@@ -12,12 +12,12 @@
   })(window,document,'script','dataLayer','GTM-5QLXDT4T');</script>
   <!-- End Google Tag Manager -->
   <title>Services - Websites, GTM & GA4 Setup | Tobias Meixner Würzburg</title>
-  <meta name="description" content="Freelancer from Würzburg: website development from €349, GTM & GA4 setup from €149, monthly care package from €49. Direct, transparent, GDPR-compliant.">
+  <meta name="description" content="Freelancer from Würzburg: website development from €890, GTM & GA4 setup from €390, monthly care package from €49. Direct, transparent, GDPR-compliant.">
 
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://meixner-tobias.com/en/services/">
   <meta property="og:title"       content="Services & Pricing - Websites, GTM & GA4 | Tobias Meixner">
-  <meta property="og:description" content="Website from €349, GTM & GA4 setup from €149, care package from €49/month. Freelancer from Würzburg - direct, transparent, no agency overhead.">
+  <meta property="og:description" content="Website from €890, GTM & GA4 setup from €390, care package from €49/month. Freelancer from Würzburg - direct, transparent, no agency overhead.">
   <meta property="og:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -25,7 +25,7 @@
   <meta property="og:site_name"   content="Tobias Meixner">
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Services & Pricing - Websites, GTM & GA4 | Tobias Meixner">
-  <meta name="twitter:description" content="Website from €349, GTM & GA4 from €149, care package from €49/month. Freelancer from Würzburg.">
+  <meta name="twitter:description" content="Website from €890, GTM & GA4 from €390, care package from €49/month. Freelancer from Würzburg.">
   <meta name="twitter:image"       content="https://meixner-tobias.com/assets/img/og-image.jpg">
 
   <link rel="canonical" href="https://meixner-tobias.com/en/services/">
@@ -66,11 +66,29 @@
         "@type": "OfferCatalog",
         "name": "Services",
         "itemListElement": [
-          { "@type": "Offer", "name": "GTM & GA4 Setup", "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "EUR" } },
-          { "@type": "Offer", "name": "Website development", "priceSpecification": { "@type": "PriceSpecification", "price": "349", "priceCurrency": "EUR" } },
-          { "@type": "Offer", "name": "Care-free package" }
+          { "@type": "Offer", "name": "GTM & GA4 Setup", "description": "Set up Google Tag Manager and GA4, track conversion events, Consent Mode v2 and GDPR-compliant CMP integration. From €390 one-time.", "priceSpecification": { "@type": "PriceSpecification", "price": "390", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "Website development", "description": "Modern website with SSL, imprint, privacy policy, contact form, SEO foundation, Schema.org, sitemap and hosting setup. From €890 one-time.", "priceSpecification": { "@type": "PriceSpecification", "price": "890", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "Care-free package Starter", "description": "Monthly technical maintenance: hosting, SSL, small changes, direct point of contact. From €49/month, cancel anytime.", "priceSpecification": { "@type": "PriceSpecification", "price": "49", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "Care-free package Plus", "description": "Everything in Starter plus tracking maintenance, monthly mini-reporting, priority response and more capacity for changes. From €99/month.", "priceSpecification": { "@type": "PriceSpecification", "price": "99", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "Cross-Domain Tracking (Module)", "description": "Connect multiple domains or subdomains cleanly - e.g. marketing site and app subdomain as one session. From €150 one-time.", "priceSpecification": { "@type": "PriceSpecification", "price": "150", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "Server-Side Tracking (Module)", "description": "Your own sGTM container via Stape.io with a custom subdomain. Better data quality, longer cookie lifetime, fewer ad-blocker losses. From €500 one-time.", "priceSpecification": { "@type": "PriceSpecification", "price": "500", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "Google Ads Conversion Tracking (Module)", "description": "Conversion Linker, conversion tags, Enhanced Conversions and Conversion Import into Google Ads. From €200 one-time.", "priceSpecification": { "@type": "PriceSpecification", "price": "200", "priceCurrency": "EUR" } },
+          { "@type": "Offer", "name": "CRM Integration (Module)", "description": "Connect HubSpot, Pipedrive etc. via GTM - UTM attribution to contacts, events sent to the CRM. From €250 one-time.", "priceSpecification": { "@type": "PriceSpecification", "price": "250", "priceCurrency": "EUR" } }
         ]
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://meixner-tobias.com/en/services/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What's included in the GTM & GA4 setup?", "acceptedAnswer": { "@type": "Answer", "text": "Setting up the GTM container, configuring the GA4 property, setting up the most important conversion events (form, clicks, scroll), Consent Mode v2 to Google's standard, and a privacy-compliant CMP integration. For more complex setups (cross-domain, server-side, CRM integration) I add the matching modules." } },
+        { "@type": "Question", "name": "What is server-side tracking and when do I need it?", "acceptedAnswer": { "@type": "Answer", "text": "In classic tracking, your browser sends data directly to Google, Meta etc. With server-side it runs through your own container (e.g. Stape.io) on your subdomain - cleaner data, longer cookie lifetime, fewer losses to ad-blockers. Useful for serious paid ad campaigns, multiple platforms, or SaaS. For a simple website with a few conversions it's overkill." } },
+        { "@type": "Question", "name": "Do you offer Meta Pixel & CAPI?", "acceptedAnswer": { "@type": "Answer", "text": "Not in the standard offer - by design. If someone on your team owns the Meta campaigns, that person should set up the Meta tracking themselves - it comes out cleaner and more consistent than if it's half-prepared. What I cover: the foundation (consent, sGTM, CAPI-ready subdomain) so the handover to your Meta person is smooth. On explicit request I can set up Meta end to end." } },
+        { "@type": "Question", "name": "What does a website cost?", "acceptedAnswer": { "@type": "Answer", "text": "A simple website for freelancers or small clubs starts from €890 one-time. Includes: design, hosting setup, SSL, contact form, imprint and privacy policy, SEO foundation and sitemap. The exact price depends on the scope - after a short conversation you'll get a concrete quote." } },
+        { "@type": "Question", "name": "What is the care-free package?", "acceptedAnswer": { "@type": "Answer", "text": "Each month I make sure your website keeps running: hosting is active, SSL certificate is valid, small content changes are made promptly. You always have a direct point of contact - no ticket system, no overhead. Starter from €49/month (website maintenance), Plus from €99/month (additional tracking maintenance and mini-reporting). Cancel anytime." } },
+        { "@type": "Question", "name": "Can website and tracking be combined?", "acceptedAnswer": { "@type": "Answer", "text": "Yes - and it makes sense. Anyone getting a new website should know from the start what's happening on it. As an add-on to the website, I set up GTM and GA4 right at launch. That saves time, you start with clean data, and the add-on costs from €199 instead of the full setup price." } },
+        { "@type": "Question", "name": "How quickly can we get started?", "acceptedAnswer": { "@type": "Answer", "text": "After the first conversation and a clear brief, usually within a few days. I study in parallel so capacity is limited - but I communicate realistic timelines upfront." } }
+      ]
     }
   ]
 }
@@ -230,7 +248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="svc-main-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg>
         </div>
-        <div class="svc-price">from €149</div>
+        <div class="svc-price">from €390</div>
         <div class="svc-price-sub">one-time · no subscription</div>
         <div class="svc-main-name">GTM &amp; GA4 Setup</div>
         <p class="svc-main-tagline">You want to know what's happening on your website - without privacy issues and without technical chaos.</p>
@@ -243,11 +261,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>CMP integration (cookie banner)</li>
           <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Handover with full walkthrough</li>
         </ul>
-        <div class="addon-box">
-          <strong>+ Google Ads &amp; Meta Pixel</strong>
-          Conversion tracking for ad campaigns including Enhanced Conversions on request.
-          <span class="addon-price">on request</span>
-        </div>
         <a href="/en/contact/" class="btn btn-outline-indigo btn-full">Get in touch</a>
       </div>
 
@@ -260,7 +273,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="svc-main-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
         </div>
-        <div class="svc-price">from €349</div>
+        <div class="svc-price">from €890</div>
         <div class="svc-price-sub">one-time · no subscription</div>
         <div class="svc-main-name">Website development</div>
         <p class="svc-main-tagline">You need a professional website - fast, secure, legally sound, and without any tech headaches.</p>
@@ -274,36 +287,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Handover with complete walkthrough</li>
         </ul>
         <div class="addon-box">
-          <strong>+ Tracking included - from €99 extra</strong>
-          GTM &amp; GA4 set up right when the website goes live. Start with clean data from day one.
-          <span class="addon-price">+ from €99</span>
+          <strong>+ Tracking included - from €199 (instead of €390 separately)</strong>
+          Base setup (GTM &amp; GA4 + Consent Mode v2) right at website launch. Modules like server-side or CRM integration added separately if needed.
+          <span class="addon-price">+ from €199</span>
         </div>
         <a href="/en/contact/" class="btn btn-white btn-full">Get in touch</a>
       </div>
 
       <!-- SERVICE 3: Care-free package -->
-      <div class="svc-main-card reveal" data-d="3">
+      <div class="svc-main-card svc-main-card--tiered reveal" data-d="3">
         <div class="svc-badge-placeholder"></div>
         <div class="svc-main-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <div class="svc-price">from €49</div>
-        <div class="svc-price-sub">per month · cancel anytime</div>
         <div class="svc-main-name">Care-free package</div>
         <p class="svc-main-tagline">Your website keeps running - and you always have someone who takes care of it. No ticket system, no overhead.</p>
         <div class="svc-divider"></div>
-        <ul class="svc-feat-list">
-          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Hosting &amp; SSL running reliably</li>
-          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Small changes handled promptly</li>
-          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Direct point of contact - me, personally</li>
-          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Technical support when things go wrong</li>
-          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Cancel anytime - no lock-in</li>
-          <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Transparent monthly billing</li>
-        </ul>
-        <div class="addon-box">
-          <strong>Perfect add-on after a website launch</strong>
-          Just continue after go-live - I stay on it and you don't have to worry about anything.
+
+        <!-- TIER 1: Starter -->
+        <div class="svc-tier">
+          <div class="svc-tier-head">
+            <div class="svc-tier-info">
+              <div class="svc-tier-name">Starter</div>
+              <div class="svc-tier-sub">cancel anytime</div>
+            </div>
+            <div class="svc-tier-price">from €49<span class="svc-tier-per">/mo.</span></div>
+          </div>
+          <ul class="svc-feat-list svc-feat-list--tier">
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Hosting &amp; SSL running reliably</li>
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Small changes handled promptly</li>
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Direct point of contact</li>
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Technical support</li>
+          </ul>
         </div>
+
+        <!-- TIER 2: Plus -->
+        <div class="svc-tier svc-tier--highlight">
+          <div class="svc-tier-head">
+            <div class="svc-tier-info">
+              <div class="svc-tier-name">Plus</div>
+              <div class="svc-tier-sub">for setups with tracking</div>
+            </div>
+            <div class="svc-tier-price">from €99<span class="svc-tier-per">/mo.</span></div>
+          </div>
+          <ul class="svc-feat-list svc-feat-list--tier">
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Starter</li>
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Tracking maintenance (events &amp; GA4 health)</li>
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Monthly mini-reporting</li>
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>Priority response (hours, not 24h)</li>
+            <li><span class="svc-chk" aria-hidden="true"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg></span>More capacity for changes</li>
+          </ul>
+        </div>
+
         <a href="/en/contact/" class="btn btn-outline-indigo btn-full">Get in touch</a>
       </div>
 
@@ -321,6 +356,130 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="inc-item"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>No agency overhead</div>
       </div>
     </div>
+
+    <!-- TRACKING MODULES -->
+    <div class="svc-modules reveal">
+      <div class="svc-modules-head">
+        <div class="svc-modules-label">Tracking Modules</div>
+        <h3 class="svc-modules-title">Extendable as needed</h3>
+        <p class="svc-modules-sub">
+          The €390 is the starting price for simple setups. For more complex requirements
+          (cross-domain, server-side, CRM) I add these modules - individually or combined.
+        </p>
+      </div>
+      <div class="svc-modules-grid">
+
+        <div class="svc-module">
+          <div class="svc-module-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+          </div>
+          <div class="svc-module-head">
+            <div class="svc-module-name">Cross-Domain Tracking</div>
+            <div class="svc-module-price">from €150</div>
+          </div>
+          <p class="svc-module-desc">Connect multiple domains or subdomains cleanly - e.g. marketing site and app subdomain as one session.</p>
+        </div>
+
+        <div class="svc-module">
+          <div class="svc-module-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="8" rx="2"/>
+              <rect x="2" y="13" width="20" height="8" rx="2"/>
+              <line x1="6" y1="7" x2="6.01" y2="7"/>
+              <line x1="6" y1="17" x2="6.01" y2="17"/>
+            </svg>
+          </div>
+          <div class="svc-module-head">
+            <div class="svc-module-name">Server-Side Tracking</div>
+            <div class="svc-module-price">from €500</div>
+          </div>
+          <p class="svc-module-desc">Your own sGTM container via Stape.io with a custom subdomain. Better data quality, longer cookie lifetime, fewer ad-blocker losses.</p>
+        </div>
+
+        <div class="svc-module">
+          <div class="svc-module-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <circle cx="12" cy="12" r="6"/>
+              <circle cx="12" cy="12" r="2"/>
+            </svg>
+          </div>
+          <div class="svc-module-head">
+            <div class="svc-module-name">Google Ads Conversion Tracking</div>
+            <div class="svc-module-price">from €200</div>
+          </div>
+          <p class="svc-module-desc">Conversion Linker, conversion tags, Enhanced Conversions and Conversion Import straight into Google Ads.</p>
+        </div>
+
+        <div class="svc-module">
+          <div class="svc-module-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="svc-module-head">
+            <div class="svc-module-name">CRM Integration</div>
+            <div class="svc-module-price">from €250</div>
+          </div>
+          <p class="svc-module-desc">Connect HubSpot, Pipedrive etc. via GTM - UTM attribution to contacts, events sent to the CRM.</p>
+        </div>
+
+      </div>
+      <p class="svc-modules-note">
+        For more complex setups (B2B SaaS, multi-domain, several modules combined) I quote individually - typically in the low four-figure range.
+      </p>
+    </div>
+
+    <!-- AGENCY COMPARISON -->
+    <div class="svc-compare reveal">
+      <div class="svc-compare-title">What does this cost elsewhere?</div>
+      <p class="svc-compare-sub">
+        Same care, same GDPR compliance, same clean handover -
+        just without the agency markup and without three project managers in between.
+      </p>
+      <div class="svc-compare-grid">
+        <div class="svc-compare-head">
+          <span></span>
+          <span>Agency</span>
+          <span class="hl">With me</span>
+        </div>
+        <div class="svc-compare-row">
+          <span class="cmp-label">GTM &amp; GA4 setup</span>
+          <span class="cmp-old">from €990</span>
+          <span class="cmp-new">from €390</span>
+        </div>
+        <div class="svc-compare-row">
+          <span class="cmp-label">Server-Side Tracking</span>
+          <span class="cmp-old">from €1,500</span>
+          <span class="cmp-new">from €500</span>
+        </div>
+        <div class="svc-compare-row">
+          <span class="cmp-label">Website development</span>
+          <span class="cmp-old">from €3,000</span>
+          <span class="cmp-new">from €890</span>
+        </div>
+        <div class="svc-compare-row">
+          <span class="cmp-label">Ongoing care</span>
+          <span class="cmp-old">from €100/mo.</span>
+          <span class="cmp-new">from €49/mo.</span>
+        </div>
+      </div>
+      <p class="svc-compare-note">
+        Agency prices as typical market reference points for comparable services.
+        With me you talk directly to the person doing the work.
+      </p>
+    </div>
+
+    <p class="svc-vat-note">
+      All prices are final. As a small business under §19 of the German VAT Act, I do not charge VAT.
+    </p>
+
   </div>
 </section>
 
@@ -337,28 +496,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <div class="svc-block-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h8"/><path d="M7 11h12"/><path d="M7 6h3"/></svg></div>
         <h3 class="svc-block-title">Tracking &amp; Analytics</h3>
-        <p class="svc-block-desc">My strongest area - with real hands-on experience from Gumb AG. Clean data foundation for good decisions, GDPR-compliant and reliable.</p>
+        <p class="svc-block-desc">My strongest area - with real hands-on experience from Gumb AG. From simple GTM/GA4 setup to server-side tracking and CRM integration - clean, GDPR-compliant, documented.</p>
       </div>
       <div class="svc-detail-grid">
         <div class="svc-detail-card">
           <div class="svc-detail-title">Google Tag Manager</div>
-          <p class="svc-detail-text">Building, configuring and maintaining the GTM container. Events, triggers, variables - cleanly structured and documented.</p>
+          <p class="svc-detail-text">Building, configuring and maintaining the GTM container. Events, triggers, variables, dataLayer structures - cleanly documented and handover-ready.</p>
           <div class="svc-tags"><span class="svc-tag">GTM Setup</span><span class="svc-tag">Events</span><span class="svc-tag">DataLayer</span></div>
         </div>
         <div class="svc-detail-card">
           <div class="svc-detail-title">Google Analytics 4</div>
-          <p class="svc-detail-text">Set up GA4 property, configure events, define conversions - and actually understand what the data is telling you.</p>
-          <div class="svc-tags"><span class="svc-tag">GA4</span><span class="svc-tag">Conversions</span><span class="svc-tag">Reports</span></div>
+          <p class="svc-detail-text">Set up GA4 property, configure cross-domain, define conversions - and actually understand what the data is telling you.</p>
+          <div class="svc-tags"><span class="svc-tag">GA4</span><span class="svc-tag">Cross-Domain</span><span class="svc-tag">Conversions</span></div>
         </div>
         <div class="svc-detail-card">
           <div class="svc-detail-title">Consent Mode v2 &amp; GDPR</div>
-          <p class="svc-detail-text">Privacy-compliant implementation with CMP integration to Google's standard. Tracking that's legally sound.</p>
+          <p class="svc-detail-text">Privacy-compliant implementation with CMP integration (CookieScript, Cookiebot) to Google's standard. Tracking that stays legally sound.</p>
           <div class="svc-tags"><span class="svc-tag">Consent Mode v2</span><span class="svc-tag">GDPR</span><span class="svc-tag">CMP</span></div>
         </div>
         <div class="svc-detail-card">
-          <div class="svc-detail-title">Ads &amp; Meta Tracking</div>
-          <p class="svc-detail-text">Google Ads conversion tracking and Meta Pixel including Enhanced Conversions for more precise campaign data.</p>
-          <div class="svc-tags"><span class="svc-tag">Google Ads</span><span class="svc-tag">Meta Pixel</span><span class="svc-tag">Enhanced Conversions</span></div>
+          <div class="svc-detail-title">Server-Side Tracking</div>
+          <p class="svc-detail-text">Your own sGTM container via Stape.io with a custom subdomain. Conversion events server-side, better data quality, longer cookie lifetime.</p>
+          <div class="svc-tags"><span class="svc-tag">Server-Side</span><span class="svc-tag">Stape.io</span><span class="svc-tag">sGTM</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">CRM Integration</div>
+          <p class="svc-detail-text">HubSpot, Pipedrive etc. via GTM - UTM attribution to contacts, events sent to the CRM. Lead-source tracking that sales actually understands.</p>
+          <div class="svc-tags"><span class="svc-tag">HubSpot</span><span class="svc-tag">UTM Attribution</span><span class="svc-tag">Lead Source</span></div>
+        </div>
+        <div class="svc-detail-card">
+          <div class="svc-detail-title">Google Ads Conversion Tracking</div>
+          <p class="svc-detail-text">Conversion Linker, conversion tags, Enhanced Conversions and Conversion Import into Google Ads - precise campaign performance.</p>
+          <div class="svc-tags"><span class="svc-tag">Google Ads</span><span class="svc-tag">Enhanced Conversions</span><span class="svc-tag">Conversion Import</span></div>
         </div>
       </div>
     </div>
@@ -474,42 +643,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-a" role="region" aria-labelledby="faq-q-1">
-              <div class="faq-a-inner">Setting up the GTM container, configuring the GA4 property, setting up the most important conversion events (form, clicks, scroll), Consent Mode v2 to Google's standard, and a privacy-compliant CMP integration. Handover with a walkthrough explaining what's being tracked and why.</div>
+              <div class="faq-a-inner">Setting up the GTM container, configuring the GA4 property, setting up the most important conversion events (form, clicks, scroll), Consent Mode v2 to Google's standard, and a privacy-compliant CMP integration. For more complex setups (cross-domain, server-side, CRM integration) I add the matching modules - see above.</div>
             </div>
           </div>
+
           <div class="faq-item reveal" data-d="2">
             <button class="faq-q" id="faq-q-2" aria-expanded="false">
-              What does a website cost exactly?
+              What is server-side tracking and when do I need it?
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-a" role="region" aria-labelledby="faq-q-2">
-              <div class="faq-a-inner">A simple website for freelancers or small clubs starts from €349 one-time. More pages or complex requirements cost more accordingly. After a quick conversation you'll get a concrete quote - transparent and with no surprises.</div>
+              <div class="faq-a-inner">In classic tracking, your browser sends data directly to Google, Meta etc. With server-side it runs through your own container (e.g. Stape.io) on your subdomain - cleaner data, longer cookie lifetime, fewer losses to ad-blockers. Useful if you run serious paid ad campaigns, work across multiple platforms, or run a SaaS. For a simple website with a few conversions it's overkill.</div>
             </div>
           </div>
+
           <div class="faq-item reveal" data-d="3">
             <button class="faq-q" id="faq-q-3" aria-expanded="false">
-              What exactly is the care-free package?
+              Do you offer Meta Pixel &amp; CAPI?
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-a" role="region" aria-labelledby="faq-q-3">
-              <div class="faq-a-inner">Each month I make sure your website keeps running: hosting is active, SSL certificate is valid, small content changes are made promptly. You always have a direct point of contact - me, personally. No ticket system, no overhead. From €49/month, cancel anytime.</div>
+              <div class="faq-a-inner">Not in the standard offer - by design. If someone on your team owns the Meta campaigns, that person should set up the Meta tracking themselves - it comes out cleaner and more consistent than if it's half-prepared. What I cover: the foundation (consent, sGTM, CAPI-ready subdomain) so the handover to your Meta person is smooth. On explicit request I can also set up Meta end to end.</div>
             </div>
           </div>
+
           <div class="faq-item reveal" data-d="4">
             <button class="faq-q" id="faq-q-4" aria-expanded="false">
-              Can website and tracking be combined?
+              What does a website cost exactly?
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-a" role="region" aria-labelledby="faq-q-4">
-              <div class="faq-a-inner">Yes - and I recommend it. Anyone getting a new website should know from the start what's happening on it. As an add-on to the website, I set up GTM and GA4 right at launch. That saves time, you start with clean data from day one, and the add-on costs from €99 instead of the full setup price.</div>
+              <div class="faq-a-inner">A simple website for freelancers or small clubs starts from €890 one-time. More pages or complex requirements cost more accordingly. After a quick conversation you'll get a concrete quote - transparent and with no surprises.</div>
             </div>
           </div>
+
           <div class="faq-item reveal" data-d="5">
             <button class="faq-q" id="faq-q-5" aria-expanded="false">
-              How quickly can we get started?
+              What exactly is the care-free package?
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-a" role="region" aria-labelledby="faq-q-5">
+              <div class="faq-a-inner">Each month I make sure your website keeps running: hosting is active, SSL certificate is valid, small content changes are made promptly. You always have a direct point of contact - me, personally. No ticket system, no overhead. Starter from €49/month (website maintenance), Plus from €99/month (additional tracking maintenance and mini-reporting). Cancel anytime.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" data-d="6">
+            <button class="faq-q" id="faq-q-6" aria-expanded="false">
+              Can website and tracking be combined?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a" role="region" aria-labelledby="faq-q-6">
+              <div class="faq-a-inner">Yes - and I recommend it. Anyone getting a new website should know from the start what's happening on it. As an add-on to the website, I set up GTM and GA4 right at launch. That saves time, you start with clean data from day one, and the add-on costs from €199 instead of the full setup price.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" data-d="7">
+            <button class="faq-q" id="faq-q-7" aria-expanded="false">
+              How quickly can we get started?
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a" role="region" aria-labelledby="faq-q-7">
               <div class="faq-a-inner">After the first conversation and a clear brief, usually within a few days. I study in parallel so capacity is limited - but I communicate realistic timelines upfront. Better honest than too fast and poor quality.</div>
             </div>
           </div>

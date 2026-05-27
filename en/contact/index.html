@@ -250,8 +250,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div id="addonBox" style="display:none;margin-top:12px;background:var(--indigo-soft);border:1px solid var(--indigo-mid);border-radius:var(--r);padding:14px 16px;">
               <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:.875rem;color:var(--text);">
                 <input type="checkbox" id="addon_tracking" style="margin-top:2px;accent-color:var(--indigo);flex-shrink:0;" onchange="document.getElementById('addon_tracking_val').value = this.checked ? 'Yes - GTM & GA4 add-on requested' : 'No'">
-                <span><strong style="color:var(--navy);font-family:var(--fd);">+ Tracking included - from €99 extra</strong><br>GTM &amp; GA4 set up right when the website goes live.</span>
+                <span><strong style="color:var(--navy);font-family:var(--fd);">+ Tracking included - from €199 extra</strong><br>GTM &amp; GA4 set up right when the website goes live.</span>
               </label>
+            </div>
+
+            <input type="hidden" id="addon_modules_val" name="addon_modules" value="">
+            <div id="addonBoxTracking" style="display:none; margin-top:12px; background:var(--indigo-soft); border:1px solid var(--indigo-mid); border-radius:var(--r); padding:14px 16px;">
+              <div style="font-size:.85rem; font-weight:700; color:var(--navy); font-family:var(--fd); margin-bottom:10px;">
+                Which modules do you probably need? <span style="font-weight:400; color:var(--muted);">(optional, multiple)</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:9px;">
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="checkbox" name="module" value="cross-domain" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Cross-Domain Tracking</strong> <span style="color:var(--muted);">- from €150</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="checkbox" name="module" value="server-side" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Server-Side Tracking</strong> <span style="color:var(--muted);">- from €500</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="checkbox" name="module" value="google-ads" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Google Ads Conversion Tracking</strong> <span style="color:var(--muted);">- from €200</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="checkbox" name="module" value="crm" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">CRM Integration</strong> <span style="color:var(--muted);">- from €250</span></span>
+                </label>
+              </div>
+            </div>
+
+            <input type="hidden" id="addon_tier_val" name="addon_tier" value="">
+            <div id="addonBoxBetreuung" style="display:none; margin-top:12px; background:var(--indigo-soft); border:1px solid var(--indigo-mid); border-radius:var(--r); padding:14px 16px;">
+              <div style="font-size:.85rem; font-weight:700; color:var(--navy); font-family:var(--fd); margin-bottom:10px;">
+                Which tier fits you? <span style="font-weight:400; color:var(--muted);">(non-binding)</span>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:9px;">
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="radio" name="tier" value="starter" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Starter</strong> <span style="color:var(--muted);">- from €49/mo. — hosting, SSL, small changes, direct contact</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="radio" name="tier" value="plus" style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Plus</strong> <span style="color:var(--muted);">- from €99/mo. — plus tracking maintenance, mini-reporting, priority response</span></span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-size:.85rem; color:var(--text);">
+                  <input type="radio" name="tier" value="unsure" checked style="margin-top:2px; accent-color:var(--indigo); flex-shrink:0;">
+                  <span><strong style="color:var(--navy);">Not sure yet</strong> <span style="color:var(--muted);">- we'll discuss it on the call</span></span>
+                </label>
+              </div>
             </div>
 
             <div class="form-group">
@@ -310,7 +356,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="faq-card-title">Quick answers</div>
           <div class="faq-mini">
             <div class="faq-mini-item"><strong>How quickly can we get started?</strong>After the first conversation and a clear brief, usually within a few days. I study in parallel - but I'll tell you upfront what's realistic.</div>
-            <div class="faq-mini-item"><strong>What does it cost?</strong>GTM & GA4 from €149, website from €349, care package from €49/month. After the call you'll get a concrete quote with no surprises.</div>
+            <div class="faq-mini-item"><strong>What does it cost?</strong>GTM & GA4 from €390, website from €890, care package from €49/mo. (Plus from €99). Modules like server-side or CRM integration are added modularly. Concrete quote after the call.</div>
             <div class="faq-mini-item"><strong>What if you can't do something?</strong>Then I'll tell you directly - better upfront than halfway through. I don't sell hot air.</div>
           </div>
         </div>

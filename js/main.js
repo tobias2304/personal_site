@@ -353,10 +353,55 @@
 function initAddonBox() {
     var topic = document.getElementById('topic');
     var addonBox = document.getElementById('addonBox');
-    if (!topic || !addonBox) return;
+    var addonBoxTracking = document.getElementById('addonBoxTracking');
+    var addonBoxBetreuung = document.getElementById('addonBoxBetreuung');
+    var modulesVal = document.getElementById('addon_modules_val');
+    var tierVal    = document.getElementById('addon_tier_val');
+    if (!topic) return;
 
     function updateAddonBox() {
-      addonBox.style.display = topic.value === 'website' ? 'block' : 'none';
+      if (addonBox)          addonBox.style.display          = topic.value === 'website'   ? 'block' : 'none';
+      if (addonBoxTracking)  addonBoxTracking.style.display  = topic.value === 'tracking'  ? 'block' : 'none';
+      if (addonBoxBetreuung) addonBoxBetreuung.style.display = topic.value === 'betreuung' ? 'block' : 'none';
+
+      // Module zurücksetzen, wenn das Thema nicht (mehr) Tracking ist
+      if (modulesVal && topic.value !== 'tracking') {
+        modulesVal.value = '';
+        document.querySelectorAll('input[name="module"]').forEach(function(cb) { cb.checked = false; });
+      }
+
+      // Sorglos-Tier synchronisieren bzw. zurücksetzen
+      if (tierVal) {
+        if (topic.value === 'betreuung') {
+          var checkedTier = document.querySelector('input[name="tier"]:checked');
+          tierVal.value = checkedTier ? checkedTier.value : 'unsure';
+        } else {
+          tierVal.value = '';
+          // Default-Auswahl ("unsure") wiederherstellen
+          var unsureRadio = document.querySelector('input[name="tier"][value="unsure"]');
+          if (unsureRadio) unsureRadio.checked = true;
+        }
+      }
+    }
+
+    // Module-Checkboxen synchron in Hidden-Field schreiben
+    if (modulesVal) {
+      var moduleBoxes = document.querySelectorAll('input[name="module"]');
+      function updateModulesVal() {
+        var checked = [];
+        moduleBoxes.forEach(function(cb) { if (cb.checked) checked.push(cb.value); });
+        modulesVal.value = checked.join(', ');
+      }
+      moduleBoxes.forEach(function(cb) { cb.addEventListener('change', updateModulesVal); });
+    }
+
+    // Sorglos-Tier-Radios synchron in Hidden-Field schreiben
+    if (tierVal) {
+      document.querySelectorAll('input[name="tier"]').forEach(function(r) {
+        r.addEventListener('change', function() {
+          if (this.checked) tierVal.value = this.value;
+        });
+      });
     }
 
     topic.addEventListener('change', updateAddonBox);
@@ -400,6 +445,10 @@ function initContactForm() {
     var companyValue = document.getElementById('company').value.trim();
     var phoneValue   = document.getElementById('phone').value.trim();
     var addonValue   = document.getElementById('addon_tracking_val').value;
+    var modulesValEl = document.getElementById('addon_modules_val');
+    var modulesValue = modulesValEl ? modulesValEl.value : '';
+    var tierValEl    = document.getElementById('addon_tier_val');
+    var tierValue    = tierValEl ? tierValEl.value : '';
     var topicMap     = {
       tracking:  'GTM & GA4 Setup',
       website:   'Website erstellen',
@@ -419,7 +468,9 @@ function initContactForm() {
         company:        companyValue,
         topic:          topicValue,
         message:        message.value.trim(),
-        addon_tracking: addonValue
+        addon_tracking: addonValue,
+        addon_modules:  modulesValue,
+        addon_tier:     tierValue
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -436,6 +487,8 @@ function initContactForm() {
           event:            'generate_lead',
           lead_topic:       topicMap[topicValue] || '',
           lead_addon:       addonValue,
+          lead_modules:     modulesValue,
+          lead_tier:        tierValue,
           lead_has_company: companyValue !== '' ? 'yes' : 'no',
           lead_has_phone:   phoneValue   !== '' ? 'yes' : 'no'
         });
