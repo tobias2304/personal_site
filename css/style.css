@@ -2254,6 +2254,19 @@ textarea:focus-visible {
   .svc-compare-head span { font-size: .62rem; }
 }
 
+/* ── Website-Karte Disclaimer-Hinweis ── */
+.svc-website-note {
+  background: rgba(0,0,0,.18);
+  border-left: 2px solid rgba(125,211,250,.4);
+  border-radius: 6px;
+  padding: 11px 14px;
+  margin: 0 0 14px;
+  font-size: .78rem;
+  color: rgba(255,255,255,.62);
+  font-style: italic;
+  line-height: 1.55;
+}
+
 /* ── Tiered service card (Sorglos-Betreuung Starter/Plus) ── */
 .svc-main-card--tiered .svc-divider { margin-bottom: 18px; }
 .svc-main-card--tiered .svc-feat-list { flex: 0 1 auto; }
